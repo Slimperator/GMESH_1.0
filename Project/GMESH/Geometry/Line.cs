@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace Geometry
 {
-
-    class Segment
+    class Line
     {
-
     }
 }
