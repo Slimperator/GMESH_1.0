@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Geometry
 {
-    class Line
+    public class Line : ICurve
     {
+        public void getPoint(double t, out IPoint p)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

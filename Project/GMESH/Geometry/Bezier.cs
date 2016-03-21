@@ -8,5 +8,9 @@ namespace Geometry
 {
     class Bezier : ICurve
     {
+        public void getPoint(double t, out IPoint p)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

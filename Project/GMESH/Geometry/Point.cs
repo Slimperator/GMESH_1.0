@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace Geometry
 {
-
     public class Point : IPoint
     {
         public Point(double x, double y)
@@ -19,12 +18,12 @@ namespace Geometry
         {
             get
             {
-                throw new NotImplementedException();
+                return this.X;
             }
 
             set
             {
-                throw new NotImplementedException();
+                this.X = value;
             }
         }
 
@@ -32,12 +31,12 @@ namespace Geometry
         {
             get
             {
-                throw new NotImplementedException();
+                return this.Y;
             }
 
             set
             {
-                throw new NotImplementedException();
+                this.Y = value;
             }
         }
     }

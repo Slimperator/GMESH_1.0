@@ -14,9 +14,10 @@ namespace Geometry
 
     public interface ISegment
     {
-        IPoint st { get; set; }
-        IPoint fin { get; set; }
+        IPoint St { get; set; }
+        IPoint Fin { get; set; }
     }
+
 
     public interface ICurve
     {
