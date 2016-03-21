@@ -18,7 +18,7 @@ namespace Geometry
         IPoint fin { get; set; }
     }
 
-    public interface Curve
+    public interface ICurve
     {
         void getPoint(double t, out IPoint p);
     }

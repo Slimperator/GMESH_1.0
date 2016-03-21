@@ -9,5 +9,6 @@ namespace Geometry
 
     class Segment
     {
+
     }
 }
