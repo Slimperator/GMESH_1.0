@@ -1,0 +1,9 @@
+c:\users\ghost_council\documents\visual studio 2015\Projects\GMESH_prototype\GMESH_prototype\bin\Debug\GMESH_prototype.exe.config
+c:\users\ghost_council\documents\visual studio 2015\Projects\GMESH_prototype\GMESH_prototype\bin\Debug\GMESH_prototype.exe
+c:\users\ghost_council\documents\visual studio 2015\Projects\GMESH_prototype\GMESH_prototype\bin\Debug\GMESH_prototype.pdb
+c:\users\ghost_council\documents\visual studio 2015\Projects\GMESH_prototype\GMESH_prototype\obj\Debug\GMESH_prototype.csprojResolveAssemblyReference.cache
+c:\users\ghost_council\documents\visual studio 2015\Projects\GMESH_prototype\GMESH_prototype\obj\Debug\GMESH_prototype.Form1.resources
+c:\users\ghost_council\documents\visual studio 2015\Projects\GMESH_prototype\GMESH_prototype\obj\Debug\GMESH_prototype.Properties.Resources.resources
+c:\users\ghost_council\documents\visual studio 2015\Projects\GMESH_prototype\GMESH_prototype\obj\Debug\GMESH_prototype.csproj.GenerateResource.Cache
+c:\users\ghost_council\documents\visual studio 2015\Projects\GMESH_prototype\GMESH_prototype\obj\Debug\GMESH_prototype.exe
+c:\users\ghost_council\documents\visual studio 2015\Projects\GMESH_prototype\GMESH_prototype\obj\Debug\GMESH_prototype.pdb

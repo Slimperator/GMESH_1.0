@@ -1,0 +1,5 @@
+C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH\Geometry\obj\Debug\Geometry.csprojResolveAssemblyReference.cache
+C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH\Geometry\bin\Debug\Geometry.dll
+C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH\Geometry\bin\Debug\Geometry.pdb
+C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH\Geometry\obj\Debug\Geometry.dll
+C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH\Geometry\obj\Debug\Geometry.pdb
