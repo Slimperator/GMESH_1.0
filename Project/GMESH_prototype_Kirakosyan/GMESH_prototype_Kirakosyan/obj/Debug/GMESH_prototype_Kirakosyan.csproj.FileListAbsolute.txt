@@ -1,9 +1,0 @@
-c:\users\ани\documents\visual studio 2015\Projects\GMESH_prototype_Kirakosyan\GMESH_prototype_Kirakosyan\bin\Debug\GMESH_prototype_Kirakosyan.exe.config
-c:\users\ани\documents\visual studio 2015\Projects\GMESH_prototype_Kirakosyan\GMESH_prototype_Kirakosyan\bin\Debug\GMESH_prototype_Kirakosyan.exe
-c:\users\ани\documents\visual studio 2015\Projects\GMESH_prototype_Kirakosyan\GMESH_prototype_Kirakosyan\bin\Debug\GMESH_prototype_Kirakosyan.pdb
-c:\users\ани\documents\visual studio 2015\Projects\GMESH_prototype_Kirakosyan\GMESH_prototype_Kirakosyan\obj\Debug\GMESH_prototype_Kirakosyan.csprojResolveAssemblyReference.cache
-c:\users\ани\documents\visual studio 2015\Projects\GMESH_prototype_Kirakosyan\GMESH_prototype_Kirakosyan\obj\Debug\GMESH_prototype_Kirakosyan.Form1.resources
-c:\users\ани\documents\visual studio 2015\Projects\GMESH_prototype_Kirakosyan\GMESH_prototype_Kirakosyan\obj\Debug\GMESH_prototype_Kirakosyan.Properties.Resources.resources
-c:\users\ани\documents\visual studio 2015\Projects\GMESH_prototype_Kirakosyan\GMESH_prototype_Kirakosyan\obj\Debug\GMESH_prototype_Kirakosyan.csproj.GenerateResource.Cache
-c:\users\ани\documents\visual studio 2015\Projects\GMESH_prototype_Kirakosyan\GMESH_prototype_Kirakosyan\obj\Debug\GMESH_prototype_Kirakosyan.exe
-c:\users\ани\documents\visual studio 2015\Projects\GMESH_prototype_Kirakosyan\GMESH_prototype_Kirakosyan\obj\Debug\GMESH_prototype_Kirakosyan.pdb
