@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<polygon>
+  <point  type_of_line ="bezier">1</point>
+  <point  type_of_line ="line">2</point>
+  <point  type_of_line ="bezier">3</point>
+  <point  type_of_line ="line">4</point>
+</polygon>
