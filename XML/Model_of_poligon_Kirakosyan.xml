@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <polygon>
-  <point  type_of_line ="bezier">1</point>
-  <point  type_of_line ="line">2</point>
-  <point  type_of_line ="bezier">3</point>
-  <point  type_of_line ="line">4</point>
+  <point  x ="10" y="2" type_of_line ="bezier">1</point>
+  <point x ="20" y="50" type_of_line ="line">2</point>
+  <point  x ="15" y="25" type_of_line ="bezier">3</point>
+  <point  x ="12" y="60" type_of_line ="line">4</point>
 </polygon>
