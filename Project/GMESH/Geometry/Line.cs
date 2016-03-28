@@ -8,7 +8,7 @@ namespace Geometry
 {
     public class Line : ICurve
     {
-        public void getPoint(double t, out IPoint p)
+        public void getPoint(double t, out double x, out double y)
         {
             throw new NotImplementedException();
         }

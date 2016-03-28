@@ -12,7 +12,7 @@ namespace Geometry
         double Y { get; set; }
     }
 
-    public interface ISegment
+    public interface ISegment : ICurve
     {
         IPoint St { get; set; }
         IPoint Fin { get; set; }
@@ -21,6 +21,6 @@ namespace Geometry
 
     public interface ICurve
     {
-        void getPoint(double t, out IPoint p);
+        void getPoint(double t, out double x, out double y);
     }
 }

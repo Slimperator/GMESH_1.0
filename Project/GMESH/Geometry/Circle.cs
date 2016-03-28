@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Geometry
 {
-    public class Sin : ICurve
+    public class Circle : ICurve
     {
-        public void getPoint(double t, out IPoint p)
+        //Math тебе в помощь для синусов, косинусов и "ПИ"
+        public void getPoint(double t, out double x, out double y)
         {
             throw new NotImplementedException();
         }
