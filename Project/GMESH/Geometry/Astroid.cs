@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Geometry
 {
-    public class Bezier : ICurve
+    public class Astroid : ICurve
     {
         public void getPoint(double t, out double x, out double y)
         {
