@@ -8,6 +8,9 @@ namespace Geometry
 {
     public class Semicircle : ICurve
     {
-        
+        public void getPoint(double t, out double x, out double y)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

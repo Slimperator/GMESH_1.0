@@ -8,22 +8,25 @@ namespace Geometry
 {
     public class Point : IPoint
     {
+        private double x;
+        private double y;
+
         public Point(double x, double y)
         {
-            this.X = x;
-            this.Y = y;
+            this.x = x;
+            this.y = y;
         }
 
         public double X
         {
             get
             {
-                return this.X;
+                return this.x;
             }
 
             set
             {
-                this.X = value;
+                this.x = value;
             }
         }
 
@@ -31,12 +34,12 @@ namespace Geometry
         {
             get
             {
-                return this.Y;
+                return this.y;
             }
 
             set
             {
-                this.Y = value;
+                this.y = value;
             }
         }
     }

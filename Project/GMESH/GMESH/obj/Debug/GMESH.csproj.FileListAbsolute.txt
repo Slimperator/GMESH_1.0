@@ -1,1 +1,11 @@
 C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH\GMESH\bin\Debug\GMESH.exe.config
+C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH\GMESH\obj\Debug\GMESH.csprojResolveAssemblyReference.cache
+C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH\GMESH\obj\Debug\GMESH.Form1.resources
+C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH\GMESH\obj\Debug\GMESH.Properties.Resources.resources
+C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH\GMESH\obj\Debug\GMESH.csproj.GenerateResource.Cache
+C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH\GMESH\bin\Debug\GMESH.exe
+C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH\GMESH\bin\Debug\GMESH.pdb
+C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH\GMESH\bin\Debug\Geometry.dll
+C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH\GMESH\bin\Debug\Geometry.pdb
+C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH\GMESH\obj\Debug\GMESH.exe
+C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH\GMESH\obj\Debug\GMESH.pdb

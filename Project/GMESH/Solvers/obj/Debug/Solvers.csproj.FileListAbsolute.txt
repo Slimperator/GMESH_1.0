@@ -1,0 +1,6 @@
+C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH\Solvers\bin\Debug\Solvers.exe.config
+C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH\Solvers\bin\Debug\Solvers.exe
+C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH\Solvers\bin\Debug\Solvers.pdb
+C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH\Solvers\obj\Debug\Solvers.csprojResolveAssemblyReference.cache
+C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH\Solvers\obj\Debug\Solvers.exe
+C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH\Solvers\obj\Debug\Solvers.pdb
