@@ -1,0 +1,19 @@
+c:\users\user\documents\visual studio 2010\Projects\Gmesh\Gmesh\bin\Debug\Gmesh.exe
+c:\users\user\documents\visual studio 2010\Projects\Gmesh\Gmesh\bin\Debug\Gmesh.pdb
+c:\users\user\documents\visual studio 2010\Projects\Gmesh\Gmesh\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2010\Projects\Gmesh\Gmesh\obj\x86\Debug\Gmesh.Form1.resources
+c:\users\user\documents\visual studio 2010\Projects\Gmesh\Gmesh\obj\x86\Debug\Gmesh.Properties.Resources.resources
+c:\users\user\documents\visual studio 2010\Projects\Gmesh\Gmesh\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\user\documents\visual studio 2010\Projects\Gmesh\Gmesh\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\user\documents\visual studio 2010\Projects\Gmesh\Gmesh\obj\x86\Debug\Gmesh.exe
+c:\users\user\documents\visual studio 2010\Projects\Gmesh\Gmesh\obj\x86\Debug\Gmesh.pdb
+C:\Users\User\Desktop\GMESH\прототип\Gmesh1_1\Gmesh1.1\Gmesh\obj\x86\Debug\Gmesh.exe
+C:\Users\User\Desktop\GMESH\прототип\Gmesh1_1\Gmesh1.1\Gmesh\obj\x86\Debug\Gmesh.pdb
+C:\Users\User\Desktop\GMESH\прототип\Gmesh1_1\Gmesh1.1\Gmesh\bin\Debug\Gmesh.exe
+C:\Users\User\Desktop\GMESH\прототип\Gmesh1_1\Gmesh1.1\Gmesh\bin\Debug\Gmesh.pdb
+C:\Users\User\Desktop\GMESH\прототип\Gmesh1_1\Gmesh1.1\Gmesh\obj\x86\Debug\Gmesh.Form1.resources
+C:\Users\User\Desktop\GMESH\прототип\Gmesh1_1\Gmesh1.1\Gmesh\obj\x86\Debug\Gmesh.Properties.Resources.resources
+C:\Users\User\Desktop\GMESH\прототип\Gmesh1_1\Gmesh1.1\Gmesh\obj\x86\Debug\Gmesh.csproj.GenerateResource.Cache
+C:\Users\User\Desktop\GMESH\прототип\Gmesh1_1\Gmesh1.1\Gmesh\obj\x86\Debug\Gmesh.csprojResolveAssemblyReference.cache
+C:\Users\Маруся\Desktop\прототип\Gmesh1_1\Gmesh_prototype\Gmesh\obj\x86\Debug\Gmesh.exe
+C:\Users\Маруся\Desktop\прототип\Gmesh1_1\Gmesh_prototype\Gmesh\obj\x86\Debug\Gmesh.pdb
