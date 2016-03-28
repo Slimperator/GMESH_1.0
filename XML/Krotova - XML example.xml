@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<figure type="Triangle">
+<pointsnum>3 points</pointsnum>
+<Coords numb="1">
+	<params>
+		<Xcoord name="x">0</Xcoord>
+		<Ycoord name="y">0</Ycoord>
+		<pointrad name="rad">5</pointrad>
+		<typeline name="line_type">line</typeline>
+	</params>
+</Coors>
+<Coords numb="2">
+	<params>
+		<Xcoord name="x">5</Xcoord>
+		<Ycoord name="y">0</Ycoord>
+		<pointrad name="rad">5</pointrad>
+		<typeline name="line_type">line</typeline>
+	</params>
+</Coors>
+<Coords numb="3">
+	<params>
+		<Xcoord name="x">0</Xcoord>
+		<Ycoord name="y">7</Ycoord>
+		<pointrad name="rad">5</pointrad>
+		<typeline name="line_type">line</typeline>
+	</params>
+</Coors>
+<img src="figure.jpg" />
+</figure>
