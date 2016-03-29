@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Astroid.cs" />
     <Compile Include="Bezier.cs" />
+    <Compile Include="Cardioid.cs" />
     <Compile Include="Core.cs" />
     <Compile Include="Cycloid.cs" />
     <Compile Include="Line.cs" />
