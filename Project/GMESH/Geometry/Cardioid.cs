@@ -8,16 +8,18 @@ namespace Geometry
 {
     public class Cardioid : ICurve
     {
+        private IPoint center;
         private double radius;
 
-        public Cardioid(double radius)
+        public Cardioid(IPoint center, double radius)
         {
+            this.center = new Point(center.X, center.Y);
             this.radius = radius;
         }
         public void getPoint(double t, out double x, out double y)
         {
-            x = 2*this.radius*Math.Cos(t) - this.radius*Math.Cos(2*t);
-            y = 2 * this.radius * Math.Sin(t) - this.radius * Math.Sin(2 * t); ;
+            x = this.center.X + (2 * this.radius*Math.Cos(t) - this.radius*Math.Cos(2*t));
+            y = this.center.Y + (2 * this.radius * Math.Sin(t) - this.radius * Math.Sin(2 * t)); 
         }
     }
 }
