@@ -40,9 +40,26 @@ namespace GMESH
                 g.DrawLine(new Pen(Color.Orange), (int)x1, (int)y1, (int)x2, (int)y2);
             }
         }
+
+        private void DrawCardioid()
+        {
+            Graphics g = this.CreateGraphics();
+            x = 600;
+            y = 300;
+            center = new Geometry.Point(x, y);
+            curve = new Cardioid(center, radius);
+            for (t = 0; t < 7; t += h)
+            {
+                curve.getPoint(t, out x1, out y1);
+                curve.getPoint(t + h, out x2, out y2);
+                g.DrawLine(new Pen(Color.Purple), (int)x1, (int)y1, (int)x2, (int)y2);
+            }
+        }
+
         private void Painting(object sender, PaintEventArgs e)
         {
             DrawAstroid();
+            DrawCardioid();
         }
     }
 }
