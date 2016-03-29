@@ -9,22 +9,25 @@ namespace Geometry
 
     public class Segment : ISegment
     {
+        IPoint st;
+        IPoint fin;
+
         public Segment(IPoint st, IPoint fin)
         {
-            this.St = st;
-            this.Fin = fin;
+            this.st = new Point(st.X, st.Y);
+            this.fin = new Point(fin.X, fin.Y);
         }
 
         public IPoint Fin
         {
             get
             {
-                return this.Fin;
+                return this.fin;
             }
 
             set
             {
-                this.Fin = value;
+                this.fin = value;
             }
         }
 
@@ -32,19 +35,19 @@ namespace Geometry
         {
             get
             {
-                return this.St;
+                return this.st;
             }
 
             set
             {
-                this.St = value;
+                this.st = value;
             }
         }
 
         public void getPoint(double t, out double x, out double y)
         {
-            x = (1 - t) * this.St.X + t * this.Fin.X;
-            y = (1 - t) * this.St.Y + t * this.Fin.Y;
+            x = (1 - t) * this.st.X + t * this.fin.X;
+            y = (1 - t) * this.st.Y + t * this.fin.Y;
         }
     }
 }
