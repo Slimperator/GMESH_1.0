@@ -18,8 +18,8 @@ namespace Geometry
         }
         public void getPoint(double t, out double x, out double y)
         {
-            x = this.center.X + (2 * this.radius*Math.Cos(t) - this.radius*Math.Cos(2*t));
-            y = this.center.Y + (2 * this.radius * Math.Sin(t) - this.radius * Math.Sin(2 * t)); 
+            x = this.center.X + (2 * this.radius*Math.Cos(2 * Math.PI*t) - this.radius*Math.Cos(2 * 2 * Math.PI * t));
+            y = this.center.Y + (2 * this.radius * Math.Sin(2 * Math.PI*t) - this.radius * Math.Sin(2 * 2 * Math.PI * t)); 
         }
     }
 }
