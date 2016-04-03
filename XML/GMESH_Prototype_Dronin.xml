@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<gmesh>
+
+<points>
+
+<point Curve_Atributes = "..." TypeCurve = "Curve_Name" y="20" x="20" id="1"  />
+
+<point Curve_Atributes = "..." TypeCurve = "Curve_Name" y="100" x="100" id="2"/>
+
+</points>
+
+
+</gmesh>
+
