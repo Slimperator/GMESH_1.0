@@ -26,6 +26,12 @@ namespace GMESH
         IPoint center;
         ICurve curve;
         IPoint P0, P1, P2, P3; // для Безье
+        IPoint L1, L2;
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
 
         private void DrawAstroid()
         {
@@ -75,11 +81,29 @@ namespace GMESH
             }
         }
 
+        private void DrawLine()
+        {
+            Graphics g = this.CreateGraphics();
+            L1 = new Geometry.Point(50, 50);
+            L2 = new Geometry.Point(400, 200);
+            curve = new Line(L1, L2);
+
+            for (t = 0; t < 1; t += h)
+            {
+                curve.getPoint(t, out x1, out y1);
+                curve.getPoint(t + h, out x2, out y2);
+                g.DrawLine(new Pen(Color.LightBlue,2), (int)x1, (int)y1, (int)x2, (int)y2);
+
+            }
+            
+        }
+
         private void Painting(object sender, PaintEventArgs e)
         {
             DrawAstroid();
             DrawCardioid();
             DrawBezier();
+            DrawLine();
         }
     }
 }
