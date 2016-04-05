@@ -8,10 +8,21 @@ namespace Geometry
 {
     public class Circle : ICurve
     {
-        //Math тебе в помощь для синусов, косинусов и "ПИ"
-        public void getPoint(double t, out double x, out double y)
+        private IPoint center;
+        private double radius;
+
+
+        public Circle(IPoint center,double radius)
         {
-            throw new NotImplementedException();
+            this.center = new Point(center.X,center.Y);
+            this.radius = radius;
+
+        }
+        public void getPoint(double t, out double x, out double y)
+        {           
+            t *= 2 * Math.PI;         
+            x = this.center.X + this.radius * Math.Cos(t);
+            y = this.center.Y + this.radius * Math.Sin(t);
         }
     }
 }

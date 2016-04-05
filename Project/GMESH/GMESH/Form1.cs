@@ -98,12 +98,30 @@ namespace GMESH
             
         }
 
+        private void DrawCircle()
+        {
+            Graphics g = this.CreateGraphics();
+            x = 150;
+            y = 150; 
+            center = new   Geometry.Point(x, y);
+            curve = new Circle(center,radius);
+            for (t = 0; t < 1; t += h)
+            {
+                curve.getPoint(t, out x1, out y1);
+                curve.getPoint(t + h, out x2, out y2);
+                g.DrawLine(new Pen(Color.Blue), (int)x1, (int)y1, (int)x2, (int)y2);
+
+            }
+
+        }
+
         private void Painting(object sender, PaintEventArgs e)
         {
             DrawAstroid();
             DrawCardioid();
             DrawBezier();
             DrawLine();
+            DrawCircle();
         }
     }
 }
