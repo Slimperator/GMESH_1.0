@@ -94,8 +94,22 @@ namespace GMESH
                 curve.getPoint(t + h, out x2, out y2);
                 g.DrawLine(new Pen(Color.LightBlue,2), (int)x1, (int)y1, (int)x2, (int)y2);
 
+            }            
+        }
+
+
+        private void DrawCycloid()
+        {
+            Graphics g = this.CreateGraphics();
+            L1 = new Geometry.Point(50, 50);
+            L2 = new Geometry.Point(100, 50);
+            curve = new Cycloid(L1, L2, true);
+            for (t = 0; t < 1; t += h)
+            {
+                curve.getPoint(t, out x1, out y1);
+                curve.getPoint(t + h, out x2, out y2);
+                g.DrawLine(new Pen(Color.Red, 1), (int)x1, (int)y1, (int)x2, (int)y2);
             }
-            
         }
 
         private void DrawCircle()
@@ -110,9 +124,7 @@ namespace GMESH
                 curve.getPoint(t, out x1, out y1);
                 curve.getPoint(t + h, out x2, out y2);
                 g.DrawLine(new Pen(Color.Blue), (int)x1, (int)y1, (int)x2, (int)y2);
-
             }
-
         }
 
         private void Painting(object sender, PaintEventArgs e)
@@ -122,6 +134,7 @@ namespace GMESH
             DrawBezier();
             DrawLine();
             DrawCircle();
+            DrawCycloid();
         }
     }
 }
