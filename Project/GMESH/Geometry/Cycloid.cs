@@ -8,9 +8,114 @@ namespace Geometry
 {
     public class Cycloid : ICurve
     {
+        private double Radius;                              //Радиус окружности, катящейся по прямой
+        private double Agle;                                //Угол параметра t в радианах
+        private IPoint Begin;                               //Точка начала
+        private IPoint End;                                 //Точка конца
+        private bool Convex;                                //Впуклость-выпуклость циклоиды
+        private IPoint VectorOXWorld = new Point(1, 0);     //Базис векторы
+        private IPoint VectorOYWorld = new Point(0, 1);     //относительно начала координат
+        private IPoint VectorOXFigure;                      //Базис векторы 
+        private IPoint VectorOYFigure;                      //которые повернули на AglRotate 
+        private IPoint VectorBE;                            //Вектор с началом в точке Begin и концом в точке End
+        private double AglRotate;                           //Угол поворота между Базисом Мировых координат и Базисом координат вектора          
+        /// <summary>
+        /// Создает Циклоиду между двумя точками 
+        /// с заданной выпуклостью (true - выпуклая, false - впуклая)
+        /// </summary>
+        public Cycloid (IPoint Begin, IPoint End, bool Convex)
+        {
+            this.Begin = Begin;
+            this.End = End;
+            this.Radius = calculationRadius(Begin, End);
+            this.Convex = Convex;
+            this.VectorBE = vectorCalculate();
+            this.AglRotate = aglRotate();
+            matrixOfRotate();
+        }
+        /// <summary>
+        /// Возвращает координату точки на поверхности циклоиды 
+        /// в момент периода t
+        /// </summary>
         public void getPoint(double t, out double x, out double y)
         {
-            throw new NotImplementedException();
+            this.Agle = paramToRadian(t);
+            x = (getX(this.Agle) + Begin.X) * VectorOXFigure.X + (getY(this.Agle) + Begin.Y) * VectorOYFigure.X;    //Получаем координаты точки
+            y = (getX(this.Agle) + Begin.X) * VectorOXFigure.Y + (getY(this.Agle) + Begin.Y) * VectorOYFigure.Y;    //И переносим её в мировые координаты
+        }
+
+        /// <summary>
+        /// Возвращает Х координату,
+        /// t должен быть в радианах
+        /// </summary>
+        private double getX (double t)
+        {
+            return this.Radius * (t - Math.Sin(t));
+        }
+        /// <summary>
+        /// Возвращает Y координату,
+        /// t должен быть в радианах
+        /// </summary>
+        private double getY (double t)
+        {
+            if (Convex)
+                    return this.Radius * (1 - Math.Cos(t));
+            else
+                    return this.Radius * (1 - Math.Cos(t)) * -1;          
+        }
+        /// <summary>
+        /// Возвращает радиус катящейся окружности
+        /// </summary>
+        private double calculationRadius (IPoint Begin, IPoint End)
+        {
+            return Math.Sqrt(Math.Pow(this.End.X - this.Begin.X, 2) + Math.Pow(this.End.Y - this.Begin.Y, 2))/(2*Math.PI);
+        }
+
+        /// <summary>
+        /// Возвращает значение указанного угла t в радианах
+        /// </summary>
+        private double degreeToRadian (double t)
+        {
+            return Math.PI * t / 180;
+        }
+        /// <summary>
+        /// Возвращает значение угла в радианах, 
+        /// при заданном параметре t
+        /// от 0 до 1
+        /// (от 0 до 2*Pi)
+        /// </summary>
+        private double paramToRadian (double t)
+        {
+            return /*((Math.PI) / 180) */ (Math.PI * 2 * t); 
+        }
+        /// <summary>
+        /// Возвращает значение угла между вектором OX и вектором рассматриваемого отрезка в радианах
+        /// </summary>
+        private double aglRotate()
+        {
+            return Math.Acos((VectorOXWorld.X * VectorBE.X + VectorOXWorld.Y * VectorBE.Y) /
+                (Math.Sqrt(Math.Pow(VectorBE.X, 2) + Math.Pow(VectorBE.Y, 2)) * Math.Sqrt(Math.Pow(VectorOXWorld.X, 2) + Math.Pow(VectorOXWorld.Y, 2))));
+        }
+        /// <summary>
+        /// Возвращает координаты вектора OX рассматриваемого отрезка
+        /// </summary>
+        private IPoint vectorCalculate()
+        {
+            return new Point(End.X - Begin.X, End.Y - Begin.Y);
+        }
+
+        /// <summary>
+        /// Поворачивает базисные вектора так, чтобы OX базиса совпадала с BE 
+        /// </summary>
+        private void matrixOfRotate()
+        {
+            VectorOXFigure = new Point(
+            VectorOXWorld.X * Math.Cos(AglRotate) - VectorOXWorld.Y * Math.Sin(AglRotate),
+            VectorOXWorld.X * Math.Sin(AglRotate) + VectorOXWorld.Y * Math.Cos(AglRotate));
+
+            VectorOYFigure = new Point(
+            VectorOYWorld.X * Math.Cos(AglRotate) - VectorOYWorld.Y * Math.Sin(AglRotate),
+            VectorOYWorld.X * Math.Sin(AglRotate) + VectorOYWorld.Y * Math.Cos(AglRotate));
         }
     }
 }
