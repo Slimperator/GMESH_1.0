@@ -163,7 +163,6 @@ namespace GMESH
             isBuildClicked = true;
             pp.Clear();
             Refresh();
-            
         }
 
         
@@ -188,6 +187,14 @@ namespace GMESH
 
             }
         }
+
+        private void Form1_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+       
+        
 
         //private void Painting(object sender, PaintEventArgs e)
         //{
