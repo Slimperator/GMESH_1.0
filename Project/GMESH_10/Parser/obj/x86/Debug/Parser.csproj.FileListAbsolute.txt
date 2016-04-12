@@ -1,0 +1,9 @@
+C:\Users\User\Desktop\GMESH\GMESH\Parser\bin\Debug\Parser.exe
+C:\Users\User\Desktop\GMESH\GMESH\Parser\bin\Debug\Parser.pdb
+C:\Users\User\Desktop\GMESH\GMESH\Parser\obj\x86\Debug\Parser.exe
+C:\Users\User\Desktop\GMESH\GMESH\Parser\obj\x86\Debug\Parser.pdb
+C:\Users\Vladimir\Desktop\GMESH.Parser\Parser\obj\x86\Debug\Parser.exe
+C:\Users\Vladimir\Desktop\GMESH.Parser\Parser\obj\x86\Debug\Parser.pdb
+C:\Users\Vladimir\Desktop\GMESH.Parser\Parser\bin\Debug\Parser.exe
+C:\Users\Vladimir\Desktop\GMESH.Parser\Parser\bin\Debug\Parser.pdb
+C:\Users\Vladimir\Desktop\GMESH.Parser\Parser\obj\x86\Debug\Parser.csprojResolveAssemblyReference.cache

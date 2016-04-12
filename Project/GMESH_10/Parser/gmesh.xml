@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<gmesh>
+  <poligons>
+    <poligon>
+      <curves>
+        <curve id="0" type="line" next_curve_id="1" prev_curve_id="-1">
+          <points>
+            <point type="st" x="10" y="10"/>
+            <point type="fin" x="20" y="20" />
+          </points>
+        </curve>
+        <curve id="1" type="bezier" next_curve_id="-1" prev_curve_id="0">
+          <points>
+            <point type="st" x="10" y="10"/>
+            <point type="spec" x="20" y="20"/>
+            <point type="spec" x="30" y="30"/>
+            <point type="fin" x="40" y="40"/>
+          </points>
+        </curve>
+      </curves>
+    </poligon>
+  </poligons>
+</gmesh>
