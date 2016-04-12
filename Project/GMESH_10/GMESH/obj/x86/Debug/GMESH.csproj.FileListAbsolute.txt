@@ -30,3 +30,5 @@ C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\Geometry.dll
 C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\Parser.dll
 C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\Geometry.pdb
 C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\Parser.pdb
+C:\Users\Ани\Desktop\Новая папка (2)\GMESH_1.0\Project\GMESH_10\GMESH\obj\x86\Debug\GMESH.exe
+C:\Users\Ани\Desktop\Новая папка (2)\GMESH_1.0\Project\GMESH_10\GMESH\obj\x86\Debug\GMESH.pdb
