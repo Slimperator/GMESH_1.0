@@ -9,8 +9,8 @@ namespace Geometry
 
     public class Segment : ISegment
     {
-        IPoint st;
-        IPoint fin;
+        private IPoint st;
+        private IPoint fin;
 
         public Segment(IPoint st, IPoint fin)
         {
