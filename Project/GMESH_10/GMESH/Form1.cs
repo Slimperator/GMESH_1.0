@@ -1,5 +1,4 @@
 ﻿using Geometry;
-using Parser;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,17 +9,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace GMESH
 {
     public partial class Form1 : Form
     {
+        private bool isClicked = false;
+        private bool isBuildClicked = false;
+        private int currentClickedPoint = -1;
         List<ICurve> curves = new List<ICurve>();
-        private Parser.Parser Parser = new Parser.Parser();
 
         public Form1()
         {
             InitializeComponent();
+            FigureInit();
+            MouseDown += Form1_MouseDown;
+            MouseDoubleClick += Form1_MouseDoubleClick;
+
+        }
+
+        void FigureInit()
+        {
             curves.Add(new Bezier(new Geometry.Point(100, 100), new Geometry.Point(150, 50), new Geometry.Point(200, 50), new Geometry.Point(250, 100)));
             curves.Add(new Bezier(new Geometry.Point(250, 100), new Geometry.Point(260, 150), new Geometry.Point(260, 150), new Geometry.Point(250, 180)));
             curves.Add(new Line(new Geometry.Point(250, 180), new Geometry.Point(150, 200)));
@@ -39,7 +47,128 @@ namespace GMESH
             }
         }
 
-        void draw(Graphics g)
+        List<Geometry.Point> pp = new List<Geometry.Point>();
+
+        void Draw(Graphics g)
+        {
+            for (int i = 0; i < pp.Count; i++)
+            {
+                if (i == currentClickedPoint)
+                {
+                    pp[i].Fill(g);
+                }
+                else
+                {
+                    pp[i].Draw(g);
+                }
+
+                g.DrawString((i + 1).ToString(), new Font("Arial", 10), new SolidBrush(Color.Black), Convert.ToInt32((pp[i].X - pp[i].R)), Convert.ToInt32((pp[i].Y - pp[i].R)));
+            }
+            if (pp.Count >= 3)
+            {
+                for (int i = 1; i <= pp.Count; i++)
+                {
+                    g.DrawLine(new Pen(Color.Black), Convert.ToInt32(pp[i % pp.Count].X), Convert.ToInt32(pp[i % pp.Count].Y), Convert.ToInt32(pp[(i - 1) % pp.Count].X), Convert.ToInt32(pp[(i - 1) % pp.Count].Y));
+                }
+            }
+
+        }
+
+        int IsContain(MouseEventArgs e)
+        {
+            for (int i = 0; i < pp.Count; i++)
+            {
+                if (pp[i].IsContain(e.X, e.Y) == true)
+                {
+                    return i;
+                }
+            }
+            return -1;
+
+        }
+        private void createPoint(object sender, MouseEventArgs e)
+        {
+            if (IsContain(e) == -1)
+            {
+                Geometry.Point p = new Geometry.Point(e.X, e.Y);
+
+                pp.Add(p);
+                Refresh();
+            }
+        }
+
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = this.CreateGraphics();
+
+            if (isBuildClicked)
+            {
+                drawSpecialFigure(g);
+            }
+            else
+            {
+                Draw(g);
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            isClicked = true;
+            currentClickedPoint = IsContain(e);
+            Refresh();
+        }
+
+        private void Form1_MouseUp(object sender, MouseEventArgs e)
+        {
+            isClicked = false;
+        }
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (isClicked)
+            {
+                int pointNum = IsContain(e);
+
+                if (pointNum == -1) return;
+                else
+                {
+                    pp[pointNum].X = e.X;
+                    pp[pointNum].Y = e.Y;
+                }
+                Refresh();
+            }
+        }
+
+        private void Form1_MouseDoubleClick(object sender, MouseEventArgs e)//Удалить точку
+        {
+
+            int pointNum = IsContain(e);
+
+            if (pointNum == -1) return;
+            else
+            {
+                pp.RemoveAt(pointNum);
+            }
+            Refresh();
+
+        }
+
+        private void Build_Click(object sender, EventArgs e)
+        {
+            isBuildClicked = true;
+            pp.Clear();
+            Refresh();
+            
+        }
+
+        
+    //=======================================================================
+        void drawSpecialFigure(Graphics g)
         {
             foreach (var c in curves)
             {
@@ -60,15 +189,11 @@ namespace GMESH
             }
         }
 
-        private void Painting(object sender, PaintEventArgs e)
-        {
-            draw(e.Graphics);
-        }
+        //private void Painting(object sender, PaintEventArgs e)
+        //{
+        //    draw(e.Graphics);
+        //}
 
-        private void testingParser()
-        {
-
-        }
     }
 }
 
