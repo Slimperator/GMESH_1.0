@@ -47,7 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bufer.cs" />
+    <Compile Include="ICurveFactory.cs" />
     <Compile Include="Parser.cs" />
+    <Compile Include="Processing.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
