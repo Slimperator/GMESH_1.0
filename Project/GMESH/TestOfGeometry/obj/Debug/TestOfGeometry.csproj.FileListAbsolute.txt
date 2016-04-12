@@ -1,9 +1,0 @@
-C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH\TestOfGeometry\bin\Debug\TestOfGeometry.dll
-C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH\TestOfGeometry\bin\Debug\TestOfGeometry.pdb
-C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH\TestOfGeometry\bin\Debug\Geometry.dll
-C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH\TestOfGeometry\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
-C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH\TestOfGeometry\bin\Debug\Geometry.pdb
-C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH\TestOfGeometry\bin\Debug\ru\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
-C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH\TestOfGeometry\obj\Debug\TestOfGeometry.csprojResolveAssemblyReference.cache
-C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH\TestOfGeometry\obj\Debug\TestOfGeometry.dll
-C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH\TestOfGeometry\obj\Debug\TestOfGeometry.pdb
