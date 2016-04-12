@@ -13,27 +13,59 @@ namespace GMESH
 {
     public partial class Form1 : Form
     {
+        List<ICurve> curves = new List<ICurve>();
+
         public Form1()
         {
             InitializeComponent();
+            curves.Add(new Bezier(new Geometry.Point(100, 100), new Geometry.Point(150, 50), new Geometry.Point(200, 50), new Geometry.Point(250, 100)));
+            curves.Add(new Bezier(new Geometry.Point(250, 100), new Geometry.Point(260, 150), new Geometry.Point(260, 150), new Geometry.Point(250, 180)));
+            curves.Add(new Line(new Geometry.Point(250, 180), new Geometry.Point(150, 200)));
+            curves.Add(new Bezier(new Geometry.Point(150, 200), new Geometry.Point(170, 150), new Geometry.Point(170, 150), new Geometry.Point(100, 100)));
+
+            for (double alpha = 0.1; alpha < 1; alpha += 0.1)
+            {
+                Geometry.Point a, b;
+                double x, y;
+                curves[1].getPoint(1-alpha, out x, out y);
+                a = new Geometry.Point(x, y);
+                curves[3].getPoint(alpha, out x, out y);
+                b = new Geometry.Point(x, y);
+                curves.Add(new Relocate(new Morph(curves[0], curves[2], alpha), a, b));
+
+            }
         }
 
-        double x, y;
-        double x1, y1, x2, y2;
-        double radius = 100;
-        double t = 0;
-        double h = 0.01;
-        IPoint center;
-        ICurve curve;
-        IPoint P0, P1, P2, P3; // для Безье
-        IPoint L1, L2;
-
-        private void Form1_Load(object sender, EventArgs e)
+        void draw(Graphics g)
         {
-
+            foreach (var c in curves)
+            {
+                drawCurve(c, g);
+            }
         }
 
-        private void DrawAstroid()
+        void drawCurve(ICurve curve, Graphics g)
+        {
+            double h = 0.01;
+            double x1, x2, y1, y2;
+            for (double t = 0; t < 1; t += h)
+            {
+                curve.getPoint(t, out x1, out y1);
+                curve.getPoint(t + h, out x2, out y2);
+                g.DrawLine(new Pen(Color.Green), (int)x1, (int)y1, (int)x2, (int)y2);
+
+            }
+        }
+
+        private void Painting(object sender, PaintEventArgs e)
+        {
+            draw(e.Graphics);
+        }
+    }
+}
+
+/*
+ private void DrawAstroid()
         {
             Graphics g = this.CreateGraphics();
             x = 200;
@@ -136,5 +168,4 @@ namespace GMESH
             DrawCircle();
             DrawCycloid();
         }
-    }
-}
+ */
