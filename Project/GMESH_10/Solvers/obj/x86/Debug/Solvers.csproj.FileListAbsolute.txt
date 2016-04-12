@@ -12,3 +12,10 @@ C:\Users\Ани\Desktop\GMESH\Solvers\bin\Debug\Geometry.pdb
 C:\Users\Ани\Desktop\GMESH\Solvers\obj\x86\Debug\Solvers.csprojResolveAssemblyReference.cache
 C:\Users\Ани\Desktop\GMESH\Solvers\obj\x86\Debug\Solvers.exe
 C:\Users\Ани\Desktop\GMESH\Solvers\obj\x86\Debug\Solvers.pdb
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\Solvers\bin\Debug\Solvers.exe
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\Solvers\bin\Debug\Solvers.pdb
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\Solvers\bin\Debug\Geometry.dll
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\Solvers\bin\Debug\Geometry.pdb
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\Solvers\obj\x86\Debug\Solvers.csprojResolveAssemblyReference.cache
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\Solvers\obj\x86\Debug\Solvers.exe
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\Solvers\obj\x86\Debug\Solvers.pdb

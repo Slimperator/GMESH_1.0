@@ -7,3 +7,10 @@ C:\Users\Vladimir\Desktop\GMESH.Parser\Parser\obj\x86\Debug\Parser.pdb
 C:\Users\Vladimir\Desktop\GMESH.Parser\Parser\bin\Debug\Parser.exe
 C:\Users\Vladimir\Desktop\GMESH.Parser\Parser\bin\Debug\Parser.pdb
 C:\Users\Vladimir\Desktop\GMESH.Parser\Parser\obj\x86\Debug\Parser.csprojResolveAssemblyReference.cache
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\Parser\obj\x86\Debug\Parser.csprojResolveAssemblyReference.cache
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\Parser\bin\Debug\Parser.dll
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\Parser\bin\Debug\Parser.pdb
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\Parser\bin\Debug\Geometry.dll
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\Parser\bin\Debug\Geometry.pdb
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\Parser\obj\x86\Debug\Parser.dll
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\Parser\obj\x86\Debug\Parser.pdb

@@ -14,3 +14,12 @@ C:\Users\Ани\Desktop\GMESH\TestOfGeometry\obj\Debug\TestOfGeometry.dll
 C:\Users\Ани\Desktop\GMESH\TestOfGeometry\obj\Debug\TestOfGeometry.pdb
 C:\Users\Ани\Desktop\GMESH\TestOfGeometry\bin\Debug\Geometry_Accessor.dll
 C:\Users\Ани\Desktop\GMESH\TestOfGeometry\bin\Debug\Geometry_Accessor.pdb
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\TestOfGeometry\bin\Debug\TestOfGeometry.dll
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\TestOfGeometry\bin\Debug\TestOfGeometry.pdb
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\TestOfGeometry\bin\Debug\Geometry.dll
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\TestOfGeometry\bin\Debug\Geometry.pdb
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\TestOfGeometry\bin\Debug\Geometry_Accessor.dll
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\TestOfGeometry\bin\Debug\Geometry_Accessor.pdb
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\TestOfGeometry\obj\Debug\TestOfGeometry.csprojResolveAssemblyReference.cache
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\TestOfGeometry\obj\Debug\TestOfGeometry.dll
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\TestOfGeometry\obj\Debug\TestOfGeometry.pdb

@@ -18,3 +18,15 @@ C:\Users\Ани\Desktop\GMESH\GMESH\obj\x86\Debug\GMESH.csprojResolveAssemblyRef
 C:\Users\Ани\Desktop\GMESH\GMESH\obj\x86\Debug\GMESH.Form1.resources
 C:\Users\Ани\Desktop\GMESH\GMESH\obj\x86\Debug\GMESH.Properties.Resources.resources
 C:\Users\Ани\Desktop\GMESH\GMESH\obj\x86\Debug\GMESH.csproj.GenerateResource.Cache
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\GMESH\obj\x86\Debug\GMESH.exe
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\GMESH\obj\x86\Debug\GMESH.pdb
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\GMESH\obj\x86\Debug\GMESH.csprojResolveAssemblyReference.cache
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\GMESH\obj\x86\Debug\GMESH.Form1.resources
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\GMESH\obj\x86\Debug\GMESH.Properties.Resources.resources
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\GMESH\obj\x86\Debug\GMESH.csproj.GenerateResource.Cache
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\GMESH.exe
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\GMESH.pdb
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\Geometry.dll
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\Parser.dll
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\Geometry.pdb
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\Parser.pdb
