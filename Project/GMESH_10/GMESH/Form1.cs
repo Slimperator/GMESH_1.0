@@ -1,4 +1,5 @@
 ﻿using Geometry;
+using Parser;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,11 +10,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace GMESH
 {
     public partial class Form1 : Form
     {
         List<ICurve> curves = new List<ICurve>();
+        private Parser.Parser Parser = new Parser.Parser();
 
         public Form1()
         {
@@ -60,6 +63,11 @@ namespace GMESH
         private void Painting(object sender, PaintEventArgs e)
         {
             draw(e.Graphics);
+        }
+
+        private void testingParser()
+        {
+
         }
     }
 }
