@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="2c7a074c-d92d-412e-9be4-1845c7cf7291" name="Ани@АНИ-ПК 2016-04-12 14:07:14" runUser="Ани-ПК\Ани" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Локальные" id="d1bd6848-d196-41b9-bf40-81a18eedd149">
+    <Description>Это - параметры по умолчанию для локального тестового запуска.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Ани_АНИ-ПК 2016-04-12 14_07_14">
+      <DeploymentItem filename="C:\Users\Ани\Desktop\GMESH\Geometry\bin\Debug\Geometry.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2016-04-12T14:07:14.9988608+03:00" queuing="2016-04-12T14:07:15.0708649+03:00" start="2016-04-12T14:07:15.0868658+03:00" finish="2016-04-12T14:07:15.6258967+03:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="getPointTest" storage="c:\users\ани\desktop\gmesh\testofgeometry\bin\debug\testofgeometry.dll" id="5078dd7f-e873-c55b-a73a-4cfdfe67ac57">
+      <Execution id="d3ff9eeb-76c5-4ccd-a29c-d6f1c74c7c98" />
+      <TestMethod codeBase="C:/Users/Ани/Desktop/GMESH/TestOfGeometry/bin/Debug/TestOfGeometry.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestOfGeometry.AstroidTest, TestOfGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="getPointTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Отсутствующие в списке результаты" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Все загруженные результаты" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="5078dd7f-e873-c55b-a73a-4cfdfe67ac57" executionId="d3ff9eeb-76c5-4ccd-a29c-d6f1c74c7c98" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="d3ff9eeb-76c5-4ccd-a29c-d6f1c74c7c98" testId="5078dd7f-e873-c55b-a73a-4cfdfe67ac57" testName="getPointTest" computerName="АНИ-ПК" duration="00:00:00.0376597" startTime="2016-04-12T14:07:15.1038668+03:00" endTime="2016-04-12T14:07:15.5968950+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d3ff9eeb-76c5-4ccd-a29c-d6f1c74c7c98">
+    </UnitTestResult>
+  </Results>
+</TestRun>

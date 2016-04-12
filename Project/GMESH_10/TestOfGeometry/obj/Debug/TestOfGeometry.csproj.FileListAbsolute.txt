@@ -1,0 +1,16 @@
+c:\users\ани\documents\visual studio 2010\Projects\GMESH\TestOfGeometry\bin\Debug\TestOfGeometry.dll
+c:\users\ани\documents\visual studio 2010\Projects\GMESH\TestOfGeometry\bin\Debug\TestOfGeometry.pdb
+c:\users\ани\documents\visual studio 2010\Projects\GMESH\TestOfGeometry\obj\Debug\TestOfGeometry.csprojResolveAssemblyReference.cache
+c:\users\ани\documents\visual studio 2010\Projects\GMESH\TestOfGeometry\obj\Debug\TestOfGeometry.dll
+c:\users\ани\documents\visual studio 2010\Projects\GMESH\TestOfGeometry\obj\Debug\TestOfGeometry.pdb
+c:\users\ани\documents\visual studio 2010\Projects\GMESH\TestOfGeometry\bin\Debug\Geometry.dll
+c:\users\ани\documents\visual studio 2010\Projects\GMESH\TestOfGeometry\bin\Debug\Geometry.pdb
+C:\Users\Ани\Desktop\GMESH\TestOfGeometry\bin\Debug\TestOfGeometry.dll
+C:\Users\Ани\Desktop\GMESH\TestOfGeometry\bin\Debug\TestOfGeometry.pdb
+C:\Users\Ани\Desktop\GMESH\TestOfGeometry\bin\Debug\Geometry.dll
+C:\Users\Ани\Desktop\GMESH\TestOfGeometry\bin\Debug\Geometry.pdb
+C:\Users\Ани\Desktop\GMESH\TestOfGeometry\obj\Debug\TestOfGeometry.csprojResolveAssemblyReference.cache
+C:\Users\Ани\Desktop\GMESH\TestOfGeometry\obj\Debug\TestOfGeometry.dll
+C:\Users\Ани\Desktop\GMESH\TestOfGeometry\obj\Debug\TestOfGeometry.pdb
+C:\Users\Ани\Desktop\GMESH\TestOfGeometry\bin\Debug\Geometry_Accessor.dll
+C:\Users\Ани\Desktop\GMESH\TestOfGeometry\bin\Debug\Geometry_Accessor.pdb

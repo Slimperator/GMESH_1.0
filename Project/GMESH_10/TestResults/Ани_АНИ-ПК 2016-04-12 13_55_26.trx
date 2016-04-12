@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="4cce1d61-e209-4ae8-89b5-e7064b092b25" name="Ани@АНИ-ПК 2016-04-12 13:55:26" runUser="Ани-ПК\Ани" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Локальные" id="d1bd6848-d196-41b9-bf40-81a18eedd149">
+    <Description>Это - параметры по умолчанию для локального тестового запуска.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Ани_АНИ-ПК 2016-04-12 13_55_26">
+      <DeploymentItem filename="c:\users\ани\documents\visual studio 2010\Projects\GMESH\Geometry\bin\Debug\Geometry.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2016-04-12T13:55:26.5864037+03:00" queuing="2016-04-12T13:55:26.7064039+03:00" start="2016-04-12T13:55:26.7664040+03:00" finish="2016-04-12T13:55:27.6264052+03:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="12" executed="12" passed="7" error="0" failed="5" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="FinTest" storage="c:\users\ани\documents\visual studio 2010\projects\gmesh\testofgeometry\bin\debug\testofgeometry.dll" id="c32009c0-c625-3b69-6448-32a56c055af3">
+      <Execution id="ea7e62df-d864-430b-a193-7d027a551316" />
+      <TestMethod codeBase="c:/users/ани/documents/visual studio 2010/Projects/GMESH/TestOfGeometry/bin/Debug/TestOfGeometry.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestOfGeometry.SegmentTest, TestOfGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="FinTest" />
+    </UnitTest>
+    <UnitTest name="XTest" storage="c:\users\ани\documents\visual studio 2010\projects\gmesh\testofgeometry\bin\debug\testofgeometry.dll" id="a1659872-cbd7-cd83-5661-340ffd974e46">
+      <Execution id="8d717996-b620-4287-8548-687d742ac9d9" />
+      <TestMethod codeBase="c:/users/ани/documents/visual studio 2010/Projects/GMESH/TestOfGeometry/bin/Debug/TestOfGeometry.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestOfGeometry.PointTest, TestOfGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="XTest" />
+    </UnitTest>
+    <UnitTest name="TestMethod1" storage="c:\users\ани\documents\visual studio 2010\projects\gmesh\testofgeometry\bin\debug\testofgeometry.dll" id="fceb88fd-5b4e-5989-ef88-02850e25376d">
+      <Execution id="ee1de472-2860-421f-9b82-7f9a5c083220" />
+      <TestMethod codeBase="c:/users/ани/documents/visual studio 2010/Projects/GMESH/TestOfGeometry/bin/Debug/TestOfGeometry.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestOfGeometry.UnitTest1, TestOfGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMethod1" />
+    </UnitTest>
+    <UnitTest name="getPointTest" storage="c:\users\ани\documents\visual studio 2010\projects\gmesh\testofgeometry\bin\debug\testofgeometry.dll" id="fc1dfce3-7bfd-f639-2130-4a7d21485602">
+      <Execution id="9022fc5d-504d-4f83-bc38-fc405712d56e" />
+      <TestMethod codeBase="c:/users/ани/documents/visual studio 2010/Projects/GMESH/TestOfGeometry/bin/Debug/TestOfGeometry.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestOfGeometry.CardioidTest, TestOfGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="getPointTest" />
+    </UnitTest>
+    <UnitTest name="StTest" storage="c:\users\ани\documents\visual studio 2010\projects\gmesh\testofgeometry\bin\debug\testofgeometry.dll" id="db78a6c8-4a5e-8fb6-dfae-8fa7a5f766d2">
+      <Execution id="5416c0f4-8c10-4b3e-b6d3-235852d48298" />
+      <TestMethod codeBase="c:/users/ани/documents/visual studio 2010/Projects/GMESH/TestOfGeometry/bin/Debug/TestOfGeometry.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestOfGeometry.SegmentTest, TestOfGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="StTest" />
+    </UnitTest>
+    <UnitTest name="PointConstructorTest" storage="c:\users\ани\documents\visual studio 2010\projects\gmesh\testofgeometry\bin\debug\testofgeometry.dll" id="fd26dd54-e81f-34da-adad-2b8d4582f5ed">
+      <Execution id="cb3d71b4-05e4-41ca-8ccf-10192c6cc1b3" />
+      <TestMethod codeBase="c:/users/ани/documents/visual studio 2010/Projects/GMESH/TestOfGeometry/bin/Debug/TestOfGeometry.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestOfGeometry.PointTest, TestOfGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="PointConstructorTest" />
+    </UnitTest>
+    <UnitTest name="LineConstructorTest" storage="c:\users\ани\documents\visual studio 2010\projects\gmesh\testofgeometry\bin\debug\testofgeometry.dll" id="4a5c8836-c779-c58e-ab98-5d033bc99b65">
+      <Execution id="153ebe38-23a6-4840-80e0-c0d93e4e3ccf" />
+      <TestMethod codeBase="c:/users/ани/documents/visual studio 2010/Projects/GMESH/TestOfGeometry/bin/Debug/TestOfGeometry.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestOfGeometry.LineTest, TestOfGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LineConstructorTest" />
+    </UnitTest>
+    <UnitTest name="CardioidConstructorTest" storage="c:\users\ани\documents\visual studio 2010\projects\gmesh\testofgeometry\bin\debug\testofgeometry.dll" id="f0365fef-44d3-1475-85b0-c9f7df84f4f2">
+      <Execution id="f7d3855c-014a-42f3-a748-734c5b02a76a" />
+      <TestMethod codeBase="c:/users/ани/documents/visual studio 2010/Projects/GMESH/TestOfGeometry/bin/Debug/TestOfGeometry.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestOfGeometry.CardioidTest, TestOfGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CardioidConstructorTest" />
+    </UnitTest>
+    <UnitTest name="SegmentConstructorTest" storage="c:\users\ани\documents\visual studio 2010\projects\gmesh\testofgeometry\bin\debug\testofgeometry.dll" id="67055ce4-0089-ffb8-0de5-eb188293cf42">
+      <Execution id="afa8affa-7d85-43c5-ab1f-2a39255d1987" />
+      <TestMethod codeBase="c:/users/ани/documents/visual studio 2010/Projects/GMESH/TestOfGeometry/bin/Debug/TestOfGeometry.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestOfGeometry.SegmentTest, TestOfGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SegmentConstructorTest" />
+    </UnitTest>
+    <UnitTest name="getPointTest" storage="c:\users\ани\documents\visual studio 2010\projects\gmesh\testofgeometry\bin\debug\testofgeometry.dll" id="d7c848a9-d807-cc75-fd1e-f6ed3321bc99">
+      <Execution id="bf974fd2-97dd-446a-983f-611536d841d1" />
+      <TestMethod codeBase="c:/users/ани/documents/visual studio 2010/Projects/GMESH/TestOfGeometry/bin/Debug/TestOfGeometry.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestOfGeometry.SegmentTest, TestOfGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="getPointTest" />
+    </UnitTest>
+    <UnitTest name="YTest" storage="c:\users\ани\documents\visual studio 2010\projects\gmesh\testofgeometry\bin\debug\testofgeometry.dll" id="5d31dc43-73a2-ae58-1068-419736485d2d">
+      <Execution id="d91a4565-8a58-4372-a253-00814a0d6a96" />
+      <TestMethod codeBase="c:/users/ани/documents/visual studio 2010/Projects/GMESH/TestOfGeometry/bin/Debug/TestOfGeometry.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestOfGeometry.PointTest, TestOfGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="YTest" />
+    </UnitTest>
+    <UnitTest name="getPointTest" storage="c:\users\ани\documents\visual studio 2010\projects\gmesh\testofgeometry\bin\debug\testofgeometry.dll" id="afc1b0d6-293b-332f-4927-fa53d0e03374">
+      <Execution id="4eaeaed6-4202-49c8-ae33-4ea6ebcb4f84" />
+      <TestMethod codeBase="c:/users/ани/documents/visual studio 2010/Projects/GMESH/TestOfGeometry/bin/Debug/TestOfGeometry.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestOfGeometry.LineTest, TestOfGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="getPointTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Отсутствующие в списке результаты" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Все загруженные результаты" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="4a5c8836-c779-c58e-ab98-5d033bc99b65" executionId="153ebe38-23a6-4840-80e0-c0d93e4e3ccf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5d31dc43-73a2-ae58-1068-419736485d2d" executionId="d91a4565-8a58-4372-a253-00814a0d6a96" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="67055ce4-0089-ffb8-0de5-eb188293cf42" executionId="afa8affa-7d85-43c5-ab1f-2a39255d1987" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a1659872-cbd7-cd83-5661-340ffd974e46" executionId="8d717996-b620-4287-8548-687d742ac9d9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="afc1b0d6-293b-332f-4927-fa53d0e03374" executionId="4eaeaed6-4202-49c8-ae33-4ea6ebcb4f84" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c32009c0-c625-3b69-6448-32a56c055af3" executionId="ea7e62df-d864-430b-a193-7d027a551316" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d7c848a9-d807-cc75-fd1e-f6ed3321bc99" executionId="bf974fd2-97dd-446a-983f-611536d841d1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="db78a6c8-4a5e-8fb6-dfae-8fa7a5f766d2" executionId="5416c0f4-8c10-4b3e-b6d3-235852d48298" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f0365fef-44d3-1475-85b0-c9f7df84f4f2" executionId="f7d3855c-014a-42f3-a748-734c5b02a76a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fc1dfce3-7bfd-f639-2130-4a7d21485602" executionId="9022fc5d-504d-4f83-bc38-fc405712d56e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fceb88fd-5b4e-5989-ef88-02850e25376d" executionId="ee1de472-2860-421f-9b82-7f9a5c083220" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fd26dd54-e81f-34da-adad-2b8d4582f5ed" executionId="cb3d71b4-05e4-41ca-8ccf-10192c6cc1b3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="153ebe38-23a6-4840-80e0-c0d93e4e3ccf" testId="4a5c8836-c779-c58e-ab98-5d033bc99b65" testName="LineConstructorTest" computerName="АНИ-ПК" duration="00:00:00.0953956" startTime="2016-04-12T13:55:26.7664040+03:00" endTime="2016-04-12T13:55:27.4164049+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="153ebe38-23a6-4840-80e0-c0d93e4e3ccf">
+      <Output>
+        <ErrorInfo>
+          <Message>Метод проверки TestOfGeometry.LineTest.LineConstructorTest выдал исключение: System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта..</Message>
+          <StackTrace>    в Geometry.Line..ctor(IPoint L1, IPoint L2) в c:\users\ани\documents\visual studio 2010\Projects\GMESH\Geometry\Line.cs:строка 16
+   в TestOfGeometry.LineTest.LineConstructorTest() в c:\users\ани\documents\visual studio 2010\Projects\GMESH\TestOfGeometry\LineTest.cs:строка 95
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d91a4565-8a58-4372-a253-00814a0d6a96" testId="5d31dc43-73a2-ae58-1068-419736485d2d" testName="YTest" computerName="АНИ-ПК" duration="00:00:00.0013826" startTime="2016-04-12T13:55:27.4164049+03:00" endTime="2016-04-12T13:55:27.4264049+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d91a4565-8a58-4372-a253-00814a0d6a96">
+    </UnitTestResult>
+    <UnitTestResult executionId="afa8affa-7d85-43c5-ab1f-2a39255d1987" testId="67055ce4-0089-ffb8-0de5-eb188293cf42" testName="SegmentConstructorTest" computerName="АНИ-ПК" duration="00:00:00.0063938" startTime="2016-04-12T13:55:27.4364049+03:00" endTime="2016-04-12T13:55:27.4464049+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="afa8affa-7d85-43c5-ab1f-2a39255d1987">
+      <Output>
+        <ErrorInfo>
+          <Message>Метод проверки TestOfGeometry.SegmentTest.SegmentConstructorTest выдал исключение: System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта..</Message>
+          <StackTrace>    в Geometry.Segment..ctor(IPoint st, IPoint fin) в c:\users\ани\documents\visual studio 2010\Projects\GMESH\Geometry\Segment.cs:строка 17
+   в TestOfGeometry.SegmentTest.SegmentConstructorTest() в c:\users\ани\documents\visual studio 2010\Projects\GMESH\TestOfGeometry\SegmentTest.cs:строка 129
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8d717996-b620-4287-8548-687d742ac9d9" testId="a1659872-cbd7-cd83-5661-340ffd974e46" testName="XTest" computerName="АНИ-ПК" duration="00:00:00.0008066" startTime="2016-04-12T13:55:27.4564049+03:00" endTime="2016-04-12T13:55:27.4564049+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8d717996-b620-4287-8548-687d742ac9d9">
+    </UnitTestResult>
+    <UnitTestResult executionId="4eaeaed6-4202-49c8-ae33-4ea6ebcb4f84" testId="afc1b0d6-293b-332f-4927-fa53d0e03374" testName="getPointTest" computerName="АНИ-ПК" duration="00:00:00.0017463" startTime="2016-04-12T13:55:27.4664049+03:00" endTime="2016-04-12T13:55:27.4764050+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4eaeaed6-4202-49c8-ae33-4ea6ebcb4f84">
+    </UnitTestResult>
+    <UnitTestResult executionId="ea7e62df-d864-430b-a193-7d027a551316" testId="c32009c0-c625-3b69-6448-32a56c055af3" testName="FinTest" computerName="АНИ-ПК" duration="00:00:00.0009470" startTime="2016-04-12T13:55:27.4864050+03:00" endTime="2016-04-12T13:55:27.4964050+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ea7e62df-d864-430b-a193-7d027a551316">
+    </UnitTestResult>
+    <UnitTestResult executionId="bf974fd2-97dd-446a-983f-611536d841d1" testId="d7c848a9-d807-cc75-fd1e-f6ed3321bc99" testName="getPointTest" computerName="АНИ-ПК" duration="00:00:00.0058959" startTime="2016-04-12T13:55:27.4964050+03:00" endTime="2016-04-12T13:55:27.5164050+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bf974fd2-97dd-446a-983f-611536d841d1">
+      <Output>
+        <ErrorInfo>
+          <Message>Метод проверки TestOfGeometry.SegmentTest.getPointTest выдал исключение: System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта..</Message>
+          <StackTrace>    в Geometry.Segment..ctor(IPoint st, IPoint fin) в c:\users\ани\documents\visual studio 2010\Projects\GMESH\Geometry\Segment.cs:строка 17
+   в TestOfGeometry.SegmentTest.getPointTest() в c:\users\ани\documents\visual studio 2010\Projects\GMESH\TestOfGeometry\SegmentTest.cs:строка 109
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="5416c0f4-8c10-4b3e-b6d3-235852d48298" testId="db78a6c8-4a5e-8fb6-dfae-8fa7a5f766d2" testName="StTest" computerName="АНИ-ПК" duration="00:00:00.0013419" startTime="2016-04-12T13:55:27.5264050+03:00" endTime="2016-04-12T13:55:27.5364050+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5416c0f4-8c10-4b3e-b6d3-235852d48298">
+    </UnitTestResult>
+    <UnitTestResult executionId="f7d3855c-014a-42f3-a748-734c5b02a76a" testId="f0365fef-44d3-1475-85b0-c9f7df84f4f2" testName="CardioidConstructorTest" computerName="АНИ-ПК" duration="00:00:00.0086382" startTime="2016-04-12T13:55:27.5364050+03:00" endTime="2016-04-12T13:55:27.5564051+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f7d3855c-014a-42f3-a748-734c5b02a76a">
+      <Output>
+        <ErrorInfo>
+          <Message>Метод проверки TestOfGeometry.CardioidTest.CardioidConstructorTest выдал исключение: System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта..</Message>
+          <StackTrace>    в Geometry.Cardioid..ctor(IPoint center, Double radius) в c:\users\ани\documents\visual studio 2010\Projects\GMESH\Geometry\Cardioid.cs:строка 16
+   в TestOfGeometry.CardioidTest.CardioidConstructorTest() в c:\users\ани\documents\visual studio 2010\Projects\GMESH\TestOfGeometry\CardioidTest.cs:строка 75
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9022fc5d-504d-4f83-bc38-fc405712d56e" testId="fc1dfce3-7bfd-f639-2130-4a7d21485602" testName="getPointTest" computerName="АНИ-ПК" duration="00:00:00.0048388" startTime="2016-04-12T13:55:27.5564051+03:00" endTime="2016-04-12T13:55:27.5664051+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9022fc5d-504d-4f83-bc38-fc405712d56e">
+      <Output>
+        <ErrorInfo>
+          <Message>Метод проверки TestOfGeometry.CardioidTest.getPointTest выдал исключение: System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта..</Message>
+          <StackTrace>    в Geometry.Cardioid..ctor(IPoint center, Double radius) в c:\users\ани\documents\visual studio 2010\Projects\GMESH\Geometry\Cardioid.cs:строка 16
+   в TestOfGeometry.CardioidTest.getPointTest() в c:\users\ани\documents\visual studio 2010\Projects\GMESH\TestOfGeometry\CardioidTest.cs:строка 87
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ee1de472-2860-421f-9b82-7f9a5c083220" testId="fceb88fd-5b4e-5989-ef88-02850e25376d" testName="TestMethod1" computerName="АНИ-ПК" duration="00:00:00.0005328" startTime="2016-04-12T13:55:27.5764051+03:00" endTime="2016-04-12T13:55:27.5864051+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ee1de472-2860-421f-9b82-7f9a5c083220">
+    </UnitTestResult>
+    <UnitTestResult executionId="cb3d71b4-05e4-41ca-8ccf-10192c6cc1b3" testId="fd26dd54-e81f-34da-adad-2b8d4582f5ed" testName="PointConstructorTest" computerName="АНИ-ПК" duration="00:00:00.0003620" startTime="2016-04-12T13:55:27.5864051+03:00" endTime="2016-04-12T13:55:27.5964051+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cb3d71b4-05e4-41ca-8ccf-10192c6cc1b3">
+    </UnitTestResult>
+  </Results>
+</TestRun>

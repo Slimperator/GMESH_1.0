@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="1932054e-76ce-4741-bf17-bfc5c8c5a709" name="Ани@АНИ-ПК 2016-04-12 14:03:08" runUser="Ани-ПК\Ани" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Локальные" id="d1bd6848-d196-41b9-bf40-81a18eedd149">
+    <Description>Это - параметры по умолчанию для локального тестового запуска.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Ани_АНИ-ПК 2016-04-12 14_03_08">
+      <DeploymentItem filename="C:\Users\Ани\Desktop\GMESH\Geometry\bin\Debug\Geometry.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2016-04-12T14:03:08.9029033+03:00" queuing="2016-04-12T14:03:08.9829034+03:00" start="2016-04-12T14:03:08.9929034+03:00" finish="2016-04-12T14:03:09.6229043+03:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="SegmentConstructorTest" storage="c:\users\ани\desktop\gmesh\testofgeometry\bin\debug\testofgeometry.dll" id="67055ce4-0089-ffb8-0de5-eb188293cf42">
+      <Execution id="2c4f45da-98ed-475b-b706-16c993e64f69" />
+      <TestMethod codeBase="C:/Users/Ани/Desktop/GMESH/TestOfGeometry/bin/Debug/TestOfGeometry.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestOfGeometry.SegmentTest, TestOfGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SegmentConstructorTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Отсутствующие в списке результаты" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Все загруженные результаты" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="67055ce4-0089-ffb8-0de5-eb188293cf42" executionId="2c4f45da-98ed-475b-b706-16c993e64f69" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="2c4f45da-98ed-475b-b706-16c993e64f69" testId="67055ce4-0089-ffb8-0de5-eb188293cf42" testName="SegmentConstructorTest" computerName="АНИ-ПК" duration="00:00:00.0387192" startTime="2016-04-12T14:03:09.0929036+03:00" endTime="2016-04-12T14:03:09.6029043+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2c4f45da-98ed-475b-b706-16c993e64f69">
+    </UnitTestResult>
+  </Results>
+</TestRun>

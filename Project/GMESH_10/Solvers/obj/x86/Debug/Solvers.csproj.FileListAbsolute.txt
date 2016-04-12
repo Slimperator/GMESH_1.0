@@ -1,0 +1,14 @@
+c:\users\ани\documents\visual studio 2010\Projects\GMESH\Solvers\bin\Debug\Solvers.exe
+c:\users\ани\documents\visual studio 2010\Projects\GMESH\Solvers\bin\Debug\Solvers.pdb
+c:\users\ани\documents\visual studio 2010\Projects\GMESH\Solvers\bin\Debug\Geometry.dll
+c:\users\ани\documents\visual studio 2010\Projects\GMESH\Solvers\bin\Debug\Geometry.pdb
+c:\users\ани\documents\visual studio 2010\Projects\GMESH\Solvers\obj\x86\Debug\Solvers.exe
+c:\users\ани\documents\visual studio 2010\Projects\GMESH\Solvers\obj\x86\Debug\Solvers.pdb
+c:\users\ани\documents\visual studio 2010\Projects\GMESH\Solvers\obj\x86\Debug\Solvers.csprojResolveAssemblyReference.cache
+C:\Users\Ани\Desktop\GMESH\Solvers\bin\Debug\Solvers.exe
+C:\Users\Ани\Desktop\GMESH\Solvers\bin\Debug\Solvers.pdb
+C:\Users\Ани\Desktop\GMESH\Solvers\bin\Debug\Geometry.dll
+C:\Users\Ани\Desktop\GMESH\Solvers\bin\Debug\Geometry.pdb
+C:\Users\Ани\Desktop\GMESH\Solvers\obj\x86\Debug\Solvers.csprojResolveAssemblyReference.cache
+C:\Users\Ани\Desktop\GMESH\Solvers\obj\x86\Debug\Solvers.exe
+C:\Users\Ани\Desktop\GMESH\Solvers\obj\x86\Debug\Solvers.pdb

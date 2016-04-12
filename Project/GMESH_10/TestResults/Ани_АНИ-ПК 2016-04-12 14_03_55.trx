@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="8f519023-621d-4b64-a911-ee8564a3dece" name="Ани@АНИ-ПК 2016-04-12 14:03:55" runUser="Ани-ПК\Ани" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Локальные" id="d1bd6848-d196-41b9-bf40-81a18eedd149">
+    <Description>Это - параметры по умолчанию для локального тестового запуска.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Ани_АНИ-ПК 2016-04-12 14_03_55">
+      <DeploymentItem filename="C:\Users\Ани\Desktop\GMESH\Geometry\bin\Debug\Geometry.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2016-04-12T14:03:55.6960164+03:00" queuing="2016-04-12T14:03:55.7960165+03:00" start="2016-04-12T14:03:55.8360166+03:00" finish="2016-04-12T14:03:56.7660179+03:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="14" executed="14" passed="13" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="YTest" storage="c:\users\ани\desktop\gmesh\testofgeometry\bin\debug\testofgeometry.dll" id="5d31dc43-73a2-ae58-1068-419736485d2d">
+      <Execution id="6d9e8c8d-c7eb-4810-a7b4-7f21f06e1831" />
+      <TestMethod codeBase="C:/Users/Ани/Desktop/GMESH/TestOfGeometry/bin/Debug/TestOfGeometry.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestOfGeometry.PointTest, TestOfGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="YTest" />
+    </UnitTest>
+    <UnitTest name="SegmentConstructorTest" storage="c:\users\ани\desktop\gmesh\testofgeometry\bin\debug\testofgeometry.dll" id="67055ce4-0089-ffb8-0de5-eb188293cf42">
+      <Execution id="07f32aa9-5c65-4f5e-be8d-591efb5b9207" />
+      <TestMethod codeBase="C:/Users/Ани/Desktop/GMESH/TestOfGeometry/bin/Debug/TestOfGeometry.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestOfGeometry.SegmentTest, TestOfGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SegmentConstructorTest" />
+    </UnitTest>
+    <UnitTest name="TestMethod1" storage="c:\users\ани\desktop\gmesh\testofgeometry\bin\debug\testofgeometry.dll" id="fceb88fd-5b4e-5989-ef88-02850e25376d">
+      <Execution id="6fcd6f5d-0164-4977-a03f-70082a2f5564" />
+      <TestMethod codeBase="C:/Users/Ани/Desktop/GMESH/TestOfGeometry/bin/Debug/TestOfGeometry.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestOfGeometry.UnitTest1, TestOfGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMethod1" />
+    </UnitTest>
+    <UnitTest name="XTest" storage="c:\users\ани\desktop\gmesh\testofgeometry\bin\debug\testofgeometry.dll" id="a1659872-cbd7-cd83-5661-340ffd974e46">
+      <Execution id="854b09a6-1967-44e7-8629-d945d88cd8d6" />
+      <TestMethod codeBase="C:/Users/Ани/Desktop/GMESH/TestOfGeometry/bin/Debug/TestOfGeometry.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestOfGeometry.PointTest, TestOfGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="XTest" />
+    </UnitTest>
+    <UnitTest name="StTest" storage="c:\users\ани\desktop\gmesh\testofgeometry\bin\debug\testofgeometry.dll" id="db78a6c8-4a5e-8fb6-dfae-8fa7a5f766d2">
+      <Execution id="e1e13757-6f13-4d27-9c60-235113dd9872" />
+      <TestMethod codeBase="C:/Users/Ани/Desktop/GMESH/TestOfGeometry/bin/Debug/TestOfGeometry.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestOfGeometry.SegmentTest, TestOfGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="StTest" />
+    </UnitTest>
+    <UnitTest name="getPointTest" storage="c:\users\ани\desktop\gmesh\testofgeometry\bin\debug\testofgeometry.dll" id="afc1b0d6-293b-332f-4927-fa53d0e03374">
+      <Execution id="291182c9-d6d1-41d2-acf7-dfe6520f3380" />
+      <TestMethod codeBase="C:/Users/Ани/Desktop/GMESH/TestOfGeometry/bin/Debug/TestOfGeometry.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestOfGeometry.LineTest, TestOfGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="getPointTest" />
+    </UnitTest>
+    <UnitTest name="FinTest" storage="c:\users\ани\desktop\gmesh\testofgeometry\bin\debug\testofgeometry.dll" id="c32009c0-c625-3b69-6448-32a56c055af3">
+      <Execution id="9fbfea45-ed08-451b-9163-92f517b68121" />
+      <TestMethod codeBase="C:/Users/Ани/Desktop/GMESH/TestOfGeometry/bin/Debug/TestOfGeometry.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestOfGeometry.SegmentTest, TestOfGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="FinTest" />
+    </UnitTest>
+    <UnitTest name="PointConstructorTest" storage="c:\users\ани\desktop\gmesh\testofgeometry\bin\debug\testofgeometry.dll" id="fd26dd54-e81f-34da-adad-2b8d4582f5ed">
+      <Execution id="e27da9bf-114a-41d3-b721-38c6d1718492" />
+      <TestMethod codeBase="C:/Users/Ани/Desktop/GMESH/TestOfGeometry/bin/Debug/TestOfGeometry.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestOfGeometry.PointTest, TestOfGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="PointConstructorTest" />
+    </UnitTest>
+    <UnitTest name="LineConstructorTest" storage="c:\users\ани\desktop\gmesh\testofgeometry\bin\debug\testofgeometry.dll" id="4a5c8836-c779-c58e-ab98-5d033bc99b65">
+      <Execution id="5514c10b-8b66-44ad-a3cb-b46fccadaebf" />
+      <TestMethod codeBase="C:/Users/Ани/Desktop/GMESH/TestOfGeometry/bin/Debug/TestOfGeometry.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestOfGeometry.LineTest, TestOfGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LineConstructorTest" />
+    </UnitTest>
+    <UnitTest name="getPointTest" storage="c:\users\ани\desktop\gmesh\testofgeometry\bin\debug\testofgeometry.dll" id="fc1dfce3-7bfd-f639-2130-4a7d21485602">
+      <Execution id="91fde10b-17e3-485e-a83e-2b48ebf5d28b" />
+      <TestMethod codeBase="C:/Users/Ани/Desktop/GMESH/TestOfGeometry/bin/Debug/TestOfGeometry.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestOfGeometry.CardioidTest, TestOfGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="getPointTest" />
+    </UnitTest>
+    <UnitTest name="CardioidConstructorTest" storage="c:\users\ани\desktop\gmesh\testofgeometry\bin\debug\testofgeometry.dll" id="f0365fef-44d3-1475-85b0-c9f7df84f4f2">
+      <Execution id="e9c08568-0a06-46d7-83da-65c7863f9064" />
+      <TestMethod codeBase="C:/Users/Ани/Desktop/GMESH/TestOfGeometry/bin/Debug/TestOfGeometry.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestOfGeometry.CardioidTest, TestOfGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CardioidConstructorTest" />
+    </UnitTest>
+    <UnitTest name="getPointTest" storage="c:\users\ани\desktop\gmesh\testofgeometry\bin\debug\testofgeometry.dll" id="d7c848a9-d807-cc75-fd1e-f6ed3321bc99">
+      <Execution id="7b16a495-ac5b-4e4f-89ab-7e39d72ff8fa" />
+      <TestMethod codeBase="C:/Users/Ани/Desktop/GMESH/TestOfGeometry/bin/Debug/TestOfGeometry.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestOfGeometry.SegmentTest, TestOfGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="getPointTest" />
+    </UnitTest>
+    <UnitTest name="getPointTest" storage="c:\users\ани\desktop\gmesh\testofgeometry\bin\debug\testofgeometry.dll" id="91bd4190-bb55-34c3-7f5e-c1901d395e63">
+      <Execution id="577ca925-5ac3-40d5-aef3-5c3ba904b9d4" />
+      <TestMethod codeBase="C:/Users/Ани/Desktop/GMESH/TestOfGeometry/bin/Debug/TestOfGeometry.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestOfGeometry.CircleTest, TestOfGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="getPointTest" />
+    </UnitTest>
+    <UnitTest name="CircleConstructorTest" storage="c:\users\ани\desktop\gmesh\testofgeometry\bin\debug\testofgeometry.dll" id="b877574b-dc5c-4276-2dc9-555f6aaf4d4c">
+      <Execution id="43c80159-a802-439b-92e2-7c39f9e8dafe" />
+      <TestMethod codeBase="C:/Users/Ани/Desktop/GMESH/TestOfGeometry/bin/Debug/TestOfGeometry.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestOfGeometry.CircleTest, TestOfGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="CircleConstructorTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Отсутствующие в списке результаты" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Все загруженные результаты" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="4a5c8836-c779-c58e-ab98-5d033bc99b65" executionId="5514c10b-8b66-44ad-a3cb-b46fccadaebf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5d31dc43-73a2-ae58-1068-419736485d2d" executionId="6d9e8c8d-c7eb-4810-a7b4-7f21f06e1831" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="67055ce4-0089-ffb8-0de5-eb188293cf42" executionId="07f32aa9-5c65-4f5e-be8d-591efb5b9207" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="91bd4190-bb55-34c3-7f5e-c1901d395e63" executionId="577ca925-5ac3-40d5-aef3-5c3ba904b9d4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a1659872-cbd7-cd83-5661-340ffd974e46" executionId="854b09a6-1967-44e7-8629-d945d88cd8d6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="afc1b0d6-293b-332f-4927-fa53d0e03374" executionId="291182c9-d6d1-41d2-acf7-dfe6520f3380" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b877574b-dc5c-4276-2dc9-555f6aaf4d4c" executionId="43c80159-a802-439b-92e2-7c39f9e8dafe" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c32009c0-c625-3b69-6448-32a56c055af3" executionId="9fbfea45-ed08-451b-9163-92f517b68121" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d7c848a9-d807-cc75-fd1e-f6ed3321bc99" executionId="7b16a495-ac5b-4e4f-89ab-7e39d72ff8fa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="db78a6c8-4a5e-8fb6-dfae-8fa7a5f766d2" executionId="e1e13757-6f13-4d27-9c60-235113dd9872" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f0365fef-44d3-1475-85b0-c9f7df84f4f2" executionId="e9c08568-0a06-46d7-83da-65c7863f9064" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fc1dfce3-7bfd-f639-2130-4a7d21485602" executionId="91fde10b-17e3-485e-a83e-2b48ebf5d28b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fceb88fd-5b4e-5989-ef88-02850e25376d" executionId="6fcd6f5d-0164-4977-a03f-70082a2f5564" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fd26dd54-e81f-34da-adad-2b8d4582f5ed" executionId="e27da9bf-114a-41d3-b721-38c6d1718492" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="5514c10b-8b66-44ad-a3cb-b46fccadaebf" testId="4a5c8836-c779-c58e-ab98-5d033bc99b65" testName="LineConstructorTest" computerName="АНИ-ПК" duration="00:00:00.0784550" startTime="2016-04-12T14:03:55.8660166+03:00" endTime="2016-04-12T14:03:56.5960177+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5514c10b-8b66-44ad-a3cb-b46fccadaebf">
+      <Output>
+        <ErrorInfo>
+          <Message>Метод проверки TestOfGeometry.LineTest.LineConstructorTest выдал исключение: System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта..</Message>
+          <StackTrace>    в Geometry.Line..ctor(IPoint L1, IPoint L2) в c:\users\ани\documents\visual studio 2010\Projects\GMESH\Geometry\Line.cs:строка 16
+   в TestOfGeometry.LineTest.LineConstructorTest() в C:\Users\Ани\Desktop\GMESH\TestOfGeometry\LineTest.cs:строка 95
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="6d9e8c8d-c7eb-4810-a7b4-7f21f06e1831" testId="5d31dc43-73a2-ae58-1068-419736485d2d" testName="YTest" computerName="АНИ-ПК" duration="00:00:00.0031064" startTime="2016-04-12T14:03:56.5960177+03:00" endTime="2016-04-12T14:03:56.6060177+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6d9e8c8d-c7eb-4810-a7b4-7f21f06e1831">
+    </UnitTestResult>
+    <UnitTestResult executionId="07f32aa9-5c65-4f5e-be8d-591efb5b9207" testId="67055ce4-0089-ffb8-0de5-eb188293cf42" testName="SegmentConstructorTest" computerName="АНИ-ПК" duration="00:00:00.0032698" startTime="2016-04-12T14:03:56.6160177+03:00" endTime="2016-04-12T14:03:56.6160177+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="07f32aa9-5c65-4f5e-be8d-591efb5b9207">
+    </UnitTestResult>
+    <UnitTestResult executionId="577ca925-5ac3-40d5-aef3-5c3ba904b9d4" testId="91bd4190-bb55-34c3-7f5e-c1901d395e63" testName="getPointTest" computerName="АНИ-ПК" duration="00:00:00.0016716" startTime="2016-04-12T14:03:56.6260177+03:00" endTime="2016-04-12T14:03:56.6360177+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="577ca925-5ac3-40d5-aef3-5c3ba904b9d4">
+    </UnitTestResult>
+    <UnitTestResult executionId="854b09a6-1967-44e7-8629-d945d88cd8d6" testId="a1659872-cbd7-cd83-5661-340ffd974e46" testName="XTest" computerName="АНИ-ПК" duration="00:00:00.0006408" startTime="2016-04-12T14:03:56.6360177+03:00" endTime="2016-04-12T14:03:56.6460177+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="854b09a6-1967-44e7-8629-d945d88cd8d6">
+    </UnitTestResult>
+    <UnitTestResult executionId="291182c9-d6d1-41d2-acf7-dfe6520f3380" testId="afc1b0d6-293b-332f-4927-fa53d0e03374" testName="getPointTest" computerName="АНИ-ПК" duration="00:00:00.0009688" startTime="2016-04-12T14:03:56.6560177+03:00" endTime="2016-04-12T14:03:56.6560177+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="291182c9-d6d1-41d2-acf7-dfe6520f3380">
+    </UnitTestResult>
+    <UnitTestResult executionId="43c80159-a802-439b-92e2-7c39f9e8dafe" testId="b877574b-dc5c-4276-2dc9-555f6aaf4d4c" testName="CircleConstructorTest" computerName="АНИ-ПК" duration="00:00:00.0003904" startTime="2016-04-12T14:03:56.6660178+03:00" endTime="2016-04-12T14:03:56.6660178+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="43c80159-a802-439b-92e2-7c39f9e8dafe">
+    </UnitTestResult>
+    <UnitTestResult executionId="9fbfea45-ed08-451b-9163-92f517b68121" testId="c32009c0-c625-3b69-6448-32a56c055af3" testName="FinTest" computerName="АНИ-ПК" duration="00:00:00.0009281" startTime="2016-04-12T14:03:56.6760178+03:00" endTime="2016-04-12T14:03:56.6760178+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9fbfea45-ed08-451b-9163-92f517b68121">
+    </UnitTestResult>
+    <UnitTestResult executionId="7b16a495-ac5b-4e4f-89ab-7e39d72ff8fa" testId="d7c848a9-d807-cc75-fd1e-f6ed3321bc99" testName="getPointTest" computerName="АНИ-ПК" duration="00:00:00.0009581" startTime="2016-04-12T14:03:56.6860178+03:00" endTime="2016-04-12T14:03:56.6860178+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7b16a495-ac5b-4e4f-89ab-7e39d72ff8fa">
+    </UnitTestResult>
+    <UnitTestResult executionId="e1e13757-6f13-4d27-9c60-235113dd9872" testId="db78a6c8-4a5e-8fb6-dfae-8fa7a5f766d2" testName="StTest" computerName="АНИ-ПК" duration="00:00:00.0009097" startTime="2016-04-12T14:03:56.6960178+03:00" endTime="2016-04-12T14:03:56.6960178+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e1e13757-6f13-4d27-9c60-235113dd9872">
+    </UnitTestResult>
+    <UnitTestResult executionId="e9c08568-0a06-46d7-83da-65c7863f9064" testId="f0365fef-44d3-1475-85b0-c9f7df84f4f2" testName="CardioidConstructorTest" computerName="АНИ-ПК" duration="00:00:00.0011478" startTime="2016-04-12T14:03:56.7060178+03:00" endTime="2016-04-12T14:03:56.7160178+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e9c08568-0a06-46d7-83da-65c7863f9064">
+    </UnitTestResult>
+    <UnitTestResult executionId="91fde10b-17e3-485e-a83e-2b48ebf5d28b" testId="fc1dfce3-7bfd-f639-2130-4a7d21485602" testName="getPointTest" computerName="АНИ-ПК" duration="00:00:00.0010456" startTime="2016-04-12T14:03:56.7160178+03:00" endTime="2016-04-12T14:03:56.7260178+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="91fde10b-17e3-485e-a83e-2b48ebf5d28b">
+    </UnitTestResult>
+    <UnitTestResult executionId="6fcd6f5d-0164-4977-a03f-70082a2f5564" testId="fceb88fd-5b4e-5989-ef88-02850e25376d" testName="TestMethod1" computerName="АНИ-ПК" duration="00:00:00.0004133" startTime="2016-04-12T14:03:56.7260178+03:00" endTime="2016-04-12T14:03:56.7360179+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6fcd6f5d-0164-4977-a03f-70082a2f5564">
+    </UnitTestResult>
+    <UnitTestResult executionId="e27da9bf-114a-41d3-b721-38c6d1718492" testId="fd26dd54-e81f-34da-adad-2b8d4582f5ed" testName="PointConstructorTest" computerName="АНИ-ПК" duration="00:00:00.0003567" startTime="2016-04-12T14:03:56.7360179+03:00" endTime="2016-04-12T14:03:56.7460179+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e27da9bf-114a-41d3-b721-38c6d1718492">
+    </UnitTestResult>
+  </Results>
+</TestRun>

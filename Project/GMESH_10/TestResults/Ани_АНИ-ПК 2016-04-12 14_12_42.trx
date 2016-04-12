@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="30bdbf2a-50f9-4ede-a668-6346820c8469" name="Ани@АНИ-ПК 2016-04-12 14:12:42" runUser="Ани-ПК\Ани" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Локальные" id="d1bd6848-d196-41b9-bf40-81a18eedd149">
+    <Description>Это - параметры по умолчанию для локального тестового запуска.</Description>
+    <Deployment enabled="false" runDeploymentRoot="Ани_АНИ-ПК 2016-04-12 14_12_42">
+      <DeploymentItem filename="C:\Users\Ани\Desktop\GMESH\Geometry\bin\Debug\Geometry.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2016-04-12T14:12:42.6415756+03:00" queuing="2016-04-12T14:13:04.2436071+03:00" start="2016-04-12T14:13:04.2936071+03:00" finish="2016-04-12T14:13:05.0836082+03:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="АНИ-ПК" outcome="Warning" timestamp="2016-04-12T14:13:04.2436071+03:00">
+        <Text>Развертывание в данный момент запрещено. Элемент развертывания "Geometry.dll" для теста "TestOfGeometry.CycloidTest.vectorCalculateTest" не был развернут.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="vectorCalculateTest" storage="c:\users\ани\desktop\gmesh\testofgeometry\bin\debug\testofgeometry.dll" id="390b42d1-5a5f-5785-5a03-e28bca88b425">
+      <DeploymentItems>
+        <DeploymentItem filename="Geometry.dll" />
+      </DeploymentItems>
+      <Execution id="695576b7-9e2f-4fc3-93f5-7a363c1b18cb" />
+      <TestMethod codeBase="C:/Users/Ани/Desktop/GMESH/TestOfGeometry/bin/Debug/TestOfGeometry.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TestOfGeometry.CycloidTest, TestOfGeometry, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="vectorCalculateTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Отсутствующие в списке результаты" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Все загруженные результаты" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="390b42d1-5a5f-5785-5a03-e28bca88b425" executionId="695576b7-9e2f-4fc3-93f5-7a363c1b18cb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="695576b7-9e2f-4fc3-93f5-7a363c1b18cb" testId="390b42d1-5a5f-5785-5a03-e28bca88b425" testName="vectorCalculateTest" computerName="АНИ-ПК" duration="00:00:00.0736905" startTime="2016-04-12T14:13:04.3236072+03:00" endTime="2016-04-12T14:13:05.0536082+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="695576b7-9e2f-4fc3-93f5-7a363c1b18cb">
+      <Output>
+        <ErrorInfo>
+          <Message>Метод проверки TestOfGeometry.CycloidTest.vectorCalculateTest выдал исключение: System.NullReferenceException: Ссылка на объект не указывает на экземпляр объекта..</Message>
+          <StackTrace>   в Geometry.Cycloid_Accessor.vectorCalculate()
+   в TestOfGeometry.CycloidTest.vectorCalculateTest() в C:\Users\Ани\Desktop\GMESH\TestOfGeometry\CycloidTest.cs:строка 227
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

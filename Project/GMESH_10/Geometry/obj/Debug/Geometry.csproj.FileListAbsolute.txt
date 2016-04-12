@@ -1,0 +1,8 @@
+c:\users\ани\documents\visual studio 2010\Projects\GMESH\Geometry\bin\Debug\Geometry.dll
+c:\users\ани\documents\visual studio 2010\Projects\GMESH\Geometry\bin\Debug\Geometry.pdb
+c:\users\ани\documents\visual studio 2010\Projects\GMESH\Geometry\obj\Debug\Geometry.dll
+c:\users\ани\documents\visual studio 2010\Projects\GMESH\Geometry\obj\Debug\Geometry.pdb
+C:\Users\Ани\Desktop\GMESH\Geometry\bin\Debug\Geometry.dll
+C:\Users\Ани\Desktop\GMESH\Geometry\bin\Debug\Geometry.pdb
+C:\Users\Ани\Desktop\GMESH\Geometry\obj\Debug\Geometry.dll
+C:\Users\Ани\Desktop\GMESH\Geometry\obj\Debug\Geometry.pdb
