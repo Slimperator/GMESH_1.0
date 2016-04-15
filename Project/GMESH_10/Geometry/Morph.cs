@@ -28,5 +28,9 @@ namespace Geometry
             x = this.alpha * ax + (1 - this.alpha) * bx;
             y = this.alpha * ay + (1 - this.alpha) * by;
         }
+        public void aboutCurve(out string type, out List<IPoint> Points, out List<string> Special)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

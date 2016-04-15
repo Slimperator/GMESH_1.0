@@ -22,5 +22,11 @@ namespace Geometry
             x = this.center.X + this.radius * Math.Pow(Math.Sin(2 * Math.PI * t), 3);
             y = this.center.Y + this.radius * Math.Pow(Math.Cos(2 * Math.PI * t), 3);
         }
+        public void aboutCurve(out string type, out List<IPoint> Points, out List<string> Special)
+        {
+            type = "astroid";
+            Points = new List<IPoint>() { center };
+            Special = new List<string>() { Convert.ToString(radius) };
+        }
     }
 }

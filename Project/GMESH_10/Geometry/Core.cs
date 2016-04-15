@@ -22,5 +22,6 @@ namespace Geometry
     public interface ICurve
     {
         void getPoint(double t, out double x, out double y);
+        void aboutCurve(out string type, out List<IPoint> Points, out List<string> Special);
     }
 }
