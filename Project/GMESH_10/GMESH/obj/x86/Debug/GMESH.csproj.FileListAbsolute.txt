@@ -44,3 +44,15 @@ D:\Documents\Учеба\5 курс (Магистратура)\2 сем\Kanban\Gm
 D:\Documents\Учеба\5 курс (Магистратура)\2 сем\Kanban\Gmesh\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\Parser.dll
 D:\Documents\Учеба\5 курс (Магистратура)\2 сем\Kanban\Gmesh\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\Geometry.pdb
 D:\Documents\Учеба\5 курс (Магистратура)\2 сем\Kanban\Gmesh\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\Parser.pdb
+C:\Users\Ани\Desktop\Новая папка (3)\GMESH_1.0\Project\GMESH_10\GMESH\obj\x86\Debug\GMESH.exe
+C:\Users\Ани\Desktop\Новая папка (3)\GMESH_1.0\Project\GMESH_10\GMESH\obj\x86\Debug\GMESH.pdb
+C:\Users\Ани\Desktop\Новая папка (3)\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\GMESH.exe
+C:\Users\Ани\Desktop\Новая папка (3)\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\GMESH.pdb
+C:\Users\Ани\Desktop\Новая папка (3)\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\Geometry.dll
+C:\Users\Ани\Desktop\Новая папка (3)\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\Parser.dll
+C:\Users\Ани\Desktop\Новая папка (3)\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\Geometry.pdb
+C:\Users\Ани\Desktop\Новая папка (3)\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\Parser.pdb
+C:\Users\Ани\Desktop\Новая папка (3)\GMESH_1.0\Project\GMESH_10\GMESH\obj\x86\Debug\GMESH.csprojResolveAssemblyReference.cache
+C:\Users\Ани\Desktop\Новая папка (3)\GMESH_1.0\Project\GMESH_10\GMESH\obj\x86\Debug\GMESH.Form1.resources
+C:\Users\Ани\Desktop\Новая папка (3)\GMESH_1.0\Project\GMESH_10\GMESH\obj\x86\Debug\GMESH.Properties.Resources.resources
+C:\Users\Ани\Desktop\Новая папка (3)\GMESH_1.0\Project\GMESH_10\GMESH\obj\x86\Debug\GMESH.csproj.GenerateResource.Cache
