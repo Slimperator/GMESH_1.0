@@ -16,14 +16,14 @@ namespace Geometry
 
         public int Size
         {
-            get { throw new NotImplementedException(); }
+            get { return curves.Count(); }
         }
 
         public ICurve this[int i]
         {
             get
             {
-                throw new NotImplementedException();
+                return curves[i];
             }
             set
             {
