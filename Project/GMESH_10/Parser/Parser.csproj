@@ -47,14 +47,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bufer.cs" />
-    <Compile Include="ICurveFactory.cs" />
+    <Compile Include="Curve.cs" />
+    <Compile Include="CurveSimpleFactory.cs" />
+    <Compile Include="GMESH.cs" />
     <Compile Include="Parser.cs" />
+    <Compile Include="Point.cs" />
+    <Compile Include="Poligon.cs" />
     <Compile Include="Processing.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="gmesh.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Geometry\Geometry.csproj">

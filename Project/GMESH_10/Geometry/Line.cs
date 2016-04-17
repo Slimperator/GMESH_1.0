@@ -20,9 +20,13 @@ namespace Geometry
         public void getPoint(double t, out double x, out double y)
         {
             x = (1 - t)*this.l1.X + t * l2.X;
-            y = (1 - t)*this.l1.Y + t * l2.Y;
-
-            
+            y = (1 - t)*this.l1.Y + t * l2.Y;       
+        }
+        public void aboutCurve(out string type, out List<IPoint> Points, out List<string> Special)
+        {
+            type = "line";
+            Points = new List<IPoint>() { l1, l2 };
+            Special = new List<string>();
         }
     }
 }

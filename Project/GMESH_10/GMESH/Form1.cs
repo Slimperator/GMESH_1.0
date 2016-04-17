@@ -1,4 +1,5 @@
 ﻿using Geometry;
+using Parser;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,14 +18,18 @@ namespace GMESH
         private bool isBuildClicked = false;
         private int currentClickedPoint = -1;
         List<ICurve> curves = new List<ICurve>();
+        List<Geometry.Point> pp = new List<Geometry.Point>();
+        private Parser.Parser parser = new Parser.Parser();
+        private IProcessing preproc;
+        private IProcessing postproc;
 
         public Form1()
         {
             InitializeComponent();
+            ProcessingInit();
             FigureInit();
             MouseDown += Form1_MouseDown;
             MouseDoubleClick += Form1_MouseDoubleClick;
-
         }
 
         void FigureInit()
@@ -47,7 +52,12 @@ namespace GMESH
             }
         }
 
-        List<Geometry.Point> pp = new List<Geometry.Point>();
+
+        void ProcessingInit()
+        {
+            postproc = parser.PostProcessing;
+            preproc = parser.PreProcessing;
+        }
 
         void Draw(Graphics g)
         {
@@ -191,6 +201,40 @@ namespace GMESH
         private void Form1_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void Open_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+
+            openFileDialog1.InitialDirectory = Environment.CurrentDirectory;
+            openFileDialog1.Filter = "xml files (*.xml)|*.xml|All files (*.*)|*.*";
+            openFileDialog1.FilterIndex = 1;
+            openFileDialog1.RestoreDirectory = true;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string fileSelected = openFileDialog1.FileName;
+                //parser.load(fileSelected);
+                //preproc.convert(ref curves, ref pp, ref parser.Gmesh.Poligons[0].Curves, ref parser.Gmesh.Poligons[0].Points);
+            }  
+        }
+
+        private void Save_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+
+            openFileDialog1.InitialDirectory = Environment.CurrentDirectory;
+            openFileDialog1.Filter = "xml files (*.xml)|*.xml|All files (*.*)|*.*";
+            openFileDialog1.FilterIndex = 1;
+            openFileDialog1.RestoreDirectory = true;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string fileSelected = openFileDialog1.FileName;
+                //parser.load(fileSelected);
+                //preproc.convert(ref curves, ref pp, ref parser.Gmesh.Poligons[0].Curves, ref parser.Gmesh.Poligons[0].Points);
+            }  
         }
 
        

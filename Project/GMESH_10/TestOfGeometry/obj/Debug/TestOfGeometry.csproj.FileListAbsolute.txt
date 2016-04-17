@@ -41,3 +41,12 @@ D:\Documents\Учеба\5 курс (Магистратура)\2 сем\Kanban\Gm
 D:\Documents\Учеба\5 курс (Магистратура)\2 сем\Kanban\Gmesh\GMESH_1.0\Project\GMESH_10\TestOfGeometry\obj\Debug\TestOfGeometry.csprojResolveAssemblyReference.cache
 D:\Documents\Учеба\5 курс (Магистратура)\2 сем\Kanban\Gmesh\GMESH_1.0\Project\GMESH_10\TestOfGeometry\obj\Debug\TestOfGeometry.dll
 D:\Documents\Учеба\5 курс (Магистратура)\2 сем\Kanban\Gmesh\GMESH_1.0\Project\GMESH_10\TestOfGeometry\obj\Debug\TestOfGeometry.pdb
+C:\Users\Ани\Desktop\Новая папка (3)\GMESH_1.0\Project\GMESH_10\TestOfGeometry\bin\Debug\TestOfGeometry.dll
+C:\Users\Ани\Desktop\Новая папка (3)\GMESH_1.0\Project\GMESH_10\TestOfGeometry\bin\Debug\TestOfGeometry.pdb
+C:\Users\Ани\Desktop\Новая папка (3)\GMESH_1.0\Project\GMESH_10\TestOfGeometry\bin\Debug\Geometry.dll
+C:\Users\Ани\Desktop\Новая папка (3)\GMESH_1.0\Project\GMESH_10\TestOfGeometry\bin\Debug\Geometry.pdb
+C:\Users\Ани\Desktop\Новая папка (3)\GMESH_1.0\Project\GMESH_10\TestOfGeometry\bin\Debug\Geometry_Accessor.dll
+C:\Users\Ани\Desktop\Новая папка (3)\GMESH_1.0\Project\GMESH_10\TestOfGeometry\bin\Debug\Geometry_Accessor.pdb
+C:\Users\Ани\Desktop\Новая папка (3)\GMESH_1.0\Project\GMESH_10\TestOfGeometry\obj\Debug\TestOfGeometry.csprojResolveAssemblyReference.cache
+C:\Users\Ани\Desktop\Новая папка (3)\GMESH_1.0\Project\GMESH_10\TestOfGeometry\obj\Debug\TestOfGeometry.dll
+C:\Users\Ани\Desktop\Новая папка (3)\GMESH_1.0\Project\GMESH_10\TestOfGeometry\obj\Debug\TestOfGeometry.pdb

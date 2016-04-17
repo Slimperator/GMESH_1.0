@@ -60,12 +60,14 @@
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(43, 20);
             this.Save.Text = "Save";
+            this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
             // Open
             // 
             this.Open.Name = "Open";
             this.Open.Size = new System.Drawing.Size(48, 20);
             this.Open.Text = "Open";
+            this.Open.Click += new System.EventHandler(this.Open_Click);
             // 
             // Change
             // 

@@ -117,5 +117,11 @@ namespace Geometry
             VectorOYWorld.X * Math.Cos(AglRotate) - VectorOYWorld.Y * Math.Sin(AglRotate),
             VectorOYWorld.X * Math.Sin(AglRotate) + VectorOYWorld.Y * Math.Cos(AglRotate));
         }
+        public void aboutCurve(out string type, out List<IPoint> Points, out List<string> Special)
+        {
+            type = "cycloid";
+            Points = new List<IPoint>() { Begin, End };
+            Special = new List<string>() { Convert.ToString(Convex) };
+        }
     }
 }

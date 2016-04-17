@@ -68,20 +68,52 @@ namespace TestOfGeometry
         ///Тест для getPoint
         ///</summary>
         [TestMethod()]
-        public void getPointTest()
+        public void getPointTest1()
         {
             IPoint L1 = new Point(0, 0); // TODO: инициализация подходящего значения
-            IPoint L2 = new Point(0, 0); // TODO: инициализация подходящего значения
+            IPoint L2 = new Point(1, 1); // TODO: инициализация подходящего значения
             Line target = new Line(L1, L2); // TODO: инициализация подходящего значения
             double t = 0F; // TODO: инициализация подходящего значения
             double x = 0F; // TODO: инициализация подходящего значения
-            double xExpected = 0F; // TODO: инициализация подходящего значения
+            double xExpected = 1; // TODO: инициализация подходящего значения
             double y = 0F; // TODO: инициализация подходящего значения
-            double yExpected = 0F; // TODO: инициализация подходящего значения
+            double yExpected = 1; // TODO: инициализация подходящего значения
             target.getPoint(t, out x, out y);
             Assert.AreEqual(xExpected, x);
             Assert.AreEqual(yExpected, y);
          
+        }
+        [TestMethod()]
+        public void getPointTest2()
+        {
+            IPoint L1 = new Point(0, 0); // TODO: инициализация подходящего значения
+            IPoint L2 = new Point(2, 1); // TODO: инициализация подходящего значения
+            Line target = new Line(L1, L2); // TODO: инициализация подходящего значения
+            double t = 1F; // TODO: инициализация подходящего значения
+            double x = 0F; // TODO: инициализация подходящего значения
+            double xExpected = 2; // TODO: инициализация подходящего значения
+            double y = 0F; // TODO: инициализация подходящего значения
+            double yExpected = 1; // TODO: инициализация подходящего значения
+            target.getPoint(t, out x, out y);
+            Assert.AreEqual(xExpected, x);
+            Assert.AreEqual(yExpected, y);
+
+        }
+        [TestMethod()]
+        public void getPointTest3()
+        {
+            IPoint L1 = new Point(0, 0); // TODO: инициализация подходящего значения
+            IPoint L2 = new Point(20, 10); // TODO: инициализация подходящего значения
+            Line target = new Line(L1, L2); // TODO: инициализация подходящего значения
+            double t = 0.5F; // TODO: инициализация подходящего значения
+            double x = 0F; // TODO: инициализация подходящего значения
+            double xExpected = 10.0; // TODO: инициализация подходящего значения
+            double y = 0F; // TODO: инициализация подходящего значения
+            double yExpected = 5.0; // TODO: инициализация подходящего значения
+            target.getPoint(t, out x, out y);
+            Assert.AreEqual(xExpected, x);
+            Assert.AreEqual(yExpected, y);
+
         }
 
         /// <summary>

@@ -41,6 +41,7 @@
     </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
@@ -54,6 +55,7 @@
     <Compile Include="BezierTest.cs" />
     <Compile Include="CardioidTest.cs" />
     <Compile Include="CircleTest.cs" />
+    <Compile Include="CycloidTest.cs" />
     <Compile Include="LineTest.cs" />
     <Compile Include="MorphTest.cs" />
     <Compile Include="PointTest.cs" />

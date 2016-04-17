@@ -83,7 +83,7 @@ namespace TestOfGeometry
         public void getPointTest()
         {
             IPoint center = new Point(0, 0); // TODO: инициализация подходящего значения
-            double radius = 0F; // TODO: инициализация подходящего значения
+            double radius = 1.0F; // TODO: инициализация подходящего значения
             Cardioid target = new Cardioid(center, radius); // TODO: инициализация подходящего значения
             double t = 0F; // TODO: инициализация подходящего значения
             double x = 0F; // TODO: инициализация подходящего значения

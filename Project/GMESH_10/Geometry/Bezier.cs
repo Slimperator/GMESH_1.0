@@ -27,8 +27,12 @@ namespace Geometry
 
             x = this.P0.X * (1 - t) * (1 - t) * (1 - t) + 3 * t * P1.X * (1 - t) * (1 - t) + 3 * t * t * P2.X * (1 - t) + t * t * t * P3.X;
             y = this.P0.Y * (1 - t) * (1 - t) * (1 - t) + 3 * t * P1.Y * (1 - t) * (1 - t) + 3 * t * t * P2.Y * (1 - t) + t * t * t * P3.Y;
-
-
+        }
+        public void aboutCurve(out string type, out List<IPoint> Points, out List<string> Special)
+        {
+            type = "bezier";
+            Points = new List<IPoint>() { P0, P1, P2, P3 };
+            Special = new List<string>();
         }
     }
 }

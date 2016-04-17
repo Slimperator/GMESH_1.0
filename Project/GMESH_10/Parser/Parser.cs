@@ -13,26 +13,49 @@ namespace Parser
 {
     public class Parser
     {
-        private Gmesh gmesh;
-        private XmlSerializer xml;
-        public Parser()
-        {
-            this.gmesh = new Gmesh();
-            xml = new XmlSerializer(typeof(Gmesh));
-        }
-
+        private Gmesh gmesh = new Gmesh();
+        private XmlSerializer xml = new XmlSerializer(typeof(Gmesh));
+        private IProcessing postProcessing = new PostProcessing();
+        private IProcessing preProcessing = new PreProcessing();
+        /// <summary>
+        /// Сохраняет данные из буфера парсера в xml по указанному адресу
+        /// </summary>
         public void save(string filepath)
         {
             Stream stream = File.Create(filepath);
             xml.Serialize(stream, gmesh);
             stream.Close();
         }
-
+        /// <summary>
+        /// Получает данные из xml документа по указанному адресу и записывает их в буфер
+        /// </summary>
         public void load(string filepath)
         {
             Stream stream = File.Open(filepath, FileMode.Open);
             this.gmesh = (Gmesh)xml.Deserialize(stream);
             stream.Close();
+        }
+        /// <summary>
+        /// Буфер парсера
+        /// </summary>
+        public Gmesh Gmesh
+        {
+            get { return gmesh; }
+            set { gmesh = value; }
+        }
+        /// <summary>
+        /// Вовзращает экземпляр класса препроцессинга
+        /// </summary>
+        public IProcessing PreProcessing
+        {
+            get { return preProcessing; }
+        }
+        /// <summary>
+        /// Вовзращает экземпляр класса постпроцессинга
+        /// </summary>
+        public IProcessing PostProcessing
+        {
+            get { return postProcessing; }
         }
     }    
 }
