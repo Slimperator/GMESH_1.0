@@ -82,10 +82,10 @@ namespace TestOfGeometry
         [TestMethod()]
         public void XTest()
         {
-            double x = 0F; // TODO: инициализация подходящего значения
-            double y = 0F; // TODO: инициализация подходящего значения
+            double x = 5F; // TODO: инициализация подходящего значения
+            double y = 8F; // TODO: инициализация подходящего значения
             Point target = new Point(x, y); // TODO: инициализация подходящего значения
-            double expected = 0F; // TODO: инициализация подходящего значения
+            double expected = 5F; // TODO: инициализация подходящего значения
             double actual;
             target.X = expected;
             actual = target.X;
@@ -99,10 +99,10 @@ namespace TestOfGeometry
         [TestMethod()]
         public void YTest()
         {
-            double x = 0F; // TODO: инициализация подходящего значения
-            double y = 0F; // TODO: инициализация подходящего значения
+            double x = 4F; // TODO: инициализация подходящего значения
+            double y = 3F; // TODO: инициализация подходящего значения
             Point target = new Point(x, y); // TODO: инициализация подходящего значения
-            double expected = 0F; // TODO: инициализация подходящего значения
+            double expected = 3F; // TODO: инициализация подходящего значения
             double actual;
             target.Y = expected;
             actual = target.Y;
