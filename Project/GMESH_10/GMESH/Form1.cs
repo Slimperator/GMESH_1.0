@@ -237,6 +237,17 @@ namespace GMESH
             }  
         }
 
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            RegMesh2D n = new RegMesh2D(10, 10, new Line(pp[0], pp[1]), new Line(pp[1], pp[2]), new Line(pp[2], pp[3]), new Line(pp[3], pp[0]));
+            curves = n.GetCurves();
+        }
+        // 1. тыкаешь точки
+        // 2. Gener
+        // 3. Build 
+        
+
+
        
         
 

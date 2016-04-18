@@ -21,3 +21,10 @@ D:\Documents\Учеба\5 курс (Магистратура)\2 сем\Kanban\Gm
 D:\Documents\Учеба\5 курс (Магистратура)\2 сем\Kanban\Gmesh\GMESH_1.0\Project\GMESH_10\Parser\obj\x86\Debug\Parser.csprojResolveAssemblyReference.cache
 D:\Documents\Учеба\5 курс (Магистратура)\2 сем\Kanban\Gmesh\GMESH_1.0\Project\GMESH_10\Parser\obj\x86\Debug\Parser.dll
 D:\Documents\Учеба\5 курс (Магистратура)\2 сем\Kanban\Gmesh\GMESH_1.0\Project\GMESH_10\Parser\obj\x86\Debug\Parser.pdb
+C:\Users\User\Desktop\GMESH_1.0\Project\GMESH_10\Parser\bin\Debug\Parser.dll
+C:\Users\User\Desktop\GMESH_1.0\Project\GMESH_10\Parser\bin\Debug\Parser.pdb
+C:\Users\User\Desktop\GMESH_1.0\Project\GMESH_10\Parser\bin\Debug\Geometry.dll
+C:\Users\User\Desktop\GMESH_1.0\Project\GMESH_10\Parser\bin\Debug\Geometry.pdb
+C:\Users\User\Desktop\GMESH_1.0\Project\GMESH_10\Parser\obj\x86\Debug\Parser.csprojResolveAssemblyReference.cache
+C:\Users\User\Desktop\GMESH_1.0\Project\GMESH_10\Parser\obj\x86\Debug\Parser.dll
+C:\Users\User\Desktop\GMESH_1.0\Project\GMESH_10\Parser\obj\x86\Debug\Parser.pdb
