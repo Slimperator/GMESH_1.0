@@ -21,6 +21,7 @@ namespace Geometry
     {
         IPoint St { get; set; }
         IPoint Fin { get; set; }
+        double Length { get; } 
     }
     /// <summary>
     /// Интерфейс определяет внешние контракты объекта "Кривая"
