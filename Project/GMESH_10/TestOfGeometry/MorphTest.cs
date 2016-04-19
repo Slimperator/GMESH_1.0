@@ -131,6 +131,23 @@ namespace TestOfGeometry
             Assert.AreEqual(yExpected, y);
 
         }
+        [TestMethod()]
+        public void getPointTest4()
+        {
+            ICurve a = new Line(new Point(0, 10), new Point(20, 10)); // TODO: инициализация подходящего значения
+            ICurve b = new Bezier(new Point(8, 8), new Point(16, 8), new Point(8, 16), new Point(16, 16)); // TODO: инициализация подходящего значения
+            double alpha = 0.5F; // TODO: инициализация подходящего значения
+            Morph target = new Morph(a, b, alpha); // TODO: инициализация подходящего значения
+            double t = 0.5F; // TODO: инициализация подходящего значения
+            double x = 0F; // TODO: инициализация подходящего значения
+            double xExpected = 11.0F; // TODO: инициализация подходящего значения
+            double y = 0F; // TODO: инициализация подходящего значения
+            double yExpected = 11.0F; // TODO: инициализация подходящего значения
+            target.getPoint(t, out x, out y);
+            Assert.AreEqual(xExpected, x, 0.01);
+            Assert.AreEqual(yExpected, y, 0.01);
+
+        }
 
     }
 }

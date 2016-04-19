@@ -115,6 +115,22 @@ namespace TestOfGeometry
             Assert.AreEqual(yExpected, y);
 
         }
+        [TestMethod()]
+        public void getPointTest4()
+        {
+            IPoint L1 = new Point(10, 30); // TODO: инициализация подходящего значения
+            IPoint L2 = new Point(20, 10); // TODO: инициализация подходящего значения
+            Line target = new Line(L1, L2); // TODO: инициализация подходящего значения
+            double t = 0.1F; // TODO: инициализация подходящего значения
+            double x = 0F; // TODO: инициализация подходящего значения
+            double xExpected = 11.0; // TODO: инициализация подходящего значения
+            double y = 0F; // TODO: инициализация подходящего значения
+            double yExpected = 28.0; // TODO: инициализация подходящего значения
+            target.getPoint(t, out x, out y);
+            Assert.AreEqual(xExpected, x, 0.001);
+            Assert.AreEqual(yExpected, y, 0.001);
+
+        }
 
         /// <summary>
         ///Тест для Конструктор Line

@@ -102,7 +102,7 @@ namespace TestOfGeometry
         ///Тест для getPoint
         ///</summary>
         [TestMethod()]
-        public void getPointTest()
+        public void getPointTest0()
         {
             IPoint st = new Point(0, 0); // TODO: инициализация подходящего значения
             IPoint fin = new Point(0, 0); // TODO: инициализация подходящего значения
@@ -112,6 +112,38 @@ namespace TestOfGeometry
             double xExpected = 0F; // TODO: инициализация подходящего значения
             double y = 0F; // TODO: инициализация подходящего значения
             double yExpected = 0F; // TODO: инициализация подходящего значения
+            target.getPoint(t, out x, out y);
+            Assert.AreEqual(xExpected, x);
+            Assert.AreEqual(yExpected, y);
+
+        }
+        [TestMethod()]
+        public void getPointTest1()
+        {
+            IPoint st = new Point(0, 0); // TODO: инициализация подходящего значения
+            IPoint fin = new Point(1, 1); // TODO: инициализация подходящего значения
+            Line target = new Line(st, fin); // TODO: инициализация подходящего значения
+            double t = 0F; // TODO: инициализация подходящего значения
+            double x = 0F; // TODO: инициализация подходящего значения
+            double xExpected = 1; // TODO: инициализация подходящего значения
+            double y = 0F; // TODO: инициализация подходящего значения
+            double yExpected = 1; // TODO: инициализация подходящего значения
+            target.getPoint(t, out x, out y);
+            Assert.AreEqual(xExpected, x);
+            Assert.AreEqual(yExpected, y);
+
+        }
+        [TestMethod()]
+        public void getPointTest2()
+        {
+            IPoint st = new Point(0, 0); // TODO: инициализация подходящего значения
+            IPoint fin = new Point(2, 1); // TODO: инициализация подходящего значения
+            Line target = new Line(st, fin); // TODO: инициализация подходящего значения
+            double t = 1F; // TODO: инициализация подходящего значения
+            double x = 0F; // TODO: инициализация подходящего значения
+            double xExpected = 2; // TODO: инициализация подходящего значения
+            double y = 0F; // TODO: инициализация подходящего значения
+            double yExpected = 1; // TODO: инициализация подходящего значения
             target.getPoint(t, out x, out y);
             Assert.AreEqual(xExpected, x);
             Assert.AreEqual(yExpected, y);
