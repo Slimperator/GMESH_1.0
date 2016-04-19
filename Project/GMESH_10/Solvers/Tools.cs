@@ -7,12 +7,16 @@ using Geometry;
 namespace Solvers
 {
     /// <summary>
-    ///
+    ///Класс вспомогательных медотов для работы с "Кривыми".
     /// </summary>
     public static class Tools
     {
         private static double h = 0.001;
-
+        /// <summary>
+        /// Метод вычисления длины кривой
+        /// </summary>
+        /// <param name="curve">Кривая, длина которой измеряется данным методом</param>
+        /// <returns>Длина кривой</returns>
         public static double length(ICurve curve)
         {
             double x1, y1, x2, y2;
@@ -26,6 +30,12 @@ namespace Solvers
             }
             return result;
         }
+        /// <summary>
+        /// Метод вычисляет параметр t, соответствующий длине части дуги
+        /// </summary>
+        /// <param name="curve">Кривая, для которой вычисляется параметр</param>
+        /// <param name="length">Длина, соответствующая искомому параметру</param>
+        /// <returns>Параметр t</returns>
         public static double getParam(ICurve curve, double length)
         {
             return length/Tools.length(curve);
