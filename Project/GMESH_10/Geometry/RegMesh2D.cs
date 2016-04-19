@@ -9,7 +9,7 @@ namespace Geometry
     {
         private IPoint[,] mesh;
         private int nX;
-        private int nY;
+        private int nY; // строки
 
         /// <summary>
         /// Обращение к точке из сетки по индексу
@@ -29,22 +29,22 @@ namespace Geometry
             }
         }
 
-        public RegMesh2D(IPoint[,] mesh, int nX, int nY)
+        public RegMesh2D(IPoint[,] mesh, int nY, int nX)
         {
             this.mesh = mesh;
-            this.nX = nX;
             this.nY = nY;
+            this.nX = nX;
         }
 
-        public RegMesh2D(int nX, int nY)
+        public RegMesh2D(int nY, int nX)
         {
-            this.nX = nX;
             this.nY = nY;
+            this.nX = nX;
 
-            mesh = new IPoint[nX, nY];
-            for (int i = 0; i < nX; i++)
+            mesh = new IPoint[nY, nX];
+            for (int i = 0; i < nY; i++)
             {
-                for (int j = 0; j < nY; j++)
+                for (int j = 0; j < nX; j++)
                 {
                     mesh[i, j] = new Point(0, 0);
                 }
