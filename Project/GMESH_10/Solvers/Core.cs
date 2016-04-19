@@ -11,7 +11,7 @@ namespace Solvers
     /// </summary>
     public interface IMeshGen
     {
-        Point[,] Generate(Contour contour);
+        RegMesh2D Generate(Contour contour);
     }
     /// <summary>
     /// Интерфейс, описывающий внешние контракты декомпозиторов сеток
