@@ -8,6 +8,7 @@ namespace Solvers
 {
     public class TriaMeshGen : IMeshGen
     {
+        //Поменять Point на IPoint
         public Point[,] Generate(Contour contour)
         {
             throw new NotImplementedException();

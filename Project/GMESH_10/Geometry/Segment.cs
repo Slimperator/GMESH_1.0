@@ -44,6 +44,14 @@ namespace Geometry
             }
         }
 
+        public double Length
+        {
+            get
+            {
+                return Math.Sqrt(Math.Pow(this.Fin.X - this.St.X, 2) + Math.Pow(this.Fin.Y - this.St.Y, 2));
+            }
+        }
+
         public void getPoint(double t, out double x, out double y)
         {
             x = (1 - t) * this.st.X + t * this.fin.X;

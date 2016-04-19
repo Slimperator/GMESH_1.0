@@ -7,7 +7,7 @@ namespace Geometry
 {
     public class Relocate : ICurve
     {
-        private Point newA, newB;
+        private IPoint newA, newB;
         private ICurve curve;
 
         public Relocate(ICurve curve, Point newA, Point newB)
