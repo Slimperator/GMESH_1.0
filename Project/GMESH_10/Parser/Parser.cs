@@ -14,12 +14,23 @@ namespace Parser
     public class Parser
     {
         private Gmesh gmesh = new Gmesh();
+        private List<Poligon> poligon = new List<Poligon>();
+        private List<Curve> curve = new List<Curve>();
+        private List<Point> point = new List<Point>();
         private XmlSerializer xml = new XmlSerializer(typeof(Gmesh));
         private IProcessing postProcessing = new PostProcessing();
         private IProcessing preProcessing = new PreProcessing();
         /// <summary>
         /// Сохраняет данные из буфера парсера в xml по указанному адресу
         /// </summary>
+        public Parser()
+        {
+            point.Add(new Point(0, 0, 0));
+            curve.Add(new Curve(Curve.type_line.line, 0, null, null));
+            poligon.Add(new Poligon(curve, point));
+            gmesh.Poligons = poligon;
+            
+        }
         public void save(string filepath)
         {
             Stream stream = File.Create(filepath);
