@@ -18,6 +18,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parser", "Parser\Parser.csproj", "{8AD5EC50-A45D-4C16-B21F-A68BFCAA5ADA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestOfSolovers", "TestProjectOfSolover\TestOfSolovers.csproj", "{CBDF33B2-E414-42D8-9A2D-9F17F375350F}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = GMESH.vsmdi
@@ -81,6 +83,16 @@ Global
 		{8AD5EC50-A45D-4C16-B21F-A68BFCAA5ADA}.Release|Mixed Platforms.Build.0 = Release|x86
 		{8AD5EC50-A45D-4C16-B21F-A68BFCAA5ADA}.Release|x86.ActiveCfg = Release|x86
 		{8AD5EC50-A45D-4C16-B21F-A68BFCAA5ADA}.Release|x86.Build.0 = Release|x86
+		{CBDF33B2-E414-42D8-9A2D-9F17F375350F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBDF33B2-E414-42D8-9A2D-9F17F375350F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBDF33B2-E414-42D8-9A2D-9F17F375350F}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{CBDF33B2-E414-42D8-9A2D-9F17F375350F}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{CBDF33B2-E414-42D8-9A2D-9F17F375350F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CBDF33B2-E414-42D8-9A2D-9F17F375350F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBDF33B2-E414-42D8-9A2D-9F17F375350F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBDF33B2-E414-42D8-9A2D-9F17F375350F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{CBDF33B2-E414-42D8-9A2D-9F17F375350F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{CBDF33B2-E414-42D8-9A2D-9F17F375350F}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
