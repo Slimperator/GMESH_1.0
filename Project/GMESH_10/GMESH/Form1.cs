@@ -18,7 +18,7 @@ namespace GMESH
         private bool isBuildClicked = false;
         private int currentClickedPoint = -1;
         List<ICurve> curves = new List<ICurve>();
-        List<Geometry.Point> pp = new List<Geometry.Point>();
+        List<IPoint> pp = new List<IPoint>();
         private Parser.Parser parser = new Parser.Parser();
         private IProcessing preproc;
         private IProcessing postproc;
@@ -27,7 +27,7 @@ namespace GMESH
         {
             InitializeComponent();
             ProcessingInit();
-            FigureInit();
+            //FigureInit();
             MouseDown += Form1_MouseDown;
             MouseDoubleClick += Form1_MouseDoubleClick;
         }
@@ -48,7 +48,6 @@ namespace GMESH
                 curves[3].getPoint(alpha, out x, out y);
                 b = new Geometry.Point(x, y);
                 curves.Add(new Relocate(new Morph(curves[0], curves[2], alpha), a, b));
-
             }
         }
 
@@ -65,14 +64,14 @@ namespace GMESH
             {
                 if (i == currentClickedPoint)
                 {
-                    pp[i].Fill(g);
+                    g.FillEllipse(new SolidBrush(Color.Green), Convert.ToInt32(pp[i].X - 10), Convert.ToInt32(pp[i].Y - 10), Convert.ToInt32(2 * 10), Convert.ToInt32(2 * 10));
                 }
                 else
                 {
-                    pp[i].Draw(g);
+                    g.DrawEllipse(new Pen(Color.Red), Convert.ToInt32(pp[i].X - 10), Convert.ToInt32(pp[i].Y - 10), Convert.ToInt32(2 * 10), Convert.ToInt32(2 * 10));
                 }
 
-                g.DrawString((i + 1).ToString(), new Font("Arial", 10), new SolidBrush(Color.Black), Convert.ToInt32((pp[i].X - pp[i].R)), Convert.ToInt32((pp[i].Y - pp[i].R)));
+                g.DrawString((i + 1).ToString(), new Font("Arial", 10), new SolidBrush(Color.Black), Convert.ToInt32((pp[i].X - 10)), Convert.ToInt32((pp[i].Y - 10)));
             }
             if (pp.Count >= 3)
             {
@@ -88,7 +87,7 @@ namespace GMESH
         {
             for (int i = 0; i < pp.Count; i++)
             {
-                if (pp[i].IsContain(e.X, e.Y) == true)
+                if ((pp[i].X - e.X) * (pp[i].X - e.X) + (pp[i].Y - e.Y) * (pp[i].Y - e.Y) <= 10 * 10)
                 {
                     return i;
                 }
@@ -96,6 +95,7 @@ namespace GMESH
             return -1;
 
         }
+
         private void createPoint(object sender, MouseEventArgs e)
         {
             if (IsContain(e) == -1)
@@ -215,14 +215,15 @@ namespace GMESH
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string fileSelected = openFileDialog1.FileName;
-                //parser.load(fileSelected);
-                //preproc.convert(ref curves, ref pp, ref parser.Gmesh.Poligons[0].Curves, ref parser.Gmesh.Poligons[0].Points);
+                parser.load(fileSelected);
+                preproc.convert(ref curves, ref pp, ref parser.Gmesh.Poligons[0].Curves, ref parser.Gmesh.Poligons[0].Points);
+                Refresh();
             }  
         }
 
         private void Save_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            SaveFileDialog openFileDialog1 = new SaveFileDialog();
 
             openFileDialog1.InitialDirectory = Environment.CurrentDirectory;
             openFileDialog1.Filter = "xml files (*.xml)|*.xml|All files (*.*)|*.*";
@@ -232,8 +233,8 @@ namespace GMESH
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string fileSelected = openFileDialog1.FileName;
-                //parser.load(fileSelected);
-                //preproc.convert(ref curves, ref pp, ref parser.Gmesh.Poligons[0].Curves, ref parser.Gmesh.Poligons[0].Points);
+                postproc.convert(ref curves, ref pp, ref parser.Gmesh.Poligons[0].Curves, ref parser.Gmesh.Poligons[0].Points);
+                parser.save(fileSelected);
             }  
         }
         
