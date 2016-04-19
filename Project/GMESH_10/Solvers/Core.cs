@@ -30,6 +30,6 @@ namespace Solvers
     /// </summary>
     public interface IGrade
     {
-
+        double Calculate(RegMesh2D mesh);
     }
 }
