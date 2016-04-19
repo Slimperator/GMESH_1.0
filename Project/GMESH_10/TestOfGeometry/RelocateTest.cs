@@ -83,15 +83,15 @@ namespace TestOfGeometry
         [TestMethod()]
         public void getPointTest()
         {
-            ICurve curve = new Line(new Point(0, 0), new Point(0, 0)); // TODO: инициализация подходящего значения
-            Point newA = new Point(0, 0); // TODO: инициализация подходящего значения
-            Point newB = new Point(0, 0); // TODO: инициализация подходящего значения
+            ICurve curve = new Line(new Point(2, 1), new Point(3, 4)); // TODO: инициализация подходящего значения
+            Point newA = new Point(2, 1); // TODO: инициализация подходящего значения
+            Point newB = new Point(3, 4); // TODO: инициализация подходящего значения
             Relocate target = new Relocate(curve, newA, newB); // TODO: инициализация подходящего значения
             double t = 0F; // TODO: инициализация подходящего значения
             double x = 0F; // TODO: инициализация подходящего значения
-            double xExpected = 0F; // TODO: инициализация подходящего значения
+            double xExpected = 2F; // TODO: инициализация подходящего значения
             double y = 0F; // TODO: инициализация подходящего значения
-            double yExpected = 0F; // TODO: инициализация подходящего значения
+            double yExpected = 1F; // TODO: инициализация подходящего значения
             target.getPoint(t, out x, out y);
             Assert.AreEqual(xExpected, x);
             Assert.AreEqual(yExpected, y);

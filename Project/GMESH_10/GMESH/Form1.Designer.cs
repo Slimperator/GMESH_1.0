@@ -39,7 +39,6 @@
             this.Line = new System.Windows.Forms.ToolStripMenuItem();
             this.Gauge = new System.Windows.Forms.ToolStripMenuItem();
             this.Build = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,8 +48,7 @@
             this.Save,
             this.Open,
             this.Change,
-            this.Build,
-            this.toolStripMenuItem1});
+            this.Build});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(289, 24);
@@ -128,13 +126,6 @@
             this.Build.Text = "Build";
             this.Build.Click += new System.EventHandler(this.Build_Click);
             // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(50, 20);
-            this.toolStripMenuItem1.Text = "Gener";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -169,7 +160,6 @@
         private System.Windows.Forms.ToolStripMenuItem Line;
         private System.Windows.Forms.ToolStripMenuItem Gauge;
         private System.Windows.Forms.ToolStripMenuItem Build;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }
 
