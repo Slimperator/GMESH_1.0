@@ -26,9 +26,5 @@ namespace Geometry
             x += (1 - t) * (this.newA.X - ax) + t * (this.newB.X - bx);
             y += (1 - t) * (this.newA.Y - ay) + t * (this.newB.Y - by);
         }
-        public void aboutCurve(out string type, out List<IPoint> Points, out List<string> Special)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

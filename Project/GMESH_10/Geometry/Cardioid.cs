@@ -21,11 +21,5 @@ namespace Geometry
             x = this.center.X + (2 * this.radius * Math.Cos(2 * Math.PI * t) - this.radius * Math.Cos(2 * 2 * Math.PI * t));
             y = this.center.Y + (2 * this.radius * Math.Sin(2 * Math.PI * t) - this.radius * Math.Sin(2 * 2 * Math.PI * t));
         }
-        public void aboutCurve(out string type, out List<IPoint> Points, out List<string> Special)
-        {
-            type = "cardioid";
-            Points = new List<IPoint>() { center };
-            Special = new List<string>() { Convert.ToString(radius) };
-        }
     }
 }
