@@ -13,12 +13,12 @@ namespace Geometry
         private IPoint Begin;                               //Точка начала
         private IPoint End;                                 //Точка конца
         private bool Convex;                                //Впуклость-выпуклость циклоиды
-        private IPoint VectorOXWorld = new Point(1, 0);     //Базис векторы
-        private IPoint VectorOYWorld = new Point(0, 1);     //относительно начала координат
-        private IPoint VectorOXFigure;                      //Базис векторы 
-        private IPoint VectorOYFigure;                      //которые повернули на AglRotate 
+        //private IPoint VectorOXWorld = new Point(1, 0);     //Базис векторы
+        //private IPoint VectorOYWorld = new Point(0, 1);     //относительно начала координат
+        //private IPoint VectorOXFigure;                      //Базис векторы 
+        //private IPoint VectorOYFigure;                      //которые повернули на AglRotate 
         private IPoint VectorBE;                            //Вектор с началом в точке Begin и концом в точке End
-        private double AglRotate;                           //Угол поворота между Базисом Мировых координат и Базисом координат вектора          
+        //private double AglRotate;                           //Угол поворота между Базисом Мировых координат и Базисом координат вектора          
         /// <summary>
         /// Создает Циклоиду между двумя точками 
         /// с заданной выпуклостью (true - выпуклая, false - впуклая)
@@ -30,8 +30,8 @@ namespace Geometry
             this.Radius = calculationRadius(Begin, End);
             this.Convex = Convex;
             this.VectorBE = vectorCalculate();
-            this.AglRotate = aglRotate();
-            matrixOfRotate();
+            //this.AglRotate = aglRotate();
+            //matrixOfRotate();
         }
         /// <summary>
         /// Возвращает координату точки на поверхности циклоиды 
@@ -40,8 +40,10 @@ namespace Geometry
         public void getPoint(double t, out double x, out double y)
         {
             this.Agle = paramToRadian(t);
-            x = (getX(this.Agle) + Begin.X) * VectorOXFigure.X + (getY(this.Agle) + Begin.Y) * VectorOYFigure.X;    //Получаем координаты точки
-            y = (getX(this.Agle) + Begin.X) * VectorOXFigure.Y + (getY(this.Agle) + Begin.Y) * VectorOYFigure.Y;    //И переносим её в мировые координаты
+            x = getX(this.Agle) + Begin.X;
+            y = getY(this.Agle) + Begin.Y;
+            //x = (getX(this.Agle) + Begin.X) * VectorOXFigure.X + (getY(this.Agle) + Begin.Y) * VectorOYFigure.X;    //Получаем координаты точки
+            //y = (getX(this.Agle) + Begin.X) * VectorOXFigure.Y + (getY(this.Agle) + Begin.Y) * VectorOYFigure.Y;    //И переносим её в мировые координаты
         }
 
         /// <summary>
@@ -72,13 +74,6 @@ namespace Geometry
         }
 
         /// <summary>
-        /// Возвращает значение указанного угла t в радианах
-        /// </summary>
-        private double degreeToRadian(double t)
-        {
-            return Math.PI * t / 180;
-        }
-        /// <summary>
         /// Возвращает значение угла в радианах, 
         /// при заданном параметре t
         /// от 0 до 1
@@ -88,6 +83,7 @@ namespace Geometry
         {
             return /*((Math.PI) / 180) */ (Math.PI * 2 * t);
         }
+        /*
         /// <summary>
         /// Возвращает значение угла между вектором OX и вектором рассматриваемого отрезка в радианах
         /// </summary>
@@ -95,7 +91,7 @@ namespace Geometry
         {
             return Math.Acos((VectorOXWorld.X * VectorBE.X + VectorOXWorld.Y * VectorBE.Y) /
                 (Math.Sqrt(Math.Pow(VectorBE.X, 2) + Math.Pow(VectorBE.Y, 2)) * Math.Sqrt(Math.Pow(VectorOXWorld.X, 2) + Math.Pow(VectorOXWorld.Y, 2))));
-        }
+        }*/
         /// <summary>
         /// Возвращает координаты вектора OX рассматриваемого отрезка
         /// </summary>
@@ -103,7 +99,7 @@ namespace Geometry
         {
             return new Point(End.X - Begin.X, End.Y - Begin.Y);
         }
-
+        /*
         /// <summary>
         /// Поворачивает базисные вектора так, чтобы OX базиса совпадала с BE 
         /// </summary>
@@ -116,12 +112,6 @@ namespace Geometry
             VectorOYFigure = new Point(
             VectorOYWorld.X * Math.Cos(AglRotate) - VectorOYWorld.Y * Math.Sin(AglRotate),
             VectorOYWorld.X * Math.Sin(AglRotate) + VectorOYWorld.Y * Math.Cos(AglRotate));
-        }
-        public void aboutCurve(out string type, out List<IPoint> Points, out List<string> Special)
-        {
-            type = "cycloid";
-            Points = new List<IPoint>() { Begin, End };
-            Special = new List<string>() { Convert.ToString(Convex) };
-        }
+        }*/
     }
 }
