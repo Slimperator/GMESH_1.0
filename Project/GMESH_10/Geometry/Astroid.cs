@@ -14,7 +14,7 @@ namespace Geometry
 
         public Astroid(IPoint center, double radius)
         {
-            this.center = new Point(center.X, center.Y);
+            this.center = center;
             this.radius = radius;
         }
         public void getPoint(double t, out double x, out double y)

@@ -16,10 +16,10 @@ namespace Geometry
 
         public Bezier(IPoint P0, IPoint P1, IPoint P2, IPoint P3)
         {
-            this.P0 = new Point(P0.X, P0.Y);
-            this.P1 = new Point(P1.X, P1.Y);
-            this.P2 = new Point(P2.X, P2.Y);
-            this.P3 = new Point(P3.X, P3.Y);
+            this.P0 = P0;
+            this.P1 = P1;
+            this.P2 = P2;
+            this.P3 = P3;
         }
 
         public void getPoint(double t, out double x, out double y)

@@ -14,8 +14,8 @@ namespace Geometry
 
         public Segment(IPoint st, IPoint fin)
         {
-            this.st = new Point(st.X, st.Y);
-            this.fin = new Point(fin.X, fin.Y);
+            this.st = st;
+            this.fin = fin;
         }
 
         public IPoint Fin

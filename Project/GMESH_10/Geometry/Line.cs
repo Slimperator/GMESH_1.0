@@ -13,8 +13,8 @@ namespace Geometry
 
         public Line(IPoint l1, IPoint l2)
         {
-            this.l1 = new Point(l1.X, l1.Y);
-            this.l2 = new Point(l2.X, l2.Y);
+            this.l1 = l1;
+            this.l2 = l2;
 
         }
         public void getPoint(double t, out double x, out double y)

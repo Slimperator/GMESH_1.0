@@ -14,7 +14,7 @@ namespace Geometry
 
         public Circle(IPoint center, double radius)
         {
-            this.center = new Point(center.X, center.Y);
+            this.center = center;
             this.radius = radius;
 
         }
