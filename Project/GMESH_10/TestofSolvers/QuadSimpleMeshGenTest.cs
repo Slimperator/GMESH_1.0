@@ -71,10 +71,10 @@ namespace TestOfSolvers
         [TestMethod()]
         public void QuadSimpleMeshGenConstructorTest()
         {
-            int nX = 0; // TODO: инициализация подходящего значения
-            int nY = 0; // TODO: инициализация подходящего значения
+            int nX = 1; // TODO: инициализация подходящего значения
+            int nY = 1; // TODO: инициализация подходящего значения
             QuadSimpleMeshGen target = new QuadSimpleMeshGen(nX, nY);
-            Assert.Inconclusive("TODO: реализуйте код для проверки целевого объекта");
+        
         }
 
         /// <summary>
@@ -83,15 +83,14 @@ namespace TestOfSolvers
         [TestMethod()]
         public void GenerateTest()
         {
-            int nX = 0; // TODO: инициализация подходящего значения
-            int nY = 0; // TODO: инициализация подходящего значения
+            int nX = 1; // TODO: инициализация подходящего значения
+            int nY = 1; // TODO: инициализация подходящего значения
             QuadSimpleMeshGen target = new QuadSimpleMeshGen(nX, nY); // TODO: инициализация подходящего значения
             Contour contour = null; // TODO: инициализация подходящего значения
             RegMesh2D expected = null; // TODO: инициализация подходящего значения
             RegMesh2D actual;
             actual = target.Generate(contour);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Проверьте правильность этого метода теста.");
         }
     }
 }
