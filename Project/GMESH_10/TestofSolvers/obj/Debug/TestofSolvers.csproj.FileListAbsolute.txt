@@ -1,9 +1,0 @@
-D:\Project\Source\GMESH_1.0\Project\GMESH_10\TestofSolvers\bin\Debug\TestofSolvers.dll
-D:\Project\Source\GMESH_1.0\Project\GMESH_10\TestofSolvers\bin\Debug\TestofSolvers.pdb
-D:\Project\Source\GMESH_1.0\Project\GMESH_10\TestofSolvers\bin\Debug\Geometry.dll
-D:\Project\Source\GMESH_1.0\Project\GMESH_10\TestofSolvers\bin\Debug\Solvers.exe
-D:\Project\Source\GMESH_1.0\Project\GMESH_10\TestofSolvers\bin\Debug\Geometry.pdb
-D:\Project\Source\GMESH_1.0\Project\GMESH_10\TestofSolvers\bin\Debug\Solvers.pdb
-D:\Project\Source\GMESH_1.0\Project\GMESH_10\TestofSolvers\obj\Debug\TestofSolvers.csprojResolveAssemblyReference.cache
-D:\Project\Source\GMESH_1.0\Project\GMESH_10\TestofSolvers\obj\Debug\TestofSolvers.dll
-D:\Project\Source\GMESH_1.0\Project\GMESH_10\TestofSolvers\obj\Debug\TestofSolvers.pdb

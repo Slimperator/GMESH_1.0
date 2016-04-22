@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором 
 // атрибутов. Отредактируйте значения этих атрибутов, чтобы изменить
 // общие сведения об этой сборке.
-[assembly: AssemblyTitle("TestofSolvers")]
+[assembly: AssemblyTitle("TestOfSolvers")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("TestofSolvers")]
+[assembly: AssemblyProduct("TestOfSolvers")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("e3df1dc9-5fae-410c-a7b4-f7808db95ca2")]
+[assembly: Guid("b90d384f-8ea9-47e0-992d-2c879c14811d")]
 
 // Сведения о версии сборки состоят из следующих четырех значений:
 //
