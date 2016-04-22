@@ -26,7 +26,7 @@ namespace Geometry
     /// <summary>
     /// Интерфейс определяет внешние контракты объекта "Кривая"
     /// </summary>
-    public interface ICurve
+    public interface ICurve : IVisited
     {
         void getPoint(double t, out double x, out double y);
     }
@@ -37,5 +37,21 @@ namespace Geometry
     {
         int Size { get; }
         ICurve this[int i] { get; set; }
+    }
+    /// <summary>
+    /// 
+    /// </summary>
+    public interface IVisitor
+    {
+        void visitLine(Line curve);
+        void visitBezier(Bezier curve);
+        void visit(ICurve curve);
+    }
+    /// <summary>
+    /// 
+    /// </summary>
+    public interface IVisited
+    {
+        void accept(IVisitor visitor);
     }
 }
