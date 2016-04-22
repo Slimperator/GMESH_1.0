@@ -86,9 +86,9 @@ namespace TestOfGeometry
             double radius = 5; // TODO: инициализация подходящего значения
             Circle target = new Circle(center, radius); // TODO: инициализация подходящего значения
             double t = 0.1; // TODO: инициализация подходящего значения
-            double x = 1.0; // TODO: инициализация подходящего значения
+            double x = 0.0F; // TODO: инициализация подходящего значения
             double xExpected = 5.05; // TODO: инициализация подходящего значения
-            double y = 1.0F; // TODO: инициализация подходящего значения
+            double y = 0.0F; // TODO: инициализация подходящего значения
             double yExpected = 3.94; // TODO: инициализация подходящего значения
             target.getPoint(t, out x, out y);
             Assert.AreEqual(xExpected, x, 0.01);
