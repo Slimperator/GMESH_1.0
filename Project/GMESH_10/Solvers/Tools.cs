@@ -25,8 +25,7 @@ namespace Solvers
             {
                 curve.getPoint(t, out x1, out y1);
                 curve.getPoint(t + h, out x2, out y2);
-                ISegment temp = new Segment(new Point(x1, y1), new Point(x2, y2));
-                result += temp.Length;
+                result += Math.Sqrt(Math.Pow(x1 - x2, 2) + Math.Pow(y1 - y2, 2));
             }
             return result;
         }
