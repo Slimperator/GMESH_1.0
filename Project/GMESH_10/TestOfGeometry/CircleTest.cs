@@ -91,8 +91,8 @@ namespace TestOfGeometry
             double y = 1.0F; // TODO: инициализация подходящего значения
             double yExpected = 3.94; // TODO: инициализация подходящего значения
             target.getPoint(t, out x, out y);
-            Assert.AreEqual((Math.Round(xExpected, 2)), Math.Round(x, 2));
-            Assert.AreEqual((Math.Round(yExpected, 2)), Math.Round(y, 2));
+            Assert.AreEqual(xExpected, x, 0.01);
+            Assert.AreEqual(yExpected, y, 0.01);
         
         }
     }
