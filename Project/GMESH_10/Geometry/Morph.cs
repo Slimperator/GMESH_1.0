@@ -28,5 +28,10 @@ namespace Geometry
             x = this.alpha * ax + (1 - this.alpha) * bx;
             y = this.alpha * ay + (1 - this.alpha) * by;
         }
+
+        public void accept(IVisitor visitor)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
