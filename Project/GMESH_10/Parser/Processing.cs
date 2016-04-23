@@ -21,6 +21,7 @@ namespace Parser
         {
             GMESH_Points.Clear();
             GMESH_Curves.Clear();
+            IPoint[] Points_curve;
             foreach (Point Point in Points)
             {
                 GMESH_Points.Add(new Geometry.Point(Point.x, Point.y));
@@ -28,13 +29,19 @@ namespace Parser
 
             foreach (Curve Curve in Curves)
             {
-                GMESH_Curves.Add(factory.createICurve(Convert.ToString(Curve.type), GMESH_Points, Curve.special));
+                Points_curve = new IPoint[Curve.points.Capacity];
+                foreach (uint i in Curve.points) { Points_curve[Curve.points.IndexOf(i)] = GMESH_Points[Convert.ToInt32(i)]; }
+                GMESH_Curves.Add(factory.createICurve(Convert.ToString(Curve.type), Points_curve, Curve.special));
             }
         }
     }
 
     public class PostProcessing : IProcessing, IVisitor
     {
+        private List<Geometry.IPoint> points_of_curvs;
+        private List<string> special_of_curvs;
+        private List<uint> id_points_of_curvs;
+        private Curve.type_line type = new Curve.type_line();
         /// <summary>
         /// Подготавливает данные из программы к записи в документ.
         /// </summary>
@@ -42,61 +49,50 @@ namespace Parser
         {
             Curves.Clear();
             Points.Clear();
-            string intermediate_type;
-            List<Geometry.IPoint> intermediate_points;
-            List<string> intermediate_special;
-            List<uint> id;
+            points_of_curvs = GMESH_Points;
 
             foreach (IPoint Point in GMESH_Points)
             {
                 Points.Add(new Point(Convert.ToUInt32(GMESH_Points.IndexOf(Point)), Point.X, Point.Y));
             }
-
-            foreach (ICurve Curv in GMESH_Curves)
+            foreach (ICurve curve in GMESH_Curves)
             {
-                Curv.aboutCurve(out intermediate_type, out intermediate_points, out intermediate_special);
-                id = new List<uint>();
-                foreach(IPoint Point in intermediate_points)
-                {
-                    id.Add(Convert.ToUInt32(GMESH_Points.Find(x => x == Point)));
-                }
-                switch(intermediate_type)
-                {
-                    case ("line"):
-                        Curves.Add(new Curve(Curve.type_line.line, Convert.ToUInt32(GMESH_Curves.IndexOf(Curv)), id, intermediate_special));
-                        break;
-                    case ("astroid"):
-                        Curves.Add(new Curve(Curve.type_line.astroid, Convert.ToUInt32(GMESH_Curves.IndexOf(Curv)), id, intermediate_special));
-                        break;
-                    case ("cardioid"):
-                        Curves.Add(new Curve(Curve.type_line.cardioid, Convert.ToUInt32(GMESH_Curves.IndexOf(Curv)), id, intermediate_special));
-                        break;
-                    case ("circle"):
-                        Curves.Add(new Curve(Curve.type_line.circle, Convert.ToUInt32(GMESH_Curves.IndexOf(Curv)), id, intermediate_special));
-                        break;
-                    case ("cycloid"):
-                        Curves.Add(new Curve(Curve.type_line.cycloid, Convert.ToUInt32(GMESH_Curves.IndexOf(Curv)), id, intermediate_special));
-                        break;
-                    case ("bezier"):
-                        Curves.Add(new Curve(Curve.type_line.bezier, Convert.ToUInt32(GMESH_Curves.IndexOf(Curv)), id, intermediate_special));
-                        break;
-                }
+                curve.accept(this);
+                Curves.Add(new Curve(type, Convert.ToUInt32(GMESH_Curves.IndexOf(curve)),id_points_of_curvs,special_of_curvs));
             }
         }
 
         public void visitLine(Line curve)
         {
-            throw new NotImplementedException();
+            this.id_points_of_curvs = new List<uint>();
+            addPointInIdList(curve.l1);
+            addPointInIdList(curve.l2);
+            this.type = Curve.type_line.line;
         }
 
         public void visitBezier(Bezier curve)
         {
-            throw new NotImplementedException();
+            this.id_points_of_curvs = new List<uint>();
+            addPointInIdList(curve.P0);
+            addPointInIdList(curve.P1);
+            addPointInIdList(curve.P2);
+            addPointInIdList(curve.P3);
+            this.type = Curve.type_line.bezier;
         }
 
         public void visit(ICurve curve)
         {
             throw new NotImplementedException();
         }
+
+        private void addPointInIdList(IPoint Point)
+        {
+            uint p = Convert.ToUInt32(points_of_curvs.FindIndex(x => x == Point));
+            id_points_of_curvs.Add(p);
+        }
     }
 }
+                /*foreach(IPoint Point in intermediate_points)
+                {
+                    id.Add(Convert.ToUInt32(GMESH_Points.Find(x => x == Point)));
+                }*/

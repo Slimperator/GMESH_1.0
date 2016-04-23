@@ -10,7 +10,7 @@ namespace Parser
         /// <summary>
         /// Создает экземпляр и вовзращает ссылку на ICurve из Geometry
         /// </summary>
-        public ICurve createICurve(string type, List<IPoint> Points, List<string> Special)
+        public ICurve createICurve(string type, IPoint[] Points, List <string> Special)
         {
             switch (type)
             {
