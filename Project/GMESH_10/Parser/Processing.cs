@@ -33,7 +33,7 @@ namespace Parser
         }
     }
 
-    public class PostProcessing : IProcessing
+    public class PostProcessing : IProcessing, IVisitor
     {
         /// <summary>
         /// Подготавливает данные из программы к записи в документ.
@@ -82,6 +82,21 @@ namespace Parser
                         break;
                 }
             }
+        }
+
+        public void visitLine(Line curve)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void visitBezier(Bezier curve)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void visit(ICurve curve)
+        {
+            throw new NotImplementedException();
         }
     }
 }
