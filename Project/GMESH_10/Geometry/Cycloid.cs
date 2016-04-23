@@ -10,9 +10,9 @@ namespace Geometry
     {
         private double Radius;                              //Радиус окружности, катящейся по прямой
         private double Agle;                                //Угол параметра t в радианах
-        private IPoint Begin { get; private set; }            //Точка начала
-        private IPoint End { get; private set; }              //Точка конца
-        private bool Convex { get; private set; }             //Впуклость-выпуклость циклоиды
+        public IPoint Begin { get; private set; }            //Точка начала
+        public IPoint End { get; private set; }              //Точка конца
+        public bool Convex { get; private set; }             //Впуклость-выпуклость циклоиды
         private IPoint VectorBE;                            //Вектор с началом в точке Begin и концом в точке End         
         /// <summary>
         /// Создает Циклоиду между двумя точками 
