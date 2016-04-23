@@ -8,8 +8,8 @@ namespace Geometry
 {
     public class Line : ICurve
     {
-        private IPoint l1;
-        private IPoint l2;
+        private IPoint l1 { get; private set; }
+        private IPoint l2 { get; private set; }
 
         public Line(IPoint l1, IPoint l2)
         {
