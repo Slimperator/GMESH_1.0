@@ -57,5 +57,10 @@ namespace Geometry
             x = (1 - t) * this.st.X + t * this.fin.X;
             y = (1 - t) * this.st.Y + t * this.fin.Y;
         }
+
+        public void accept(IVisitor visitor)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
