@@ -22,5 +22,10 @@ namespace Geometry
             x = (1 - t)*this.l1.X + t * l2.X;
             y = (1 - t)*this.l1.Y + t * l2.Y;       
         }
+
+        public void accept(IVisitor visitor)
+        {
+            visitor.visitLine(this);
+        }
     }
 }

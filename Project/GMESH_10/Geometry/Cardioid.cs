@@ -21,5 +21,10 @@ namespace Geometry
             x = this.center.X + (2 * this.radius * Math.Cos(2 * Math.PI * t) - this.radius * Math.Cos(2 * 2 * Math.PI * t));
             y = this.center.Y + (2 * this.radius * Math.Sin(2 * Math.PI * t) - this.radius * Math.Sin(2 * 2 * Math.PI * t));
         }
+
+        public void accept(IVisitor visitor)
+        {
+            visitor.visit(this);
+        }
     }
 }

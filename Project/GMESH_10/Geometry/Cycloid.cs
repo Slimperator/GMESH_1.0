@@ -113,5 +113,10 @@ namespace Geometry
             VectorOYWorld.X * Math.Cos(AglRotate) - VectorOYWorld.Y * Math.Sin(AglRotate),
             VectorOYWorld.X * Math.Sin(AglRotate) + VectorOYWorld.Y * Math.Cos(AglRotate));
         }*/
+
+        public void accept(IVisitor visitor)
+        {
+            visitor.visit(this);
+        }
     }
 }

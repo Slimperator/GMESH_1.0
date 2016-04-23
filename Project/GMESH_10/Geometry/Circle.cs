@@ -24,5 +24,10 @@ namespace Geometry
             x = this.center.X + this.radius * Math.Cos(t);
             y = this.center.Y + this.radius * Math.Sin(t);
         }
+
+        public void accept(IVisitor visitor)
+        {
+            visitor.visit(this);
+        }
     }
 }

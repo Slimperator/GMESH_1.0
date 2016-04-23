@@ -28,6 +28,11 @@ namespace Geometry
             x = this.P0.X * (1 - t) * (1 - t) * (1 - t) + 3 * t * P1.X * (1 - t) * (1 - t) + 3 * t * t * P2.X * (1 - t) + t * t * t * P3.X;
             y = this.P0.Y * (1 - t) * (1 - t) * (1 - t) + 3 * t * P1.Y * (1 - t) * (1 - t) + 3 * t * t * P2.Y * (1 - t) + t * t * t * P3.Y;
         }
+
+        public void accept(IVisitor visitor)
+        {
+            visitor.visitBezier(this);
+        }
     }
 }
 
