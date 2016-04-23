@@ -50,6 +50,7 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArithmMeanGradeTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuadSimpleMeshGenTest.cs" />
     <Compile Include="UnitTest1.cs" />
@@ -63,6 +64,9 @@
       <Project>{AD87D7FB-B6EE-498D-AA62-AAE517CE59B9}</Project>
       <Name>Solvers</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Shadow Include="Тестовые ссылки\Solvers.accessor" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
