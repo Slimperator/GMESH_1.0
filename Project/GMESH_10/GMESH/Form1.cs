@@ -14,11 +14,12 @@ namespace GMESH
 {
     public partial class Form1 : Form
     {
-        private bool isClicked = false;
-        private bool isBuildClicked = false;
         private int currentClickedPoint = -1;
+        const int rad = 10;
+
         List<ICurve> curves = new List<ICurve>();
-        List<IPoint> pp = new List<IPoint>();
+        List<IPoint> points = new List<IPoint>();
+
         private Parser.Parser parser = new Parser.Parser();
         private IProcessing preproc;
         private IProcessing postproc;
@@ -26,217 +27,140 @@ namespace GMESH
         public Form1()
         {
             InitializeComponent();
-            ProcessingInit();
-            //FigureInit();
-            MouseDown += Form1_MouseDown;
-            MouseDoubleClick += Form1_MouseDoubleClick;
         }
 
-        void FigureInit()
-        {
-            curves.Add(new Bezier(new Geometry.Point(100, 100), new Geometry.Point(150, 50), new Geometry.Point(200, 50), new Geometry.Point(250, 100)));
-            curves.Add(new Bezier(new Geometry.Point(250, 100), new Geometry.Point(260, 150), new Geometry.Point(260, 150), new Geometry.Point(250, 180)));
-            curves.Add(new Line(new Geometry.Point(250, 180), new Geometry.Point(150, 200)));
-            curves.Add(new Bezier(new Geometry.Point(150, 200), new Geometry.Point(170, 150), new Geometry.Point(170, 150), new Geometry.Point(100, 100)));
-
-            for (double alpha = 0.1; alpha < 1; alpha += 0.1)
-            {
-                Geometry.Point a, b;
-                double x, y;
-                curves[1].getPoint(1-alpha, out x, out y);
-                a = new Geometry.Point(x, y);
-                curves[3].getPoint(alpha, out x, out y);
-                b = new Geometry.Point(x, y);
-                curves.Add(new Relocate(new Morph(curves[0], curves[2], alpha), a, b));
-            }
-        }
-
-
-        void ProcessingInit()
-        {
-            postproc = parser.PostProcessing;
-            preproc = parser.PreProcessing;
-        }
-
-        void Draw(Graphics g)
-        {
-            for (int i = 0; i < pp.Count; i++)
-            {
-                if (i == currentClickedPoint)
-                {
-                    g.FillEllipse(new SolidBrush(Color.Green), Convert.ToInt32(pp[i].X - 10), Convert.ToInt32(pp[i].Y - 10), Convert.ToInt32(2 * 10), Convert.ToInt32(2 * 10));
-                }
-                else
-                {
-                    g.DrawEllipse(new Pen(Color.Red), Convert.ToInt32(pp[i].X - 10), Convert.ToInt32(pp[i].Y - 10), Convert.ToInt32(2 * 10), Convert.ToInt32(2 * 10));
-                }
-
-                g.DrawString((i + 1).ToString(), new Font("Arial", 10), new SolidBrush(Color.Black), Convert.ToInt32((pp[i].X - 10)), Convert.ToInt32((pp[i].Y - 10)));
-            }
-            if (pp.Count >= 3)
-            {
-                for (int i = 1; i <= pp.Count; i++)
-                {
-                    g.DrawLine(new Pen(Color.Black), Convert.ToInt32(pp[i % pp.Count].X), Convert.ToInt32(pp[i % pp.Count].Y), Convert.ToInt32(pp[(i - 1) % pp.Count].X), Convert.ToInt32(pp[(i - 1) % pp.Count].Y));
-                }
-            }
-
-        }
-
+        // Logic Section
         int IsContain(MouseEventArgs e)
         {
-            for (int i = 0; i < pp.Count; i++)
+            for (int i = 0; i < points.Count; i++)
             {
-                if ((pp[i].X - e.X) * (pp[i].X - e.X) + (pp[i].Y - e.Y) * (pp[i].Y - e.Y) <= 10 * 10)
+                if (Math.Pow(points[i].X - e.X, 2) + Math.Pow(points[i].Y - e.Y, 2) <= rad * rad)
                 {
                     return i;
                 }
             }
             return -1;
-
         }
 
-        private void createPoint(object sender, MouseEventArgs e)
+        // Event section
+        private void Form1_MouseClick(object sender, MouseEventArgs e)
         {
             if (IsContain(e) == -1)
             {
-                Geometry.Point p = new Geometry.Point(e.X, e.Y);
-
-                pp.Add(p);
-                Refresh();
+                points.Add(new Geometry.Point(e.X, e.Y));
+                if (points.Count == 2)
+                {
+                    curves.Add(new Line(points[1], points[0]));
+                    curves.Add(new Line(points[0], points[1]));
+                }
+                if (points.Count >= 3)
+                {
+                    curves.RemoveAt(curves.Count - 1);
+                    curves.Add(new Line(points[points.Count - 2], points[points.Count - 1]));
+                    curves.Add(new Line(points[points.Count - 1], points[0]));
+                }
             }
-        }
-
-        private void Form1_Paint(object sender, PaintEventArgs e)
-        {
-            Graphics g = this.CreateGraphics();
-
-            if (isBuildClicked)
-            {
-                drawSpecialFigure(g);
-            }
-            else
-            {
-                Draw(g);
-            }
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
+            Refresh();
         }
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
-            isClicked = true;
             currentClickedPoint = IsContain(e);
             Refresh();
         }
 
         private void Form1_MouseUp(object sender, MouseEventArgs e)
         {
-            isClicked = false;
+            currentClickedPoint = -1;
+            Refresh();
         }
 
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
-            if (isClicked)
-            {
-                int pointNum = IsContain(e);
-
-                if (pointNum == -1) return;
-                else
-                {
-                    pp[pointNum].X = e.X;
-                    pp[pointNum].Y = e.Y;
-                }
-                Refresh();
-            }
+            if (currentClickedPoint == -1)
+                return;
+            points[currentClickedPoint].X = e.X;
+            points[currentClickedPoint].Y = e.Y;
+            Refresh();
         }
 
-        private void Form1_MouseDoubleClick(object sender, MouseEventArgs e)//Удалить точку
-        {
-
-            int pointNum = IsContain(e);
-
-            if (pointNum == -1) return;
-            else
+        private void Form1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {/*
+            if (currentClickedPoint != -1)
             {
-                pp.RemoveAt(pointNum);
+                curves.RemoveAt((currentClickedPoint - 1) % (curves.Count - 1));
+                curves.RemoveAt(currentClickedPoint % (curves.Count - 1));
+                points.RemoveAt(currentClickedPoint);
+                curves.Insert((currentClickedPoint - 1) % (curves.Count - 1), new Line(points[currentClickedPoint - 1], points[currentClickedPoint]));
             }
-            Refresh();
-
+            Refresh();*/
         }
 
         private void Build_Click(object sender, EventArgs e)
         {
-            isBuildClicked = true;
-            pp.Clear();
-            Refresh();
-        }
-
-        
-    //=======================================================================
-        void drawSpecialFigure(Graphics g)
-        {
-            foreach (var c in curves)
-            {
-                drawCurve(c, g);
-            }
-        }
-
-        void drawCurve(ICurve curve, Graphics g)
-        {
-            double h = 0.01;
-            double x1, x2, y1, y2;
-            for (double t = 0; t < 1; t += h)
-            {
-                curve.getPoint(t, out x1, out y1);
-                curve.getPoint(t + h, out x2, out y2);
-                g.DrawLine(new Pen(Color.Green), (int)x1, (int)y1, (int)x2, (int)y2);
-
-            }
-        }
-
-        private void Form1_Load_1(object sender, EventArgs e)
-        {
-
         }
 
         private void Open_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
-            openFileDialog1.InitialDirectory = Environment.CurrentDirectory;
-            openFileDialog1.Filter = "xml files (*.xml)|*.xml|All files (*.*)|*.*";
-            openFileDialog1.FilterIndex = 1;
-            openFileDialog1.RestoreDirectory = true;
-
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                string fileSelected = openFileDialog1.FileName;
-                parser.load(fileSelected);
-                preproc.convert(ref curves, ref pp, ref parser.Gmesh.Poligons[0].Curves, ref parser.Gmesh.Poligons[0].Points);
-                Refresh();
-            }  
         }
 
         private void Save_Click(object sender, EventArgs e)
         {
-            SaveFileDialog openFileDialog1 = new SaveFileDialog();
 
-            openFileDialog1.InitialDirectory = Environment.CurrentDirectory;
-            openFileDialog1.Filter = "xml files (*.xml)|*.xml|All files (*.*)|*.*";
-            openFileDialog1.FilterIndex = 1;
-            openFileDialog1.RestoreDirectory = true;
-
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                string fileSelected = openFileDialog1.FileName;
-                postproc.convert(ref curves, ref pp, ref parser.Gmesh.Poligons[0].Curves, ref parser.Gmesh.Poligons[0].Points);
-                parser.save(fileSelected);
-            }  
         }
+
+        // Draw Section
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            Draw(e.Graphics);
+        }
+
+        void Draw(Graphics e)
+        {
+            drawPoints(e);
+            drawCurves(e);
+        }
+
+        void drawCurves(Graphics e)
+        {
+            if (curves.Count >= 3)
+            {
+                double h = 0.01;
+                double x1, x2, y1, y2;
+                foreach (var curve in curves)
+                {
+                    for (double t = 0; t < 1; t += h)
+                    {
+                        curve.getPoint(t, out x1, out y1);
+                        curve.getPoint(t + h, out x2, out y2);
+                        e.DrawLine(new Pen(Color.Black), (int)x1, (int)y1, (int)x2, (int)y2);
+                    }
+                }
+            }
+        }
+
+        void drawPoints(Graphics e)
+        {
+            for (int i = 0; i < points.Count; i++)
+            {
+                if (i == currentClickedPoint)
+                {
+                    e.FillEllipse(new SolidBrush(Color.Magenta), 
+                        (int)(points[i].X - 10), (int)(points[i].Y - 10),
+                        (int)(2 * rad), (int)(2 * rad));
+                }
+                else
+                {
+                    e.DrawEllipse(new Pen(Color.Red),
+                        (int)(points[i].X - 10), (int)(points[i].Y - 10),
+                        (int)(2 * rad), (int)(2 * rad));
+                }
+                e.DrawString((i + 1).ToString(), new Font("Arial", 10), new SolidBrush(Color.Black),
+                    (int)(points[i].X - 10), (int)(points[i].Y - 10));
+            }
+        }
+
         
 
 
