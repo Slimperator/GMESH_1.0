@@ -68,3 +68,4 @@ C:\Users\Ани\Desktop\Новая папка (4)\GMESH_1.0\Project\GMESH_10\Tes
 C:\Users\Ани\Desktop\Новая папка (4)\GMESH_1.0\Project\GMESH_10\TestOfGeometry\obj\Debug\TestOfGeometry.csprojResolveAssemblyReference.cache
 C:\Users\Ани\Desktop\Новая папка (4)\GMESH_1.0\Project\GMESH_10\TestOfGeometry\obj\Debug\TestOfGeometry.dll
 C:\Users\Ани\Desktop\Новая папка (4)\GMESH_1.0\Project\GMESH_10\TestOfGeometry\obj\Debug\TestOfGeometry.pdb
+C:\Users\Ани\Desktop\Новая папка\GMESH_1.0\Project\GMESH_10\TestOfGeometry\obj\Debug\TestOfGeometry.csprojResolveAssemblyReference.cache
