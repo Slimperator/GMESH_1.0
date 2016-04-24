@@ -1,5 +1,6 @@
 ﻿using Geometry;
 using Parser;
+using Solvers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,7 @@ namespace GMESH
 
         List<ICurve> curves = new List<ICurve>();
         List<IPoint> points = new List<IPoint>();
+        RegMesh2D mesh;
 
         private Parser.Parser parser = new Parser.Parser();
         private IProcessing preproc;
@@ -98,6 +100,12 @@ namespace GMESH
 
         private void Build_Click(object sender, EventArgs e)
         {
+            if (curves.Count == 4)
+            {
+                IMeshGen generator = new QuadSimpleMeshGen(10, 20);
+                mesh = generator.Generate(new Contour(curves));
+            }
+            Refresh();
         }
 
         private void Open_Click(object sender, EventArgs e)
@@ -120,6 +128,7 @@ namespace GMESH
         {
             drawPoints(e);
             drawCurves(e);
+            drawMesh(e);
         }
 
         void drawCurves(Graphics e)
@@ -159,6 +168,21 @@ namespace GMESH
                 e.DrawString((i + 1).ToString(), new Font("Arial", 10), new SolidBrush(Color.Black),
                     (int)(points[i].X - 10), (int)(points[i].Y - 10));
             }
+        }
+
+        void drawMesh(Graphics e)
+        {
+            if (mesh == null)
+                return;
+            for (int i = 0; i < mesh.X - 1; i++)
+            {
+                for (int j = 0; j < mesh.Y - 1; j++)
+                {
+                    e.DrawLine(new Pen(Color.Black), (int)mesh[i, j].X, (int)mesh[i, j].Y, (int)mesh[i, j + 1].X, (int)mesh[i, j + 1].Y);
+                    e.DrawLine(new Pen(Color.Black), (int)mesh[i, j].X, (int)mesh[i, j].Y, (int)mesh[i + 1, j].X, (int)mesh[i + 1, j].Y);
+                }
+            }
+            mesh = null;
         }
 
         
