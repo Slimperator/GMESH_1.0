@@ -100,13 +100,15 @@ namespace GMESH
 
         private void Build_Click(object sender, EventArgs e)
         {
-            if (curves.Count == 4)
+            Contour contour = new Contour(curves);
+            if (contour.Size == 4)
             {
-                IMeshGen generator = new QuadSimpleMeshGen(10, 20);
-                mesh = generator.Generate(new Contour(curves));
+                IMeshGen generator = new QuadSimpleMeshGen(10, 10);
+                mesh = generator.Generate(contour);
             }
             Refresh();
         }
+
 
         private void Open_Click(object sender, EventArgs e)
         {
@@ -172,135 +174,20 @@ namespace GMESH
 
         void drawMesh(Graphics e)
         {
-            if (mesh == null)
-                return;
-            for (int i = 0; i < mesh.X - 1; i++)
+            if (mesh != null) 
             {
-                for (int j = 0; j < mesh.Y - 1; j++)
+                for (int i = 0; i < mesh.Y - 1; i++)
                 {
-                    e.DrawLine(new Pen(Color.Black), (int)mesh[i, j].X, (int)mesh[i, j].Y, (int)mesh[i, j + 1].X, (int)mesh[i, j + 1].Y);
-                    e.DrawLine(new Pen(Color.Black), (int)mesh[i, j].X, (int)mesh[i, j].Y, (int)mesh[i + 1, j].X, (int)mesh[i + 1, j].Y);
+          
+                    for (int j = 0; j < mesh.X - 1; j++)
+                    {
+                        e.DrawLine(new Pen(Color.Black), (int)mesh[i, j].X, (int)mesh[i, j].Y, (int)mesh[i, j + 1].X, (int)mesh[i, j + 1].Y);
+                        e.DrawLine(new Pen(Color.Black), (int)mesh[i, j].X, (int)mesh[i, j].Y, (int)mesh[i + 1, j].X, (int)mesh[i + 1, j].Y);
+                    }               
                 }
-            }
-            mesh = null;
-        }
-
-        
-
-
-       
-        
-
-        //private void Painting(object sender, PaintEventArgs e)
-        //{
-        //    draw(e.Graphics);
-        //}
-
+                mesh = null;
+            }      
+        }   
     }
 }
 
-/*
- private void DrawAstroid()
-        {
-            Graphics g = this.CreateGraphics();
-            x = 200;
-            y = 200;
-            center = new Geometry.Point(x, y);
-            curve = new Astroid(center, radius);
-            for (t = 0; t < 1; t += h)
-            {
-                curve.getPoint(t, out x1, out y1);
-                curve.getPoint(t + h, out x2, out y2);
-                g.DrawLine(new Pen(Color.Orange), (int)x1, (int)y1, (int)x2, (int)y2);
-            }
-        }
-
-        private void DrawCardioid()
-        {
-            Graphics g = this.CreateGraphics();
-            x = 600;
-            y = 300;
-            center = new Geometry.Point(x, y);
-            curve = new Cardioid(center, radius);
-            for (t = 0; t < 1; t += h)
-            {
-                curve.getPoint(t, out x1, out y1);
-                curve.getPoint(t + h, out x2, out y2);
-                g.DrawLine(new Pen(Color.Purple), (int)x1, (int)y1, (int)x2, (int)y2);
-            }
-        }
-        private void DrawBezier()
-        {
-            Graphics g = this.CreateGraphics();
-
-            P0 = new Geometry.Point(200, 200);
-            P1 = new Geometry.Point(300, 100);
-            P2 = new Geometry.Point(400, 100);
-            P3 = new Geometry.Point(500, 200);
-            curve = new Bezier(P0, P1, P2, P3);
-
-            for (t = 0; t < 1; t += h)
-            {
-                curve.getPoint(t, out x1, out y1);
-                curve.getPoint(t + h, out x2, out y2);
-                g.DrawLine(new Pen(Color.Green), (int)x1, (int)y1, (int)x2, (int)y2);
-
-            }
-        }
-
-        private void DrawLine()
-        {
-            Graphics g = this.CreateGraphics();
-            L1 = new Geometry.Point(50, 50);
-            L2 = new Geometry.Point(400, 200);
-            curve = new Line(L1, L2);
-
-            for (t = 0; t < 1; t += h)
-            {
-                curve.getPoint(t, out x1, out y1);
-                curve.getPoint(t + h, out x2, out y2);
-                g.DrawLine(new Pen(Color.LightBlue, 2), (int)x1, (int)y1, (int)x2, (int)y2);
-
-            }
-        }
-
-
-        private void DrawCycloid()
-        {
-            Graphics g = this.CreateGraphics();
-            L1 = new Geometry.Point(50, 50);
-            L2 = new Geometry.Point(100, 50);
-            curve = new Cycloid(L1, L2, true);
-            for (t = 0; t < 1; t += h)
-            {
-                curve.getPoint(t, out x1, out y1);
-                curve.getPoint(t + h, out x2, out y2);
-                g.DrawLine(new Pen(Color.Red, 1), (int)x1, (int)y1, (int)x2, (int)y2);
-            }
-        }
-
-        private void DrawCircle()
-        {
-            Graphics g = this.CreateGraphics();
-            x = 150;
-            y = 150;
-            center = new Geometry.Point(x, y);
-            curve = new Circle(center, radius);
-            for (t = 0; t < 1; t += h)
-            {
-                curve.getPoint(t, out x1, out y1);
-                curve.getPoint(t + h, out x2, out y2);
-                g.DrawLine(new Pen(Color.Blue), (int)x1, (int)y1, (int)x2, (int)y2);
-            }
-        }
-
-        private void Painting(object sender, PaintEventArgs e)
-        {
-            DrawAstroid();
-            DrawCardioid();
-            DrawBezier();
-            DrawLine();
-            DrawCircle();
-            DrawCycloid();
-        }
- */
