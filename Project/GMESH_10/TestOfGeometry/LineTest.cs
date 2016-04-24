@@ -75,9 +75,9 @@ namespace TestOfGeometry
             Line target = new Line(L1, L2); // TODO: инициализация подходящего значения
             double t = 0F; // TODO: инициализация подходящего значения
             double x = 0F; // TODO: инициализация подходящего значения
-            double xExpected = 1; // TODO: инициализация подходящего значения
+            double xExpected = 0; // TODO: инициализация подходящего значения
             double y = 0F; // TODO: инициализация подходящего значения
-            double yExpected = 1; // TODO: инициализация подходящего значения
+            double yExpected = 0; // TODO: инициализация подходящего значения
             target.getPoint(t, out x, out y);
             Assert.AreEqual(xExpected, x);
             Assert.AreEqual(yExpected, y);
