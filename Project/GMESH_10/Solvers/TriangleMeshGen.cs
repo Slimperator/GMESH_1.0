@@ -8,7 +8,7 @@ namespace Solvers
 {
     public class TriaMeshGen : IMeshGen
     {
-        RegMesh2D Generate(Contour contour)
+        public RegMesh2D Generate(Contour contour)
         {
             throw new NotImplementedException();
         }
