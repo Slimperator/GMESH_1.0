@@ -23,8 +23,6 @@ namespace GMESH
         RegMesh2D mesh;
 
         private Parser.Parser parser = new Parser.Parser();
-        private IProcessing preproc;
-        private IProcessing postproc;
 
         public Form1()
         {
@@ -111,7 +109,8 @@ namespace GMESH
             Contour contour = new Contour(curves);
             if (contour.Size == 4)
             {
-                IMeshGen generator = new QuadSimpleMeshGen(10, 10);
+                //IMeshGen generator = new QuadSimpleMeshGen(10, 10);
+                IMeshGen generator = new QuadCleverMeshGen(10, 10);
                 mesh = generator.Generate(contour);
             }
             Refresh();
@@ -120,12 +119,38 @@ namespace GMESH
 
         private void Open_Click(object sender, EventArgs e)
         {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
+            openFileDialog1.InitialDirectory = Environment.CurrentDirectory;
+            openFileDialog1.Filter = "xml files (*.xml)|*.xml|All files (*.*)|*.*";
+            openFileDialog1.FilterIndex = 1;
+            openFileDialog1.RestoreDirectory = true;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string fileSelected = openFileDialog1.FileName;
+                parser.load(fileSelected);
+                parser.PreProcessing.convert(ref curves, ref points, ref parser.Gmesh.Poligons[0].Curves, ref parser.Gmesh.Poligons[0].Points);
+                Refresh();
+            }  
         }
 
         private void Save_Click(object sender, EventArgs e)
         {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
 
+            saveFileDialog1.InitialDirectory = Environment.CurrentDirectory;
+            saveFileDialog1.Filter = "xml files (*.xml)|*.xml|All files (*.*)|*.*";
+            saveFileDialog1.FilterIndex = 1;
+            saveFileDialog1.RestoreDirectory = true;
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string fileSelected = saveFileDialog1.FileName;
+                parser.PostProcessing.convert(ref curves, ref points, ref parser.Gmesh.Poligons[0].Curves, ref parser.Gmesh.Poligons[0].Points);
+                parser.save(fileSelected);
+                Refresh();
+            }  
         }
 
         // Draw Section
