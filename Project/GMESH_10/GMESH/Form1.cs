@@ -87,15 +87,23 @@ namespace GMESH
         }
 
         private void Form1_MouseDoubleClick(object sender, MouseEventArgs e)
-        {/*
+        {
+            // Грязный алгоритм. Надо додумать
+            currentClickedPoint = IsContain(e);
             if (currentClickedPoint != -1)
             {
-                curves.RemoveAt((currentClickedPoint - 1) % (curves.Count - 1));
-                curves.RemoveAt(currentClickedPoint % (curves.Count - 1));
+                curves.RemoveAt((currentClickedPoint) % curves.Count);
+                if (currentClickedPoint == 0)
+                    curves.RemoveAt(curves.Count - 1);
+                else
+                    curves.RemoveAt((currentClickedPoint - 1) % curves.Count);//?
                 points.RemoveAt(currentClickedPoint);
-                curves.Insert((currentClickedPoint - 1) % (curves.Count - 1), new Line(points[currentClickedPoint - 1], points[currentClickedPoint]));
+                if (currentClickedPoint - 1 != curves.Count & !(currentClickedPoint == 0))
+                    curves.Insert((currentClickedPoint - 1) % (curves.Count), new Line(points[currentClickedPoint - 1], points[currentClickedPoint % points.Count]));
+                else
+                    curves.Add(new Line(points[(currentClickedPoint - 1 + points.Count) % points.Count], points[currentClickedPoint % points.Count]));
             }
-            Refresh();*/
+            Refresh();
         }
 
         private void Build_Click(object sender, EventArgs e)
