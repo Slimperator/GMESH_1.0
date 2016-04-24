@@ -4,8 +4,8 @@ using System;
 
 namespace TestOfGeometry
 {
-    
-    
+
+
     /// <summary>
     ///Это класс теста для BezierTest, в котором должны
     ///находиться все модульные тесты BezierTest
@@ -98,7 +98,7 @@ namespace TestOfGeometry
             double x = 0F; // TODO: инициализация подходящего значения
             double xExpected = 4.875; // TODO: инициализация подходящего значения
             double y = 0F; // TODO: инициализация подходящего значения
-            double yExpected = 4.25; // TODO: инициализация подходящего значения
+            double yExpected = 7.75; // TODO: инициализация подходящего значения
             target.getPoint(t, out x, out y);
             Assert.AreEqual(xExpected, x);
             Assert.AreEqual(yExpected, y);
@@ -116,7 +116,7 @@ namespace TestOfGeometry
             double x = 0F; // TODO: инициализация подходящего значения
             double xExpected = 2.487; // TODO: инициализация подходящего значения
             double y = 0F; // TODO: инициализация подходящего значения
-            double yExpected = 0.302; // TODO: инициализация подходящего значения
+            double yExpected = 1; // TODO: инициализация подходящего значения
             target.getPoint(t, out x, out y);
             Assert.AreEqual(xExpected, x);
             Assert.AreEqual(yExpected, y);
@@ -128,12 +128,12 @@ namespace TestOfGeometry
         [TestMethod()]
         public void BezierConstructorTest()
         {
-            IPoint P0 = new Point(0, 0); 
+            IPoint P0 = new Point(0, 0);
             IPoint P1 = new Point(0, 0); // TODO: инициализация подходящего значения
-            IPoint P2 = new Point(0, 0); 
+            IPoint P2 = new Point(0, 0);
             IPoint P3 = new Point(0, 0);
             Bezier target = new Bezier(P0, P1, P2, P3);
-            
+
         }
     }
 }

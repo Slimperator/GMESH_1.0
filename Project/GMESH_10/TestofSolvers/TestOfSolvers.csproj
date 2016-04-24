@@ -6,7 +6,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{1FBCFA66-548E-45A0-B26B-629D53400686}</ProjectGuid>
+    <ProjectGuid>{BDF3499C-B16D-4352-B17D-C7F10E85E5A4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TestOfSolvers</RootNamespace>
@@ -53,6 +53,8 @@
     <Compile Include="ArithmMeanGradeTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuadSimpleMeshGenTest.cs" />
+    <Compile Include="ToolsTest.cs" />
+    <Compile Include="TriaMeshGenTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Geometry\Geometry.csproj">

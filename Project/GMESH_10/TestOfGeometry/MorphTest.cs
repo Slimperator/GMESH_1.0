@@ -127,8 +127,8 @@ namespace TestOfGeometry
             double y = 0F; // TODO: инициализация подходящего значения
             double yExpected = 8.0F; // TODO: инициализация подходящего значения
             target.getPoint(t, out x, out y);
-            Assert.AreEqual(xExpected, x);
-            Assert.AreEqual(yExpected, y);
+            Assert.AreEqual(xExpected, x, 0.001);
+            Assert.AreEqual(yExpected, y, 0.001);
 
         }
         [TestMethod()]

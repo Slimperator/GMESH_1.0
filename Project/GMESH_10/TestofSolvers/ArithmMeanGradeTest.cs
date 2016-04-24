@@ -72,7 +72,7 @@ namespace TestOfSolvers
         public void ArithmMeanGradeConstructorTest()
         {
             ArithmMeanGrade target = new ArithmMeanGrade();
-           // Assert.Inconclusive("TODO: реализуйте код для проверки целевого объекта");
+            Assert.Inconclusive("TODO: реализуйте код для проверки целевого объекта");
         }
 
         /// <summary>
@@ -82,24 +82,12 @@ namespace TestOfSolvers
         public void CalculateTest()
         {
             ArithmMeanGrade target = new ArithmMeanGrade(); // TODO: инициализация подходящего значения
-
-            int row = 4;
-            int col = 4;
-            IPoint[,] setka = new IPoint[row, col];
-            for (int i = 0; i < row; i++)
-            {
-                for (int j = 0; j < col; j++)
-                {
-                    setka[i, j] = new Point(i + 1, j + 1);
-                }
-            }
-
-            RegMesh2D mesh = new RegMesh2D(setka, 4, 4); // TODO: инициализация подходящего значения
-            double expected = 1; // TODO: инициализация подходящего значения
+            RegMesh2D mesh = null; // TODO: инициализация подходящего значения
+            double expected = 0F; // TODO: инициализация подходящего значения
             double actual;
             actual = target.Calculate(mesh);
             Assert.AreEqual(expected, actual);
-            // Assert.Inconclusive("Проверьте правильность этого метода теста.");
+            Assert.Inconclusive("Проверьте правильность этого метода теста.");
         }
 
         /// <summary>
@@ -110,15 +98,15 @@ namespace TestOfSolvers
         public void CalculateSquareTest()
         {
             ArithmMeanGrade_Accessor target = new ArithmMeanGrade_Accessor(); // TODO: инициализация подходящего значения
-            IPoint p1 = new Point(1, 1); // TODO: инициализация подходящего значения
-            IPoint p2 = new Point(1, 2); // TODO: инициализация подходящего значения
-            IPoint p3 = new Point(2, 2); // TODO: инициализация подходящего значения
-            IPoint p4 = new Point(2, 1); // TODO: инициализация подходящего значения
-            double expected = 1; // TODO: инициализация подходящего значения
+            IPoint p1 = null; // TODO: инициализация подходящего значения
+            IPoint p2 = null; // TODO: инициализация подходящего значения
+            IPoint p3 = null; // TODO: инициализация подходящего значения
+            IPoint p4 = null; // TODO: инициализация подходящего значения
+            double expected = 0F; // TODO: инициализация подходящего значения
             double actual;
             actual = target.CalculateSquare(p1, p2, p3, p4);
             Assert.AreEqual(expected, actual);
-            //Assert.Inconclusive("Проверьте правильность этого метода теста.");
+            Assert.Inconclusive("Проверьте правильность этого метода теста.");
         }
     }
 }
