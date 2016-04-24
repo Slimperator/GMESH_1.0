@@ -98,3 +98,5 @@ C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH_10\GME
 C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH_10\GMESH\obj\x86\Debug\GMESH.csproj.GenerateResource.Cache
 C:\Users\Ани\Desktop\факфак\GMESH_1.0\Project\GMESH_10\GMESH\obj\x86\Debug\GMESH.exe
 C:\Users\Ани\Desktop\факфак\GMESH_1.0\Project\GMESH_10\GMESH\obj\x86\Debug\GMESH.pdb
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\Solvers.exe
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\Solvers.pdb

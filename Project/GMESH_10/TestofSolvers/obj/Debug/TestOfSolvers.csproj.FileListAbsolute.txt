@@ -1,0 +1,11 @@
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\TestOfSolvers\bin\Debug\TestOfSolvers.dll
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\TestOfSolvers\bin\Debug\TestOfSolvers.pdb
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\TestOfSolvers\bin\Debug\Geometry.dll
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\TestOfSolvers\bin\Debug\Solvers.exe
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\TestOfSolvers\bin\Debug\Geometry.pdb
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\TestOfSolvers\bin\Debug\Solvers.pdb
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\TestOfSolvers\bin\Debug\Solvers_Accessor.exe
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\TestOfSolvers\bin\Debug\Solvers_Accessor.pdb
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\TestOfSolvers\obj\Debug\TestOfSolvers.csprojResolveAssemblyReference.cache
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\TestOfSolvers\obj\Debug\TestOfSolvers.dll
+C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\TestOfSolvers\obj\Debug\TestOfSolvers.pdb
