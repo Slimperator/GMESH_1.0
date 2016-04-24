@@ -18,8 +18,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parser", "Parser\Parser.csproj", "{8AD5EC50-A45D-4C16-B21F-A68BFCAA5ADA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestOfSolvers", "TestOfSolvers\TestOfSolvers.csproj", "{1FBCFA66-548E-45A0-B26B-629D53400686}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestOfParser", "TestOfParser\TestOfParser.csproj", "{9F2CE770-553A-4D2D-A88F-2ECEA51D8303}"
 EndProject
 Global
@@ -85,16 +83,6 @@ Global
 		{8AD5EC50-A45D-4C16-B21F-A68BFCAA5ADA}.Release|Mixed Platforms.Build.0 = Release|x86
 		{8AD5EC50-A45D-4C16-B21F-A68BFCAA5ADA}.Release|x86.ActiveCfg = Release|x86
 		{8AD5EC50-A45D-4C16-B21F-A68BFCAA5ADA}.Release|x86.Build.0 = Release|x86
-		{1FBCFA66-548E-45A0-B26B-629D53400686}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1FBCFA66-548E-45A0-B26B-629D53400686}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1FBCFA66-548E-45A0-B26B-629D53400686}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{1FBCFA66-548E-45A0-B26B-629D53400686}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{1FBCFA66-548E-45A0-B26B-629D53400686}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{1FBCFA66-548E-45A0-B26B-629D53400686}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1FBCFA66-548E-45A0-B26B-629D53400686}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1FBCFA66-548E-45A0-B26B-629D53400686}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{1FBCFA66-548E-45A0-B26B-629D53400686}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{1FBCFA66-548E-45A0-B26B-629D53400686}.Release|x86.ActiveCfg = Release|Any CPU
 		{9F2CE770-553A-4D2D-A88F-2ECEA51D8303}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9F2CE770-553A-4D2D-A88F-2ECEA51D8303}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F2CE770-553A-4D2D-A88F-2ECEA51D8303}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
