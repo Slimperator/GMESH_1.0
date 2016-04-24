@@ -7,3 +7,12 @@ C:\Users\Ани\Desktop\Новая папка (3)\GMESH_1.0\Project\GMESH_10\Tes
 C:\Users\Ани\Desktop\Новая папка (3)\GMESH_1.0\Project\GMESH_10\TestOfParser\obj\Debug\TestOfParser.csprojResolveAssemblyReference.cache
 C:\Users\Ани\Desktop\Новая папка (3)\GMESH_1.0\Project\GMESH_10\TestOfParser\obj\Debug\TestOfParser.dll
 C:\Users\Ани\Desktop\Новая папка (3)\GMESH_1.0\Project\GMESH_10\TestOfParser\obj\Debug\TestOfParser.pdb
+C:\Users\Ани\Desktop\Новая папка (4)\GMESH_1.0\Project\GMESH_10\TestOfParser\bin\Debug\TestOfParser.dll
+C:\Users\Ани\Desktop\Новая папка (4)\GMESH_1.0\Project\GMESH_10\TestOfParser\bin\Debug\TestOfParser.pdb
+C:\Users\Ани\Desktop\Новая папка (4)\GMESH_1.0\Project\GMESH_10\TestOfParser\bin\Debug\Geometry.dll
+C:\Users\Ани\Desktop\Новая папка (4)\GMESH_1.0\Project\GMESH_10\TestOfParser\bin\Debug\Parser.dll
+C:\Users\Ани\Desktop\Новая папка (4)\GMESH_1.0\Project\GMESH_10\TestOfParser\bin\Debug\Geometry.pdb
+C:\Users\Ани\Desktop\Новая папка (4)\GMESH_1.0\Project\GMESH_10\TestOfParser\bin\Debug\Parser.pdb
+C:\Users\Ани\Desktop\Новая папка (4)\GMESH_1.0\Project\GMESH_10\TestOfParser\obj\Debug\TestOfParser.csprojResolveAssemblyReference.cache
+C:\Users\Ани\Desktop\Новая папка (4)\GMESH_1.0\Project\GMESH_10\TestOfParser\obj\Debug\TestOfParser.dll
+C:\Users\Ани\Desktop\Новая папка (4)\GMESH_1.0\Project\GMESH_10\TestOfParser\obj\Debug\TestOfParser.pdb

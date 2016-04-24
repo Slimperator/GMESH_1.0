@@ -25,7 +25,7 @@ namespace TestOfParses
                 curves.Add(new Line(points[i], points[i + 1]));
             // pars.load("C:/Users/Ани/Desktop/GMESH_1.0/Project/GMESH_10/Parser/bin/Debug/xml_out_test.xml");
             // pars.PreProcessing(ref curves, ref points );
-            preproc.convert(ref curves, ref points, ref pars.Gmesh.Poligons[0].Curves, ref pars.Gmesh.Poligons[0].Points);
+            //preproc.convert(ref curves, ref points, ref pars.Gmesh.Poligons[0].Curves, ref pars.Gmesh.Poligons[0].Points);
             postproc.convert(ref curves, ref points, ref pars.Gmesh.Poligons[0].Curves, ref pars.Gmesh.Poligons[0].Points);
             pars.save("C:/Users/Ани/Desktop/GMESH_1.0/Project/GMESH_10/Parser/bin/Debug/xml_test.xml");
 
