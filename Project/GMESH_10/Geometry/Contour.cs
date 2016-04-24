@@ -11,7 +11,7 @@ namespace Geometry
 
         public Contour(List<ICurve> curves)
         {
-            this.curves = curves;
+            this.curves = new List<ICurve>(curves); 
         }
 
         public int Size

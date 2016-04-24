@@ -36,3 +36,7 @@ C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH_10\Geo
 C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH_10\Geometry\bin\Debug\Geometry.pdb
 C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH_10\Geometry\obj\Debug\Geometry.dll
 C:\Users\Ghost_Council\Documents\Git\GMESH.github\GMESH_1.0\Project\GMESH_10\Geometry\obj\Debug\Geometry.pdb
+C:\Users\Ани\Desktop\Новая папка\GMESH_1.0\Project\GMESH_10\Geometry\bin\Debug\Geometry.dll
+C:\Users\Ани\Desktop\Новая папка\GMESH_1.0\Project\GMESH_10\Geometry\bin\Debug\Geometry.pdb
+C:\Users\Ани\Desktop\Новая папка\GMESH_1.0\Project\GMESH_10\Geometry\obj\Debug\Geometry.dll
+C:\Users\Ани\Desktop\Новая папка\GMESH_1.0\Project\GMESH_10\Geometry\obj\Debug\Geometry.pdb

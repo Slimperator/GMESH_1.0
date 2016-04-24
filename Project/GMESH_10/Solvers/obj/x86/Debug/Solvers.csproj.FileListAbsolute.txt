@@ -40,3 +40,4 @@ C:\Users\Ани\Desktop\GMESH_1.0\Project\GMESH_10\Solvers\bin\Debug\Geometry.pd
 C:\Users\Ани\Desktop\GMESH_1.0\Project\GMESH_10\Solvers\obj\x86\Debug\Solvers.csprojResolveAssemblyReference.cache
 C:\Users\Ани\Desktop\GMESH_1.0\Project\GMESH_10\Solvers\obj\x86\Debug\Solvers.exe
 C:\Users\Ани\Desktop\GMESH_1.0\Project\GMESH_10\Solvers\obj\x86\Debug\Solvers.pdb
+C:\Users\Ани\Desktop\Новая папка\GMESH_1.0\Project\GMESH_10\Solvers\obj\x86\Debug\Solvers.csprojResolveAssemblyReference.cache
