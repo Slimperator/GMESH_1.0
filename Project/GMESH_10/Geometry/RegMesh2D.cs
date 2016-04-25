@@ -8,8 +8,8 @@ namespace Geometry
     public class RegMesh2D
     {
         private IPoint[,] mesh;
-        private int len_col;
-        private int len_row; // строки
+        private int rows; //rows
+        private int cols; // строки
 
         /// <summary>
         /// Обращение к точке из сетки по индексу
@@ -29,22 +29,22 @@ namespace Geometry
             }
         }
 
-        public RegMesh2D(IPoint[,] mesh, int len_row, int len_col)
+        public RegMesh2D(IPoint[,] mesh, int cols, int rows)
         {
             this.mesh = mesh;
-            this.len_row = len_row;
-            this.len_col = len_col;
+            this.cols = cols;
+            this.rows = rows;
         }
 
-        public RegMesh2D(int len_row, int len_col)
+        public RegMesh2D(int cols, int rows)
         {
-            this.len_row = len_row;
-            this.len_col = len_col;
+            this.cols = cols;
+            this.rows = rows;
 
-            mesh = new IPoint[len_row, len_col];
-            for (int i = 0; i < len_row; i++)
+            mesh = new IPoint[cols, rows];
+            for (int i = 0; i < cols; i++)
             {
-                for (int j = 0; j < len_col; j++)
+                for (int j = 0; j < rows; j++)
                 {
                     mesh[i, j] = new Point(0, 0);
                 }
@@ -55,7 +55,7 @@ namespace Geometry
         {
             get
             {
-                return len_col;
+                return rows;
             }
 
         }
@@ -63,7 +63,7 @@ namespace Geometry
         {
             get
             {
-                return len_row;
+                return cols;
             }
 
         }

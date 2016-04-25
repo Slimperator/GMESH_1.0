@@ -100,3 +100,5 @@ C:\Users\Ани\Desktop\факфак\GMESH_1.0\Project\GMESH_10\GMESH\obj\x86\De
 C:\Users\Ани\Desktop\факфак\GMESH_1.0\Project\GMESH_10\GMESH\obj\x86\Debug\GMESH.pdb
 C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\Solvers.exe
 C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\Solvers.pdb
+C:\Users\User\Desktop\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\Solvers.exe
+C:\Users\User\Desktop\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\Solvers.pdb

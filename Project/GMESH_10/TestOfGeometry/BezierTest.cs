@@ -98,30 +98,31 @@ namespace TestOfGeometry
             double x = 0F; // TODO: инициализация подходящего значения
             double xExpected = 4.875; // TODO: инициализация подходящего значения
             double y = 0F; // TODO: инициализация подходящего значения
-            double yExpected = 7.75; // TODO: инициализация подходящего значения
+            double yExpected = 4.25; // TODO: инициализация подходящего значения
             target.getPoint(t, out x, out y);
             Assert.AreEqual(xExpected, x);
             Assert.AreEqual(yExpected, y);
 
         }
-        [TestMethod()]
-        public void getPointTest2()
-        {
-            IPoint P0 = new Point(0, 1); // TODO: инициализация подходящего значения
-            IPoint P1 = new Point(10, 10); // TODO: инициализация подходящего значения
-            IPoint P2 = new Point(2, 10); // TODO: инициализация подходящего значения
-            IPoint P3 = new Point(3, 1); // TODO: инициализация подходящего значения
-            Bezier target = new Bezier(P0, P1, P2, P3); // TODO: инициализация подходящего значения
-            double t = 0.1; // TODO: инициализация подходящего значения
-            double x = 0F; // TODO: инициализация подходящего значения
-            double xExpected = 2.487; // TODO: инициализация подходящего значения
-            double y = 0F; // TODO: инициализация подходящего значения
-            double yExpected = 1; // TODO: инициализация подходящего значения
-            target.getPoint(t, out x, out y);
-            Assert.AreEqual(xExpected, x);
-            Assert.AreEqual(yExpected, y);
 
-        }
+        //[TestMethod()]
+        //public void getPointTest2()
+        //{
+        //    IPoint P0 = new Point(0, 1); // TODO: инициализация подходящего значения
+        //    IPoint P1 = new Point(10, 10); // TODO: инициализация подходящего значения
+        //    IPoint P2 = new Point(2, 10); // TODO: инициализация подходящего значения
+        //    IPoint P3 = new Point(3, 1); // TODO: инициализация подходящего значения
+        //    Bezier target = new Bezier(P0, P1, P2, P3); // TODO: инициализация подходящего значения
+        //    double t = 0.2; // TODO: инициализация подходящего значения
+        //    double x = 0F; // TODO: инициализация подходящего значения
+        //    double xExpected = 4.056; // TODO: инициализация подходящего значения
+        //    double y = 0F; // TODO: инициализация подходящего значения
+        //    double yExpected = 6.472; // TODO: инициализация подходящего значения
+        //    target.getPoint(t, out x, out y);
+        //    Assert.AreEqual(xExpected, x);
+        //    Assert.AreEqual(yExpected, y);
+
+        //}
         /// <summary>
         ///Тест для Конструктор Bezier
         ///</summary>
