@@ -111,7 +111,7 @@ namespace GMESH
             {
                 //IMeshGen generator = new QuadSimpleMeshGen(10, 10);
                 IMeshGen generator = new QuadCleverMeshGen(10, 10);
-                mesh = generator.Generate(contour);
+                mesh = generator.Generate(contour)[0];
             }
             Refresh();
         }
