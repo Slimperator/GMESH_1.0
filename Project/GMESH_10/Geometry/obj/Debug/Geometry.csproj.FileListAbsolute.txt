@@ -41,7 +41,6 @@ C:\Users\Ани\Desktop\Новая папка\GMESH_1.0\Project\GMESH_10\Geometr
 C:\Users\Ани\Desktop\Новая папка\GMESH_1.0\Project\GMESH_10\Geometry\obj\Debug\Geometry.dll
 C:\Users\Ани\Desktop\Новая папка\GMESH_1.0\Project\GMESH_10\Geometry\obj\Debug\Geometry.pdb
 C:\Users\Ани\Desktop\Новая папка (4)\GMESH_1.0\Project\GMESH_10\Geometry\obj\Debug\Geometry.csprojResolveAssemblyReference.cache
-C:\Projects\GMESH\GMESH_1.0\Project\GMESH_10\Geometry\obj\Debug\Geometry.csprojResolveAssemblyReference.cache
 C:\Users\Ани\Desktop\Новая папка (10)\GMESH_1.0\Project\GMESH_10\Geometry\bin\Debug\Geometry.dll
 C:\Users\Ани\Desktop\Новая папка (10)\GMESH_1.0\Project\GMESH_10\Geometry\bin\Debug\Geometry.pdb
 C:\Users\Ани\Desktop\Новая папка (10)\GMESH_1.0\Project\GMESH_10\Geometry\obj\Debug\Geometry.csprojResolveAssemblyReference.cache
