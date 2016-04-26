@@ -11,8 +11,8 @@ namespace Solvers
     /// </summary>
     public class QuadCleverMeshGen : IMeshGen
     {
-        private Contour contour;
-        private RegMesh2D mesh;
+        private IContour contour;
+        private List<RegMesh2D> mesh;
         private double lenghtOfPart, hX, hY;
         private int numOfCurvs, nX, nY;
         private double[] vectorOfParam;
@@ -22,9 +22,10 @@ namespace Solvers
             this.nY = nY + 1;
             this.hX = 1.0 / (double)(nX);
             this.hY = 1.0 / (double)(nY);
+            this.mesh = new List<RegMesh2D>();
             vectorOfParam = new double[this.nX];
         }
-        public RegMesh2D Generate(Contour contour)
+        public List<RegMesh2D> Generate(IContour contour)
         {
             this.contour = contour;
             numOfCurvs = contour.Size;
@@ -33,7 +34,7 @@ namespace Solvers
                 case 4:
                     lenghtOfPart = getSizeOfPart(Tools.length(contour[0]));
                     createVectorOfParam();
-                    mesh = new RegMesh2D(nY, nX);
+                    mesh.Add(new RegMesh2D(nY, nX));
                     fillMesh();
                     return mesh;
                 default:
@@ -68,8 +69,8 @@ namespace Solvers
                 for (int j = 0; j < nX; j++)
                 {
                     curve.getPoint(vectorOfParam[j], out x, out y);
-                    mesh[i, j].X = x;
-                    mesh[i, j].Y = y;
+                    mesh[0][i, j].X = x;
+                    mesh[0][i, j].Y = y;
                 }
             }
         }
