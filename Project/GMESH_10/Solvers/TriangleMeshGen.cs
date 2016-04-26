@@ -8,9 +8,24 @@ namespace Solvers
 {
     public class TriaMeshGen : IMeshGen
     {
-        public RegMesh2D Generate(Contour contour)
+        private TriangleDecompositor decompos;
+        private QuadCleverMeshGen meshgen;
+        private List<RegMesh2D> mesh;
+        private IContour[] contourArray;
+        public TriaMeshGen(int nX, int nY)
         {
-            throw new NotImplementedException();
+            this.decompos = new TriangleDecompositor();
+            this.meshgen = new QuadCleverMeshGen(nX,nY);
+            this.mesh = new List<RegMesh2D>();
+        }
+        public List<RegMesh2D> Generate(IContour contour)
+        {
+            contourArray = decompos.decomposed(contour);
+            for(int i = 0; i<3;i++)
+            {
+                mesh.Add(meshgen.Generate(contourArray[i])[0]);              
+            }
+            return mesh;
         }
     }
 }
