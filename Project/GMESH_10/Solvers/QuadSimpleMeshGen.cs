@@ -26,7 +26,7 @@ namespace Solvers
             this.hY = 1.0 / (double)(nY);
         }
 
-        public RegMesh2D Generate(Contour contour)
+        public List<RegMesh2D> Generate(IContour contour)
         {
             IPoint[,] points = new Point[this.nY, this.nX];
             ICurve a1 = contour[0];
@@ -46,8 +46,9 @@ namespace Solvers
                     curve.getPoint(j * hX, out x, out y);
                     points[i, j] = new Point(x, y);
                 }
-            }
-            return new RegMesh2D(points, nX, nY);
+            }// !!!!ЗАГЛУШКА!!!!
+            return null;    //new RegMesh2D(points, nX, nY);   // !!!!ЗАГЛУШКА!!!!
+            // !!!!ЗАГЛУШКА!!!!
         }
     }
 }
