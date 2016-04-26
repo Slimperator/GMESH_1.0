@@ -22,11 +22,11 @@ namespace Solvers
             this.nY = nY + 1;
             this.hX = 1.0 / (double)(nX);
             this.hY = 1.0 / (double)(nY);
-            this.mesh = new List<RegMesh2D>();
             vectorOfParam = new double[this.nX];
         }
         public List<RegMesh2D> Generate(IContour contour)
         {
+            this.mesh = new List<RegMesh2D>();
             this.contour = contour;
             numOfCurvs = contour.Size;
             switch (numOfCurvs)
