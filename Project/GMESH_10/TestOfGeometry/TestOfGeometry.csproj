@@ -53,10 +53,12 @@
   <ItemGroup>
     <Compile Include="BezierTest.cs" />
     <Compile Include="CircleTest.cs" />
+    <Compile Include="ContourTest.cs" />
     <Compile Include="LineTest.cs" />
     <Compile Include="MorphTest.cs" />
     <Compile Include="PointTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegMesh2DTest.cs" />
     <Compile Include="RelocateTest.cs" />
   </ItemGroup>
   <ItemGroup>
