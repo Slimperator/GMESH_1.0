@@ -20,7 +20,7 @@ namespace GMESH
 
         List<ICurve> curves = new List<ICurve>();
         List<IPoint> points = new List<IPoint>();
-        RegMesh2D mesh;
+        List<RegMesh2D> meshs;
 
         private Parser.Parser parser = new Parser.Parser();
 
@@ -111,7 +111,15 @@ namespace GMESH
             {
                 //IMeshGen generator = new QuadSimpleMeshGen(10, 10);
                 IMeshGen generator = new QuadCleverMeshGen(10, 10);
-                mesh = generator.Generate(contour)[0];
+                //IMeshGen generator = new TriaMeshGen(10, 10);
+                meshs = new List<RegMesh2D>();
+                meshs.Add(generator.Generate(contour)[0]);
+            }
+            if (contour.Size == 3)
+            {
+                meshs = new List<RegMesh2D>();
+                IMeshGen generator = new TriaMeshGen(10, 10);
+                meshs = generator.Generate(contour);
             }
             Refresh();
         }
@@ -207,18 +215,21 @@ namespace GMESH
 
         void drawMesh(Graphics e)
         {
-            if (mesh != null) 
+            if (meshs != null) 
             {
-                for (int i = 0; i < mesh.Y - 1; i++)
+                foreach (var mesh in meshs)
                 {
-          
-                    for (int j = 0; j < mesh.X - 1; j++)
+                    for (int i = 0; i < mesh.Y - 1; i++)
                     {
-                        e.DrawLine(new Pen(Color.Black), (int)mesh[i, j].X, (int)mesh[i, j].Y, (int)mesh[i, j + 1].X, (int)mesh[i, j + 1].Y);
-                        e.DrawLine(new Pen(Color.Black), (int)mesh[i, j].X, (int)mesh[i, j].Y, (int)mesh[i + 1, j].X, (int)mesh[i + 1, j].Y);
-                    }               
+
+                        for (int j = 0; j < mesh.X - 1; j++)
+                        {
+                            e.DrawLine(new Pen(Color.Black), (int)mesh[i, j].X, (int)mesh[i, j].Y, (int)mesh[i, j + 1].X, (int)mesh[i, j + 1].Y);
+                            e.DrawLine(new Pen(Color.Black), (int)mesh[i, j].X, (int)mesh[i, j].Y, (int)mesh[i + 1, j].X, (int)mesh[i + 1, j].Y);
+                        }
+                    }
                 }
-                mesh = null;
+                meshs = null;
             }      
         }   
     }
