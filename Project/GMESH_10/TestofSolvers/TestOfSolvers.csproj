@@ -54,7 +54,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuadSimpleMeshGenTest.cs" />
     <Compile Include="ToolsTest.cs" />
-    <Compile Include="TriaMeshGenTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Geometry\Geometry.csproj">

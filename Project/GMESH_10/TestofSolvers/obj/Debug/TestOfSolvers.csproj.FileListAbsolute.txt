@@ -20,3 +20,14 @@ C:\Users\User\Desktop\GMESH_1.0\Project\GMESH_10\TestOfSolvers\bin\Debug\Solvers
 C:\Users\User\Desktop\GMESH_1.0\Project\GMESH_10\TestOfSolvers\obj\Debug\TestOfSolvers.csprojResolveAssemblyReference.cache
 C:\Users\User\Desktop\GMESH_1.0\Project\GMESH_10\TestOfSolvers\obj\Debug\TestOfSolvers.dll
 C:\Users\User\Desktop\GMESH_1.0\Project\GMESH_10\TestOfSolvers\obj\Debug\TestOfSolvers.pdb
+C:\Users\Ани\Desktop\Новая папка (10)\GMESH_1.0\Project\GMESH_10\TestOfSolvers\obj\Debug\TestOfSolvers.csprojResolveAssemblyReference.cache
+C:\Users\Ани\Desktop\Новая папка (10)\GMESH_1.0\Project\GMESH_10\TestOfSolvers\obj\Debug\TestOfSolvers.dll
+C:\Users\Ани\Desktop\Новая папка (10)\GMESH_1.0\Project\GMESH_10\TestOfSolvers\bin\Debug\TestOfSolvers.dll
+C:\Users\Ани\Desktop\Новая папка (10)\GMESH_1.0\Project\GMESH_10\TestOfSolvers\bin\Debug\TestOfSolvers.pdb
+C:\Users\Ани\Desktop\Новая папка (10)\GMESH_1.0\Project\GMESH_10\TestOfSolvers\bin\Debug\Geometry.dll
+C:\Users\Ани\Desktop\Новая папка (10)\GMESH_1.0\Project\GMESH_10\TestOfSolvers\bin\Debug\Solvers.exe
+C:\Users\Ани\Desktop\Новая папка (10)\GMESH_1.0\Project\GMESH_10\TestOfSolvers\bin\Debug\Geometry.pdb
+C:\Users\Ани\Desktop\Новая папка (10)\GMESH_1.0\Project\GMESH_10\TestOfSolvers\bin\Debug\Solvers.pdb
+C:\Users\Ани\Desktop\Новая папка (10)\GMESH_1.0\Project\GMESH_10\TestOfSolvers\bin\Debug\Solvers_Accessor.exe
+C:\Users\Ани\Desktop\Новая папка (10)\GMESH_1.0\Project\GMESH_10\TestOfSolvers\bin\Debug\Solvers_Accessor.pdb
+C:\Users\Ани\Desktop\Новая папка (10)\GMESH_1.0\Project\GMESH_10\TestOfSolvers\obj\Debug\TestOfSolvers.pdb
