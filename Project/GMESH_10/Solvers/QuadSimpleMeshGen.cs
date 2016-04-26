@@ -46,9 +46,8 @@ namespace Solvers
                     curve.getPoint(j * hX, out x, out y);
                     points[i, j] = new Point(x, y);
                 }
-            }// !!!!ЗАГЛУШКА!!!!
-            return null;    //new RegMesh2D(points, nX, nY);   // !!!!ЗАГЛУШКА!!!!
-            // !!!!ЗАГЛУШКА!!!!
+            }
+            return new List<RegMesh2D>() { new RegMesh2D(points, nX, nY) }; 
         }
     }
 }
