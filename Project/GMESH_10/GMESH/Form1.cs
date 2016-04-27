@@ -49,9 +49,9 @@ namespace GMESH
             {
                 points.Add(new Geometry.Point(e.X, e.Y));
                 if (points.Count == 2)
-                {
-                    curves.Add(new Line(points[1], points[0]));
+                {                    
                     curves.Add(new Line(points[0], points[1]));
+                    curves.Add(new Line(points[1], points[0]));
                 }
                 if (points.Count >= 3)
                 {
