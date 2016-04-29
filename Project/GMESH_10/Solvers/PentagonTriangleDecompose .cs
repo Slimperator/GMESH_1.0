@@ -6,6 +6,7 @@ using Geometry;
 
 namespace Solvers
 {
+
     /// <summary>
     /// name:Александр Климов
     /// date:29.04.2016
