@@ -21,6 +21,7 @@ namespace GMESH
         List<ICurve> curves = new List<ICurve>();
         List<IPoint> points = new List<IPoint>();
         List<RegMesh2D> meshs;
+        ArithmMeanGrade quality = new ArithmMeanGrade();
 
         private Parser.Parser parser = new Parser.Parser();
 
@@ -121,6 +122,10 @@ namespace GMESH
                 IMeshGen generator = new TriaMeshGen(10, 10);
                 meshs = generator.Generate(contour);
             }
+            double qualitySum = 0;
+            for (int i = 0; i < meshs.Count(); i++)
+                qualitySum += quality.Calculate(meshs[i]);
+            Quality.Text = Convert.ToString(qualitySum);
             Refresh();
         }
 
@@ -231,6 +236,14 @@ namespace GMESH
                 }
                 meshs = null;
             }      
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            points.Clear();
+            curves.Clear();
+            Quality.Clear();
+            Refresh();
         }   
     }
 }
