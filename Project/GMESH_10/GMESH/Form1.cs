@@ -108,6 +108,19 @@ namespace GMESH
         private void Build_Click(object sender, EventArgs e)
         {
             Contour contour = new Contour(curves);
+            //if (contour.Size == 5)
+            //{
+            //    IContourDecompositor decom = new PentagonTriangleDecompose();
+            //    IContour[] contourTEST;
+            //    meshs = new List<RegMesh2D>();
+            //    IMeshGen generator = new TriaMeshGen(10, 10);
+            //    contourTEST = decom.decomposed(contour);              //тестовый код для пятиугольника
+            //    meshs = generator.Generate(contourTEST[0]);
+            //    meshs.AddRange(generator.Generate(contourTEST[1]));
+            //    meshs.AddRange(generator.Generate(contourTEST[2]));
+            //    meshs.AddRange(generator.Generate(contourTEST[3]));
+            //    meshs.AddRange(generator.Generate(contourTEST[4]));
+            //}
             if (contour.Size == 4)
             {
                 //IMeshGen generator = new QuadSimpleMeshGen(10, 10);
