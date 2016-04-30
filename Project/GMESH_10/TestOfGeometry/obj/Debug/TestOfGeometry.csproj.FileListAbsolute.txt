@@ -87,3 +87,11 @@ C:\Users\Ани\Desktop\Новая папка (12)\GMESH_1.0\Project\GMESH_10\Te
 C:\Users\Ани\Desktop\Новая папка (12)\GMESH_1.0\Project\GMESH_10\TestOfGeometry\obj\Debug\TestOfGeometry.csprojResolveAssemblyReference.cache
 C:\Users\Ани\Desktop\Новая папка (12)\GMESH_1.0\Project\GMESH_10\TestOfGeometry\obj\Debug\TestOfGeometry.dll
 C:\Users\Ани\Desktop\Новая папка (12)\GMESH_1.0\Project\GMESH_10\TestOfGeometry\obj\Debug\TestOfGeometry.pdb
+C:\Users\Ани\Desktop\Новая папка\GMESH_1.0\Project\GMESH_10\TestOfGeometry\bin\Debug\TestOfGeometry.dll
+C:\Users\Ани\Desktop\Новая папка\GMESH_1.0\Project\GMESH_10\TestOfGeometry\bin\Debug\TestOfGeometry.pdb
+C:\Users\Ани\Desktop\Новая папка\GMESH_1.0\Project\GMESH_10\TestOfGeometry\bin\Debug\Geometry.dll
+C:\Users\Ани\Desktop\Новая папка\GMESH_1.0\Project\GMESH_10\TestOfGeometry\bin\Debug\Geometry.pdb
+C:\Users\Ани\Desktop\Новая папка\GMESH_1.0\Project\GMESH_10\TestOfGeometry\bin\Debug\Geometry_Accessor.dll
+C:\Users\Ани\Desktop\Новая папка\GMESH_1.0\Project\GMESH_10\TestOfGeometry\bin\Debug\Geometry_Accessor.pdb
+C:\Users\Ани\Desktop\Новая папка\GMESH_1.0\Project\GMESH_10\TestOfGeometry\obj\Debug\TestOfGeometry.dll
+C:\Users\Ани\Desktop\Новая папка\GMESH_1.0\Project\GMESH_10\TestOfGeometry\obj\Debug\TestOfGeometry.pdb
