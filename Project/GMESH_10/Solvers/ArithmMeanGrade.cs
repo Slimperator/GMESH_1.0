@@ -26,7 +26,7 @@ namespace Solvers
                 sum += i;
             }
 
-            return sum / ((mesh.X -1) * (mesh.Y - 1));
+            return sum / ((mesh.X - 1) * (mesh.Y - 1));
         }
 
         private double CalculateSquare(IPoint p1, IPoint p2, IPoint p3, IPoint p4)
@@ -44,7 +44,7 @@ namespace Solvers
             {
                 double l = Tools.length(curve);
                 double round = 1000000000;
-                l = (int)(l * round) / round;
+                l = (long)(l * round) / round;
                 a.Add(l);
             }
             //double Lmin = Math.Min(Math.Min(Math.Min(a[0], a[1]), a[2]), a[3]);
@@ -62,7 +62,12 @@ namespace Solvers
             B2 = p3.X - p2.X;
             C2 = p2.X * p3.Y - p3.X * p2.Y;
             if ((A1 * A2 + B1 * B2) == 0) a.Add(90.0);
-            else a.Add(Math.Atan((A1 * B2 - A2 * B1) / (A1 * A2 + B1 * B2)));
+            else
+            {
+                double angle = Math.Atan((A1 * B2 - A2 * B1) / (A1 * A2 + B1 * B2)) * 180.0 / Math.PI;
+                if (angle < 0) a.Add(180.0 + angle);
+                else a.Add(angle);
+            }
 
             A1 = p2.Y - p3.Y;
             B1 = p3.X - p2.X;
@@ -71,7 +76,12 @@ namespace Solvers
             B2 = p4.X - p3.X;
             C2 = p3.X * p4.Y - p4.X * p3.Y;
             if ((A1 * A2 + B1 * B2) == 0) a.Add(90.0);
-            else a.Add(Math.Atan((A1 * B2 - A2 * B1) / (A1 * A2 + B1 * B2)));
+            else
+            {
+                double angle = Math.Atan((A1 * B2 - A2 * B1) / (A1 * A2 + B1 * B2)) * 180.0 / Math.PI;
+                if (angle < 0) a.Add(180.0 + angle);
+                else a.Add(angle);
+            }
 
             A1 = p3.Y - p4.Y;
             B1 = p4.X - p3.X;
@@ -80,7 +90,12 @@ namespace Solvers
             B2 = p1.X - p4.X;
             C2 = p4.X * p1.Y - p1.X * p4.Y;
             if ((A1 * A2 + B1 * B2) == 0) a.Add(90.0);
-            else a.Add(Math.Atan((A1 * B2 - A2 * B1) / (A1 * A2 + B1 * B2)));
+            else
+            {
+                double angle = Math.Atan((A1 * B2 - A2 * B1) / (A1 * A2 + B1 * B2)) * 180.0 / Math.PI;
+                if (angle < 0) a.Add(180.0 + angle);
+                else a.Add(angle);
+            }
 
             A1 = p4.Y - p1.Y;
             B1 = p1.X - p4.X;
@@ -89,7 +104,12 @@ namespace Solvers
             B2 = p2.X - p1.X;
             C2 = p1.X * p2.Y - p2.X * p1.Y;
             if ((A1 * A2 + B1 * B2) == 0) a.Add(90.0);
-            else a.Add(Math.Atan((A1 * B2 - A2 * B1) / (A1 * A2 + B1 * B2)));
+            else
+            {
+                double angle = Math.Atan((A1 * B2 - A2 * B1) / (A1 * A2 + B1 * B2)) * 180.0 / Math.PI;
+                if (angle < 0) a.Add(180.0 + angle);
+                else a.Add(angle);
+            }
 
             //double Umin = Math.Min(Math.Min(Math.Min(a[0], a[1]), a[2]), a[3]);
             //double Umax = Math.Max(Math.Max(Math.Max(a[0], a[1]), a[2]), a[3]);

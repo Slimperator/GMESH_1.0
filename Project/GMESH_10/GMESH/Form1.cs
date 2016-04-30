@@ -138,7 +138,7 @@ namespace GMESH
             double qualitySum = 0;
             for (int i = 0; i < meshs.Count(); i++)
                 qualitySum += quality.Calculate(meshs[i]);
-            Quality.Text = Convert.ToString(qualitySum);
+            Quality.Text = Convert.ToString(qualitySum/3);
             Refresh();
         }
 

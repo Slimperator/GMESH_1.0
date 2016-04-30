@@ -130,3 +130,15 @@ C:\Users\Ани\Desktop\Новая папка (12)\GMESH_1.0\Project\GMESH_10\GM
 C:\Users\Ани\Desktop\Новая папка (12)\GMESH_1.0\Project\GMESH_10\GMESH\obj\x86\Debug\GMESH.Form1.resources
 C:\Users\Ани\Desktop\Новая папка (12)\GMESH_1.0\Project\GMESH_10\GMESH\obj\x86\Debug\GMESH.Properties.Resources.resources
 C:\Users\Ани\Desktop\Новая папка (12)\GMESH_1.0\Project\GMESH_10\GMESH\obj\x86\Debug\GMESH.csproj.GenerateResource.Cache
+C:\Users\Ани\Desktop\Новая папка\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\GMESH.exe
+C:\Users\Ани\Desktop\Новая папка\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\GMESH.pdb
+C:\Users\Ани\Desktop\Новая папка\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\Geometry.dll
+C:\Users\Ани\Desktop\Новая папка\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\Parser.dll
+C:\Users\Ани\Desktop\Новая папка\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\Solvers.exe
+C:\Users\Ани\Desktop\Новая папка\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\Geometry.pdb
+C:\Users\Ани\Desktop\Новая папка\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\Parser.pdb
+C:\Users\Ани\Desktop\Новая папка\GMESH_1.0\Project\GMESH_10\GMESH\bin\Debug\Solvers.pdb
+C:\Users\Ани\Desktop\Новая папка\GMESH_1.0\Project\GMESH_10\GMESH\obj\x86\Debug\GMESH.csprojResolveAssemblyReference.cache
+C:\Users\Ани\Desktop\Новая папка\GMESH_1.0\Project\GMESH_10\GMESH\obj\x86\Debug\GMESH.Form1.resources
+C:\Users\Ани\Desktop\Новая папка\GMESH_1.0\Project\GMESH_10\GMESH\obj\x86\Debug\GMESH.Properties.Resources.resources
+C:\Users\Ани\Desktop\Новая папка\GMESH_1.0\Project\GMESH_10\GMESH\obj\x86\Debug\GMESH.csproj.GenerateResource.Cache
