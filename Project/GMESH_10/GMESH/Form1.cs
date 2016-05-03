@@ -13,9 +13,11 @@ using System.Windows.Forms;
 
 namespace GMESH
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form, IVisitor
     {
         private int currentClickedPoint = -1;
+        private int choosencurve;
+        private IPoint[] somePoints;
         const int rad = 10;
 
         List<ICurve> curves = new List<ICurve>();
@@ -46,24 +48,56 @@ namespace GMESH
         // Event section
         private void Form1_MouseClick(object sender, MouseEventArgs e)
         {
-            if (IsContain(e) == -1)
+            if (e.Button == MouseButtons.Left)
             {
-                points.Add(new Geometry.Point(e.X, e.Y));
-                if (points.Count == 2)
-                {                    
-                    curves.Add(new Line(points[0], points[1]));
-                    curves.Add(new Line(points[1], points[0]));
-                }
-                if (points.Count >= 3)
+                if (IsContain(e) == -1)
                 {
-                    curves.RemoveAt(curves.Count - 1);
-                    curves.Add(new Line(points[points.Count - 2], points[points.Count - 1]));
-                    curves.Add(new Line(points[points.Count - 1], points[0]));
+                    points.Add(new Geometry.Point(e.X, e.Y));
+                    if (points.Count == 2)
+                    {
+                        curves.Add(new Line(points[0], points[1]));
+                        curves.Add(new Line(points[1], points[0]));
+                    }
+                    if (points.Count >= 3)
+                    {
+                        curves.RemoveAt(curves.Count - 1);
+                        curves.Add(new Line(points[points.Count - 2], points[points.Count - 1]));
+                        curves.Add(new Line(points[points.Count - 1], points[0]));
+                    }
+                }
+            }
+            if (e.Button == MouseButtons.Right)
+            {
+                if (curveAreChoosen(e) != null)
+                {
+                    choosencurve = curves.IndexOf(curveAreChoosen(e));
+                    CurveMenuStrip.Show(e.X, e.Y);
                 }
             }
             Refresh();
         }
 
+        private ICurve curveAreChoosen(MouseEventArgs e)
+        {
+            double x1, y1, x2, y2, R, D;
+            double W = 5;
+            foreach (ICurve curve in curves)
+            {
+                curve.getPoint(0, out x1, out y1);
+                curve.getPoint(0, out x2, out y2);
+
+                R = ((e.X - x1) * (x2 - x1) + (e.Y - y1) * (y2 - y1)) / (Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
+                if(R>=0 && R<=1)
+                {
+                    D = ((y1 - e.Y) * (x2 - x1) - (x1 - e.X) * (y2 - y1)) / (Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2)));
+                    if (D <= W && D >= -W)
+                    {
+                        return curve;
+                    }
+                }
+            }
+            return null;
+        }
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
             currentClickedPoint = IsContain(e);
@@ -257,7 +291,49 @@ namespace GMESH
             curves.Clear();
             Quality.Clear();
             Refresh();
-        }   
+        }
+
+        private void lineToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            curves[choosencurve].accept(this);
+            points.Remove(somePoints[1]);
+            points.Remove(somePoints[2]);
+            curves[choosencurve] = new Line(somePoints[0], somePoints[3]);
+            CurveMenuStrip.Close();
+        }
+
+        private void bezierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            double x,y;
+            curves[choosencurve].accept(this);
+            curves[choosencurve].getPoint(0.3,out x, out y);
+            points.Add(new Geometry.Point(x,y));
+            curves[choosencurve].getPoint(0.6,out x, out y);
+            points.Add(new Geometry.Point(x,y));
+            curves[choosencurve] = new Bezier(somePoints[0], points[points.Count], points[points.Count - 1], somePoints[1]);
+            CurveMenuStrip.Close();
+        }
+
+        public void visitLine(Line curve)
+        {
+            somePoints = new IPoint[2];
+            somePoints[0] = curve.l1;
+            somePoints[1] = curve.l2;
+        }
+
+        public void visitBezier(Bezier curve)
+        {
+            somePoints = new IPoint[4];
+            somePoints[0] = curve.P0;
+            somePoints[1] = curve.P1;
+            somePoints[2] = curve.P2;
+            somePoints[3] = curve.P3;
+        }
+
+        public void visit(ICurve curve)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 
