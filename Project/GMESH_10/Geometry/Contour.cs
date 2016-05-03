@@ -5,9 +5,10 @@ using System.Text;
 
 namespace Geometry
 {
-    public class Contour : IContour
+    public class Contour : IPrepareContour
     {
         private List<ICurve> curves;
+        private List<int> partitions;
 
         public Contour(List<ICurve> curves)
         {
@@ -29,6 +30,18 @@ namespace Geometry
             {
                 // Пока не нужно
                 throw new NotImplementedException();
+            }
+        }
+
+        public int this[int i]
+        {
+            get
+            {
+                return partitions[i];
+            }
+            set
+            {
+                partitions[i] = value;
             }
         }
     }

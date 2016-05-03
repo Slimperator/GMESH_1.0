@@ -38,6 +38,11 @@ namespace Geometry
         int Size { get; }
         ICurve this[int i] { get; set; }
     }
+
+    public interface IPrepareContour : IContour
+    {
+        int this[int i] { get; set; }
+    }
     /// <summary>
     /// 
     /// </summary>
@@ -54,4 +59,7 @@ namespace Geometry
     {
         void accept(IVisitor visitor);
     }
+
+
 }
+
