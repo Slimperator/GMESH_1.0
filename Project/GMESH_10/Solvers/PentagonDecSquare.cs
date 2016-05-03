@@ -10,7 +10,7 @@ namespace Solvers
     /// Киракосян Ани 
     /// Декомпозиция пятиугольника при помощи квадрата
     /// </summary>
-    class PentegonDecSquarecs : IContourDecompositor, IVisitor
+    class PentgonDecSquarecs : IContourDecompositor, IVisitor
     {
                 List<IContour> triangles;
         private List<IContour> finalDecompose;//результат декомпозиции
@@ -80,10 +80,10 @@ namespace Solvers
                 lenghts.Add(Tools.length(contour[i]));
             double minLenght = lenghts.Min();
             //находим вершины квадрата
-            IPoint squarePoint1 = new Point(center.X + minLenght / 4.0, center.Y + minLenght / 4.0);
-            IPoint squarePoint2 = new Point(center.X + minLenght / 4.0, center.Y - minLenght / 4.0);
-            IPoint squarePoint3 = new Point(center.X - minLenght / 4.0, center.Y - minLenght / 4.0);
-            IPoint squarePoint4 = new Point(center.X + minLenght / 4.0, center.Y - minLenght / 4.0);
+            IPoint squarePoint1 = new Point(center.X + minLenght / 3.0, center.Y + minLenght / 3.0);
+            IPoint squarePoint2 = new Point(center.X + minLenght / 3.0, center.Y - minLenght / 3.0);
+            IPoint squarePoint3 = new Point(center.X - minLenght / 3.0, center.Y - minLenght / 3.0);
+            IPoint squarePoint4 = new Point(center.X - minLenght / 3.0, center.Y + minLenght / 3.0);
             sqPoints.Add(squarePoint1);
             sqPoints.Add(squarePoint2);
             sqPoints.Add(squarePoint3);

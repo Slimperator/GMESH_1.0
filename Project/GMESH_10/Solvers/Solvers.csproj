@@ -45,10 +45,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArithmMeanGrade.cs" />
+    <Compile Include="PentagonDecTetraAndTri.cs" />
     <Compile Include="Core.cs" />
     <Compile Include="Gradient.cs" />
     <Compile Include="PentagonTriangleDecompose .cs" />
-    <Compile Include="PentegonDecSquarecs.cs" />
+    <Compile Include="PentagonDecSquare.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QuadCleverMeshGen.cs" />
