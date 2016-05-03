@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.Save = new System.Windows.Forms.ToolStripMenuItem();
             this.Open = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,7 +42,11 @@
             this.Build = new System.Windows.Forms.ToolStripMenuItem();
             this.Clear = new System.Windows.Forms.ToolStripMenuItem();
             this.Quality = new System.Windows.Forms.ToolStripTextBox();
+            this.CurveMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.lineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bezierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
+            this.CurveMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -143,6 +148,28 @@
             this.Quality.Name = "Quality";
             this.Quality.Size = new System.Drawing.Size(100, 23);
             // 
+            // CurveMenuStrip
+            // 
+            this.CurveMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lineToolStripMenuItem,
+            this.bezierToolStripMenuItem});
+            this.CurveMenuStrip.Name = "CurveMenuStrip";
+            this.CurveMenuStrip.Size = new System.Drawing.Size(153, 70);
+            // 
+            // lineToolStripMenuItem
+            // 
+            this.lineToolStripMenuItem.Name = "lineToolStripMenuItem";
+            this.lineToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.lineToolStripMenuItem.Text = "line";
+            this.lineToolStripMenuItem.Click += new System.EventHandler(this.lineToolStripMenuItem_Click);
+            // 
+            // bezierToolStripMenuItem
+            // 
+            this.bezierToolStripMenuItem.Name = "bezierToolStripMenuItem";
+            this.bezierToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bezierToolStripMenuItem.Text = "bezier";
+            this.bezierToolStripMenuItem.Click += new System.EventHandler(this.bezierToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -160,6 +187,7 @@
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.CurveMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,6 +208,9 @@
         private System.Windows.Forms.ToolStripMenuItem Build;
         private System.Windows.Forms.ToolStripMenuItem Clear;
         private System.Windows.Forms.ToolStripTextBox Quality;
+        private System.Windows.Forms.ContextMenuStrip CurveMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem lineToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bezierToolStripMenuItem;
     }
 }
 
