@@ -8,43 +8,20 @@ namespace Solvers
 {
     /// <summary>
     /// name:Александр Климов
-    /// date:29.04.2016
+    /// date:04.05.2016
     /// class PentagonTriangleDecompose find center of pentagon and decomposes this figure on 5's triangles
     /// </summary>
     public class PentagonTriangleDecompose : IContourDecompositor, IVisitor
     {
         private List<IPoint> pointsOfCurvs;
-        private List<IContour> triangles;
-        private IPoint[] subPoints;
-        private ICurve[] subcurves = new ICurve[2];
+        private List<IContour> triangles;        
         private IPoint pointOfMiddle;
         public IContour[] decomposed(IContour contour)
         {
             triangles = new List<IContour>();
-            pointsOfCurvs = new List<IPoint>();
-            for (int i = 0; i < 5; i++)     //вызываем кривые, чтобы они вызвали метод visitLine и отдали нам свои точки в pointsOfCurvs
-            {
-                contour[i].accept(this);
-            }
-            for (int i = 0; i < 2; i++)
-            {
-                subcurves[i] = new Line(pointsOfCurvs[0], pointsOfCurvs[2 + i]);
-            }
-            triangles.Add(new Contour(new List<ICurve> { contour[0], contour[1], subcurves[0] }));
-            triangles.Add(new Contour(new List<ICurve> { subcurves[0], contour[2], subcurves[1] }));
-            triangles.Add(new Contour(new List<ICurve> { subcurves[1], contour[3], contour[4] }));
-            subPoints = new Point[triangles.Count];
-            foreach (var triangle in triangles)
-            {
-                subPoints[triangles.IndexOf(triangle)] = findCenterTriangle(triangle);
-            }
-            subcurves = new ICurve[3];
-            subcurves[0] = new Line(subPoints[0], subPoints[1]);
-            subcurves[1] = new Line(subPoints[1], subPoints[2]);
-            subcurves[2] = new Line(subPoints[2], subPoints[0]);
-            triangles.Add(new Contour(new List<ICurve> { subcurves[0], contour[1], contour[2] }));
-            pointOfMiddle = findCenterTriangle(triangles[triangles.Count - 1]);
-            triangles.Clear();
+            
+            pointOfMiddle = findCenterPentagon(contour);
+            // create five triangles for pentagon
             triangles.Add(new Contour(new List<ICurve> { contour[0], new Line(pointsOfCurvs[1], pointOfMiddle), new Line(pointOfMiddle, pointsOfCurvs[0]) }));
             triangles.Add(new Contour(new List<ICurve> { contour[1], new Line(pointsOfCurvs[2], pointOfMiddle), new Line(pointOfMiddle, pointsOfCurvs[1]) }));
             triangles.Add(new Contour(new List<ICurve> { contour[2], new Line(pointsOfCurvs[3], pointOfMiddle), new Line(pointOfMiddle, pointsOfCurvs[2]) }));
@@ -53,18 +30,21 @@ namespace Solvers
             return triangles.ToArray();
         }
         // находит цетр для треугольника
-        private IPoint findCenterTriangle(IContour contour)
+        /// <summary>
+        /// chahged method for find center of pentagon
+        /// </summary>
+        /// <param name="contour"></param>
+        /// <returns> contour</returns>
+        private IPoint findCenterPentagon(IContour contour)
         {
+            pointsOfCurvs = new List<IPoint>();
             IPoint[] points = new IPoint[3];
-            for (int i = 0; i < contour.Size; ++i) //находим середины линий
+            for (int i = 0; i < 5; ++i)
             {
-                double x, y;
-
-                contour[i].getPoint(0.5, out x, out y);
-                points[i] = new Geometry.Point(x, y);
+                contour[i].accept(this);
             }
 
-            return new Geometry.Point((points[0].X + points[1].X + points[2].X) / 3, (points[0].Y + points[1].Y + points[2].Y) / 3);
+            return new Geometry.Point((pointsOfCurvs[0].X + pointsOfCurvs[1].X + pointsOfCurvs[2].X + pointsOfCurvs[3].X + pointsOfCurvs[4].X) / 5, (pointsOfCurvs[0].Y + pointsOfCurvs[1].Y + pointsOfCurvs[2].Y + pointsOfCurvs[3].Y + pointsOfCurvs[4].Y) / 5);
         }
 
         public void visitLine(Line curve)
