@@ -33,16 +33,15 @@ namespace Geometry
             }
         }
 
-        public int this[int i]
+        public int getPartition(int i)
         {
-            get
-            {
-                return partitions[i];
-            }
-            set
-            {
-                partitions[i] = value;
-            }
+            return partitions[i];
+        }
+
+
+        public void setPartition(int i, int value)
+        {
+            partitions[i] = value;
         }
     }
 }

@@ -41,7 +41,8 @@ namespace Geometry
 
     public interface IPrepareContour : IContour
     {
-        int this[int i] { get; set; }
+        int getPartition(int i);
+        void setPartition(int i, int value);
     }
     /// <summary>
     /// 
