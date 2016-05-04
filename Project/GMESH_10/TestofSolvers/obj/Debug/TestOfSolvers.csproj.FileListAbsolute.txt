@@ -63,3 +63,14 @@ C:\Users\Ани\Desktop\Новая папка (2)\GMESH_1.0\Project\GMESH_10\Tes
 C:\Users\Ани\Desktop\Новая папка (2)\GMESH_1.0\Project\GMESH_10\TestOfSolvers\obj\Debug\TestOfSolvers.csprojResolveAssemblyReference.cache
 C:\Users\Ани\Desktop\Новая папка (2)\GMESH_1.0\Project\GMESH_10\TestOfSolvers\obj\Debug\TestOfSolvers.dll
 C:\Users\Ани\Desktop\Новая папка (2)\GMESH_1.0\Project\GMESH_10\TestOfSolvers\obj\Debug\TestOfSolvers.pdb
+D:\Documents\Учеба\5 курс (Магистратура)\2 сем\Kanban\Gmesh\GMESH_1.0\Project\GMESH_10\TestOfSolvers\bin\Debug\TestOfSolvers.dll
+D:\Documents\Учеба\5 курс (Магистратура)\2 сем\Kanban\Gmesh\GMESH_1.0\Project\GMESH_10\TestOfSolvers\bin\Debug\TestOfSolvers.pdb
+D:\Documents\Учеба\5 курс (Магистратура)\2 сем\Kanban\Gmesh\GMESH_1.0\Project\GMESH_10\TestOfSolvers\bin\Debug\Geometry.dll
+D:\Documents\Учеба\5 курс (Магистратура)\2 сем\Kanban\Gmesh\GMESH_1.0\Project\GMESH_10\TestOfSolvers\bin\Debug\Solvers.exe
+D:\Documents\Учеба\5 курс (Магистратура)\2 сем\Kanban\Gmesh\GMESH_1.0\Project\GMESH_10\TestOfSolvers\bin\Debug\Geometry.pdb
+D:\Documents\Учеба\5 курс (Магистратура)\2 сем\Kanban\Gmesh\GMESH_1.0\Project\GMESH_10\TestOfSolvers\bin\Debug\Solvers.pdb
+D:\Documents\Учеба\5 курс (Магистратура)\2 сем\Kanban\Gmesh\GMESH_1.0\Project\GMESH_10\TestOfSolvers\bin\Debug\Solvers_Accessor.exe
+D:\Documents\Учеба\5 курс (Магистратура)\2 сем\Kanban\Gmesh\GMESH_1.0\Project\GMESH_10\TestOfSolvers\bin\Debug\Solvers_Accessor.pdb
+D:\Documents\Учеба\5 курс (Магистратура)\2 сем\Kanban\Gmesh\GMESH_1.0\Project\GMESH_10\TestOfSolvers\obj\Debug\TestOfSolvers.csprojResolveAssemblyReference.cache
+D:\Documents\Учеба\5 курс (Магистратура)\2 сем\Kanban\Gmesh\GMESH_1.0\Project\GMESH_10\TestOfSolvers\obj\Debug\TestOfSolvers.dll
+D:\Documents\Учеба\5 курс (Магистратура)\2 сем\Kanban\Gmesh\GMESH_1.0\Project\GMESH_10\TestOfSolvers\obj\Debug\TestOfSolvers.pdb

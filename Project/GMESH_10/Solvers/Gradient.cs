@@ -10,7 +10,7 @@ namespace Solvers
     {
        double status; // оценка квадратика
 
-       Color GetCellColor(double status)
+       public Color GetCellColor(double status)
        {
            if (status > 1) status = 1;
            if (status < 0) status = 0;

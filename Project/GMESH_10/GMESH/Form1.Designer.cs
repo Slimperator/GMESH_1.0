@@ -154,19 +154,19 @@
             this.lineToolStripMenuItem,
             this.bezierToolStripMenuItem});
             this.CurveMenuStrip.Name = "CurveMenuStrip";
-            this.CurveMenuStrip.Size = new System.Drawing.Size(153, 70);
+            this.CurveMenuStrip.Size = new System.Drawing.Size(106, 48);
             // 
             // lineToolStripMenuItem
             // 
             this.lineToolStripMenuItem.Name = "lineToolStripMenuItem";
-            this.lineToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.lineToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.lineToolStripMenuItem.Text = "line";
             this.lineToolStripMenuItem.Click += new System.EventHandler(this.lineToolStripMenuItem_Click);
             // 
             // bezierToolStripMenuItem
             // 
             this.bezierToolStripMenuItem.Name = "bezierToolStripMenuItem";
-            this.bezierToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bezierToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
             this.bezierToolStripMenuItem.Text = "bezier";
             this.bezierToolStripMenuItem.Click += new System.EventHandler(this.bezierToolStripMenuItem_Click);
             // 
@@ -179,6 +179,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseClick);
             this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDoubleClick);

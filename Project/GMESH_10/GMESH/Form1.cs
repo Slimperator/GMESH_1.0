@@ -267,10 +267,41 @@ namespace GMESH
 
         void drawMesh(Graphics e)
         {
-            if (meshs != null) 
+            if (meshs != null)
             {
                 foreach (var mesh in meshs)
                 {
+                    ArithmMeanGrade crit = new ArithmMeanGrade();
+                    Gradient st = new Gradient();
+
+                    for (int i = 0; i < mesh.Y - 1; i++)
+                    {
+                        for (int j = 0; j < mesh.X - 1; j++)
+                        {
+                            // st.GetCellColor(crit.Calculate(mesh));
+                            System.Drawing.Point[] littlemesh = new System.Drawing.Point[4];
+                            littlemesh[0] = new System.Drawing.Point((int)(mesh[i, j].X), (int)(mesh[i, j].Y));
+                            littlemesh[1] = new System.Drawing.Point((int)(mesh[i + 1, j].X), (int)(mesh[i + 1, j].Y));
+                            littlemesh[2] = new System.Drawing.Point((int)(mesh[i + 1, j + 1].X), (int)(mesh[i + 1, j + 1].Y));
+                            littlemesh[3] = new System.Drawing.Point((int)(mesh[i, j + 1].X), (int)(mesh[i, j + 1].Y));
+
+
+                            Geometry.Point[,] littlemesh2 = new Geometry.Point[2, 2];
+                            littlemesh2[0, 0] = new Geometry.Point((int)(mesh[i, j].X), (int)(mesh[i, j].Y));
+                            littlemesh2[0, 1] = new Geometry.Point((int)(mesh[i + 1, j].X), (int)(mesh[i + 1, j].Y));
+                            littlemesh2[1, 0] = new Geometry.Point((int)(mesh[i, j + 1].X), (int)(mesh[i, j + 1].Y));
+                            littlemesh2[1, 1] = new Geometry.Point((int)(mesh[i + 1, j + 1].X), (int)(mesh[i + 1, j + 1].Y));
+
+
+
+                            int cols = 2;
+                            int rows = 2;
+                            RegMesh2D mesh2 = new RegMesh2D(littlemesh2, cols, rows);
+                            Brush br = new SolidBrush(st.GetCellColor(crit.Calculate(mesh2)));
+
+                            e.FillPolygon(br, littlemesh);
+                        }
+                    }
                     for (int i = 0; i < mesh.Y - 1; i++)
                     {
 
@@ -333,6 +364,11 @@ namespace GMESH
         public void visit(ICurve curve)
         {
             throw new NotImplementedException();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
