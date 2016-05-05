@@ -8,6 +8,7 @@ namespace Solvers
 {
     public class PentagonDecTetraAndTri : IContourDecompositor, IVisitor
     {
+        List<IPoint> points;
         public void visitBezier(Bezier curve)
         {
             throw new NotImplementedException();
@@ -20,7 +21,7 @@ namespace Solvers
 
         public void visitLine(Line curve)
         {
-            throw new NotImplementedException();
+            points.Add(curve.l1);
         }
 
         //public IContour[] decomposed(IContour contour)
@@ -37,13 +38,8 @@ namespace Solvers
         public IContour[] decomposed(IContour contour/*, int nom*/)
         {
 
-            List<IPoint> points = new List<IPoint>();
-            for (int j = 0; j < contour.Size; j++)
-            {
-                double x, y;
-                contour[j].getPoint(0, out x, out y);
-                points.Add(new Point(x, y));
-            }
+            points = new List<IPoint>();
+            for (int i = 0; i < contour.Size; i++) { contour[i].accept(this); }
 
             List<IContour> contours = new List<IContour>();
             double best_grade = -1;
@@ -52,21 +48,12 @@ namespace Solvers
             {
                 // Декомпозиция
                 // Треугольник
-                List<ICurve> _lines = new List<ICurve>();
-                ICurve _cut = new Line(points[2], points[0]);
-                _lines.Add(contour[0]);
-                _lines.Add(contour[1]);
-                _lines.Add(_cut);
-                contours.Add(new Contour(_lines));
+
+                contours.Add(new Contour(new List<ICurve> { contour[0], contour[1], new Line(points[2], points[0])}));
 
                 // Четырёхугольник
-                _lines = new List<ICurve>();
-                _lines.Add(contour[2]);
-                _lines.Add(contour[3]);
-                _lines.Add(contour[4]);
-                _lines.Add(_cut);
-                contours.Add(new Contour(_lines));
-                _lines.Clear();
+
+                contours.Add(new Contour(new List<ICurve> { contour[2],contour[3], contour[4], new Line(points[0], points[2])}));
 
                 // считаем качество
                 // Треугольник
@@ -101,21 +88,11 @@ namespace Solvers
                 points.RemoveAt(0);
                 points.Add(tmp_point);
             }
+            contours.Clear();
 
-            List<ICurve> lines = new List<ICurve>();
-            ICurve cut = new Line(points[2], points[0]);
-            lines.Add(contour[0]);
-            lines.Add(contour[1]);
-            lines.Add(cut);
-            contours.Add(new Contour(lines));
+            contours.Add(new Contour(new List<ICurve> { contour[0], contour[1], new Line(points[2], points[0]) }));
 
-            lines = new List<ICurve>();
-            lines.Add(contour[2]);
-            lines.Add(contour[3]);
-            lines.Add(contour[4]);
-            lines.Add(cut);
-            contours.Add(new Contour(lines));
-            lines.Clear();
+            contours.Add(new Contour(new List<ICurve> { contour[2], contour[3], contour[4], new Line(points[0], points[2]) }));
 
             return contours.ToArray();
         }
