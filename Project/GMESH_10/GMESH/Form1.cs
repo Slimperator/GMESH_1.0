@@ -144,7 +144,7 @@ namespace GMESH
             Contour contour = new Contour(curves);
             if (contour.Size == 5)
             {
-                IContourDecompositor decom = new PentagonDecTetraAndTri();
+                IContourDecompositor decom = new PentagonDecSquare();
                 IContour[] contourTEST;
                 meshs = new List<RegMesh2D>();
                 IMeshGen generator;// = new TriaMeshGen(10, 10);
