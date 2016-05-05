@@ -144,14 +144,23 @@ namespace GMESH
             Contour contour = new Contour(curves);
             if (contour.Size == 5)
             {
-                IContourDecompositor decom = new PentagonDecSquare();
+                IContourDecompositor decom = new PentagonDecTetraAndTri();
                 IContour[] contourTEST;
                 meshs = new List<RegMesh2D>();
-                IMeshGen generator = new TriaMeshGen(10, 10);
+                IMeshGen generator;// = new TriaMeshGen(10, 10);
                 contourTEST = decom.decomposed(contour);              //тестовый код для пятиугольника
                 foreach (var x in contourTEST)
                 {
-                    meshs.AddRange(generator.Generate(x));
+                    if (x.Size == 4) 
+                    { 
+                        generator = new QuadCleverMeshGen(10, 10);
+                        meshs.AddRange(generator.Generate(x));
+                    }
+                    if (x.Size == 3)
+                    {
+                        generator = new TriaMeshGen(10, 10);
+                        meshs.AddRange(generator.Generate(x));
+                    }
                 }
             }
             if (contour.Size == 4)
