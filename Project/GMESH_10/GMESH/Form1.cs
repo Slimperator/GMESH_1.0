@@ -102,7 +102,7 @@ namespace GMESH
                 }
                 if (curve is Bezier)
                 {
-                    for (double i = 0.05; i < 1; i+=0.05)
+                    for (double i = 0.05; i < 1; i += 0.05)
                     {
                         curve.getPoint(i - 0.05, out x1, out y1);
                         curve.getPoint(i, out x2, out y2);
@@ -174,8 +174,8 @@ namespace GMESH
                 contourTEST = decom.decomposed(contour);              //тестовый код для пятиугольника
                 foreach (var x in contourTEST)
                 {
-                    if (x.Size == 4) 
-                    { 
+                    if (x.Size == 4)
+                    {
                         generator = new QuadSimpleMeshGen(10, 10);
                         meshs.AddRange(generator.Generate(x));
                     }
@@ -203,7 +203,7 @@ namespace GMESH
             double qualitySum = 0;
             for (int i = 0; i < meshs.Count(); i++)
                 qualitySum += quality.Calculate(meshs[i]);
-            Quality.Text = Convert.ToString(qualitySum/3);
+            Quality.Text = Convert.ToString(qualitySum / meshs.Count());
             Refresh();
         }
 
@@ -223,7 +223,7 @@ namespace GMESH
                 parser.load(fileSelected);
                 parser.PreProcessing.convert(ref curves, ref points, ref parser.Gmesh.Poligons[0].Curves, ref parser.Gmesh.Poligons[0].Points);
                 Refresh();
-            }  
+            }
         }
 
         private void Save_Click(object sender, EventArgs e)
@@ -241,7 +241,7 @@ namespace GMESH
                 parser.PostProcessing.convert(ref curves, ref points, ref parser.Gmesh.Poligons[0].Curves, ref parser.Gmesh.Poligons[0].Points);
                 parser.save(fileSelected);
                 Refresh();
-            }  
+            }
         }
 
         // Draw Section
@@ -272,7 +272,7 @@ namespace GMESH
                     {
                         curve.getPoint(t, out x1, out y1);
                         curve.getPoint(t + h, out x2, out y2);
-                        e.DrawLine( pen, (int)x1, (int)y1, (int)x2, (int)y2);
+                        e.DrawLine(pen, (int)x1, (int)y1, (int)x2, (int)y2);
                     }
                 }
             }
@@ -284,7 +284,7 @@ namespace GMESH
             {
                 if (i == currentClickedPoint)
                 {
-                    e.FillEllipse(new SolidBrush(Color.Magenta), 
+                    e.FillEllipse(new SolidBrush(Color.Magenta),
                         (int)(points[i].X - 10), (int)(points[i].Y - 10),
                         (int)(2 * rad), (int)(2 * rad));
                 }
@@ -347,7 +347,7 @@ namespace GMESH
                     }
                 }
                 meshs = null;
-            }      
+            }
         }
 
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
@@ -371,12 +371,12 @@ namespace GMESH
 
         private void bezierToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            double x,y;
+            double x, y;
             curves[choosencurve].accept(this);
-            curves[choosencurve].getPoint(0.3,out x, out y);
-            points.Add(new Geometry.Point(x,y));
-            curves[choosencurve].getPoint(0.6,out x, out y);
-            points.Add(new Geometry.Point(x,y));
+            curves[choosencurve].getPoint(0.3, out x, out y);
+            points.Add(new Geometry.Point(x, y));
+            curves[choosencurve].getPoint(0.6, out x, out y);
+            points.Add(new Geometry.Point(x, y));
             curves[choosencurve] = new Bezier(somePoints[0], points[points.Count - 1], points[points.Count - 2], somePoints[1]);
             CurveMenuStrip.Close();
             choosencurve = -1;
@@ -411,17 +411,23 @@ namespace GMESH
 
         private void decomposeOnTrianglesToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
             decomPentagon = new PentagonTriangleDecompose();
+            
+
         }
 
         private void decomposeOnToolStripMenuItem_Click(object sender, EventArgs e)
         {
+   
             decomPentagon = new PentagonDecTetraAndTri();
+       
         }
 
         private void decomposeWithStarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             decomPentagon = new PentagonDecSquare();
+
         }
     }
 }
