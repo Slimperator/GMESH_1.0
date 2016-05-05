@@ -45,6 +45,10 @@
             this.CurveMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.lineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bezierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pentagonOptionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.decomposeOnTrianglesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.decomposeOnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.decomposeWithStarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.CurveMenuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -57,7 +61,8 @@
             this.Change,
             this.Build,
             this.Clear,
-            this.Quality});
+            this.Quality,
+            this.pentagonOptionsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(500, 27);
@@ -170,6 +175,37 @@
             this.bezierToolStripMenuItem.Text = "bezier";
             this.bezierToolStripMenuItem.Click += new System.EventHandler(this.bezierToolStripMenuItem_Click);
             // 
+            // pentagonOptionsToolStripMenuItem
+            // 
+            this.pentagonOptionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.decomposeOnTrianglesToolStripMenuItem,
+            this.decomposeOnToolStripMenuItem,
+            this.decomposeWithStarToolStripMenuItem});
+            this.pentagonOptionsToolStripMenuItem.Name = "pentagonOptionsToolStripMenuItem";
+            this.pentagonOptionsToolStripMenuItem.Size = new System.Drawing.Size(115, 23);
+            this.pentagonOptionsToolStripMenuItem.Text = "Pentagon Options";
+            // 
+            // decomposeOnTrianglesToolStripMenuItem
+            // 
+            this.decomposeOnTrianglesToolStripMenuItem.Name = "decomposeOnTrianglesToolStripMenuItem";
+            this.decomposeOnTrianglesToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.decomposeOnTrianglesToolStripMenuItem.Text = "Decompose on triangles";
+            this.decomposeOnTrianglesToolStripMenuItem.Click += new System.EventHandler(this.decomposeOnTrianglesToolStripMenuItem_Click);
+            // 
+            // decomposeOnToolStripMenuItem
+            // 
+            this.decomposeOnToolStripMenuItem.Name = "decomposeOnToolStripMenuItem";
+            this.decomposeOnToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.decomposeOnToolStripMenuItem.Text = "Decompose on triangles and tetragon";
+            this.decomposeOnToolStripMenuItem.Click += new System.EventHandler(this.decomposeOnToolStripMenuItem_Click);
+            // 
+            // decomposeWithStarToolStripMenuItem
+            // 
+            this.decomposeWithStarToolStripMenuItem.Name = "decomposeWithStarToolStripMenuItem";
+            this.decomposeWithStarToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.decomposeWithStarToolStripMenuItem.Text = "Decompose with star";
+            this.decomposeWithStarToolStripMenuItem.Click += new System.EventHandler(this.decomposeWithStarToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -212,6 +248,10 @@
         private System.Windows.Forms.ContextMenuStrip CurveMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem lineToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bezierToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pentagonOptionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem decomposeOnTrianglesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem decomposeOnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem decomposeWithStarToolStripMenuItem;
     }
 }
 

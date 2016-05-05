@@ -16,8 +16,9 @@ namespace GMESH
     public partial class Form1 : Form, IVisitor
     {
         private int currentClickedPoint = -1;
-        private int choosencurve;
+        private int choosencurve = -1;
         private IPoint[] somePoints;
+        private IContourDecompositor decomPentagon = new PentagonTriangleDecompose();
         const int rad = 10;
 
         List<ICurve> curves = new List<ICurve>();
@@ -68,9 +69,10 @@ namespace GMESH
             }
             if (e.Button == MouseButtons.Right)
             {
-                if (curveAreChoosen(e) != null)
+                ICurve choose = curveAreChoosen(e);
+                if (choose != null)
                 {
-                    choosencurve = curves.IndexOf(curveAreChoosen(e));
+                    choosencurve = curves.IndexOf(choose);
                     CurveMenuStrip.Show(e.X, e.Y);
                 }
             }
@@ -80,19 +82,40 @@ namespace GMESH
         private ICurve curveAreChoosen(MouseEventArgs e)
         {
             double x1, y1, x2, y2, R, D;
-            double W = 40;
+            double W = 5;                //толщина линии, куда засчитывается попадание
             foreach (ICurve curve in curves)
             {
-                curve.getPoint(0, out x1, out y1);
-                curve.getPoint(1, out x2, out y2);
-
-                R = ((e.X - x1) * (x2 - x1) + (e.Y - y1) * (y2 - y1)) / (Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
-                if(R>=0 && R<=1)
+                if (curve is Line)
                 {
-                    D = ((y1 - e.Y) * (x2 - x1) - (x1 - e.X) * (y2 - y1)) / (Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2)));
-                    if (D <= W && D >= -W)
+                    curve.getPoint(0, out x1, out y1);
+                    curve.getPoint(1, out x2, out y2);
+
+                    R = ((e.X - x1) * (x2 - x1) + (e.Y - y1) * (y2 - y1)) / (Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
+                    if (R >= 0 && R <= 1)
                     {
-                        return curve;
+                        D = ((y1 - e.Y) * (x2 - x1) - (x1 - e.X) * (y2 - y1)) / (Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2)));
+                        if (D <= W && D >= -W)
+                        {
+                            return curve;
+                        }
+                    }
+                }
+                if (curve is Bezier)
+                {
+                    for (double i = 0.05; i < 1; i+=0.05)
+                    {
+                        curve.getPoint(i - 0.05, out x1, out y1);
+                        curve.getPoint(i, out x2, out y2);
+
+                        R = ((e.X - x1) * (x2 - x1) + (e.Y - y1) * (y2 - y1)) / (Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
+                        if (R >= 0 && R <= 1)
+                        {
+                            D = ((y1 - e.Y) * (x2 - x1) - (x1 - e.X) * (y2 - y1)) / (Math.Sqrt(Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2)));
+                            if (D <= W && D >= -W)
+                            {
+                                return curve;
+                            }
+                        }
                     }
                 }
             }
@@ -144,7 +167,7 @@ namespace GMESH
             Contour contour = new Contour(curves);
             if (contour.Size == 5)
             {
-                IContourDecompositor decom = new PentagonDecSquare();
+                IContourDecompositor decom = new PentagonTriangleDecompose();
                 IContour[] contourTEST;
                 meshs = new List<RegMesh2D>();
                 IMeshGen generator;// = new TriaMeshGen(10, 10);
@@ -153,7 +176,7 @@ namespace GMESH
                 {
                     if (x.Size == 4) 
                     { 
-                        generator = new QuadCleverMeshGen(10, 10);
+                        generator = new QuadSimpleMeshGen(10, 10);
                         meshs.AddRange(generator.Generate(x));
                     }
                     if (x.Size == 3)
@@ -242,11 +265,14 @@ namespace GMESH
                 double x1, x2, y1, y2;
                 foreach (var curve in curves)
                 {
+                    Pen pen;
+                    if (choosencurve == curves.IndexOf(curve)) { pen = new Pen(Color.Red, 4); }
+                    else { pen = new Pen(Color.Black); }
                     for (double t = 0; t < 1; t += h)
                     {
                         curve.getPoint(t, out x1, out y1);
                         curve.getPoint(t + h, out x2, out y2);
-                        e.DrawLine(new Pen(Color.Black), (int)x1, (int)y1, (int)x2, (int)y2);
+                        e.DrawLine( pen, (int)x1, (int)y1, (int)x2, (int)y2);
                     }
                 }
             }
@@ -339,6 +365,7 @@ namespace GMESH
             points.Remove(somePoints[2]);
             curves[choosencurve] = new Line(somePoints[0], somePoints[3]);
             CurveMenuStrip.Close();
+            choosencurve = -1;
             Refresh();
         }
 
@@ -352,6 +379,7 @@ namespace GMESH
             points.Add(new Geometry.Point(x,y));
             curves[choosencurve] = new Bezier(somePoints[0], points[points.Count - 1], points[points.Count - 2], somePoints[1]);
             CurveMenuStrip.Close();
+            choosencurve = -1;
             Refresh();
         }
 
@@ -379,6 +407,21 @@ namespace GMESH
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void decomposeOnTrianglesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            decomPentagon = new PentagonTriangleDecompose();
+        }
+
+        private void decomposeOnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            decomPentagon = new PentagonDecTetraAndTri();
+        }
+
+        private void decomposeWithStarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            decomPentagon = new PentagonDecSquare();
         }
     }
 }
