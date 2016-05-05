@@ -38,10 +38,13 @@ namespace Geometry
             return partitions[i];
         }
 
-
-        public void setPartition(int i, int value)
+        private void setPartition(int i, int value)
         {
             partitions[i] = value;
+        }
+
+        public void createPartitions(double step, double eps)
+        {
         }
     }
 }
