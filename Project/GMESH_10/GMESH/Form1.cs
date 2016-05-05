@@ -80,11 +80,11 @@ namespace GMESH
         private ICurve curveAreChoosen(MouseEventArgs e)
         {
             double x1, y1, x2, y2, R, D;
-            double W = 5;
+            double W = 40;
             foreach (ICurve curve in curves)
             {
                 curve.getPoint(0, out x1, out y1);
-                curve.getPoint(0, out x2, out y2);
+                curve.getPoint(1, out x2, out y2);
 
                 R = ((e.X - x1) * (x2 - x1) + (e.Y - y1) * (y2 - y1)) / (Math.Pow(x2 - x1, 2) + Math.Pow(y2 - y1, 2));
                 if(R>=0 && R<=1)
@@ -142,19 +142,18 @@ namespace GMESH
         private void Build_Click(object sender, EventArgs e)
         {
             Contour contour = new Contour(curves);
-            //if (contour.Size == 5)
-            //{
-            //    IContourDecompositor decom = new PentagonTriangleDecompose();
-            //    IContour[] contourTEST;
-            //    meshs = new List<RegMesh2D>();
-            //    IMeshGen generator = new TriaMeshGen(10, 10);
-            //    contourTEST = decom.decomposed(contour);              //тестовый код для пятиугольника
-            //    meshs = generator.Generate(contourTEST[0]);
-            //    meshs.AddRange(generator.Generate(contourTEST[1]));
-            //    meshs.AddRange(generator.Generate(contourTEST[2]));
-            //    meshs.AddRange(generator.Generate(contourTEST[3]));
-            //    meshs.AddRange(generator.Generate(contourTEST[4]));
-            //}
+            if (contour.Size == 5)
+            {
+                IContourDecompositor decom = new PentagonDecSquare();
+                IContour[] contourTEST;
+                meshs = new List<RegMesh2D>();
+                IMeshGen generator = new TriaMeshGen(10, 10);
+                contourTEST = decom.decomposed(contour);              //тестовый код для пятиугольника
+                foreach (var x in contourTEST)
+                {
+                    meshs.AddRange(generator.Generate(x));
+                }
+            }
             if (contour.Size == 4)
             {
                 //IMeshGen generator = new QuadSimpleMeshGen(10, 10);
@@ -331,6 +330,7 @@ namespace GMESH
             points.Remove(somePoints[2]);
             curves[choosencurve] = new Line(somePoints[0], somePoints[3]);
             CurveMenuStrip.Close();
+            Refresh();
         }
 
         private void bezierToolStripMenuItem_Click(object sender, EventArgs e)
@@ -341,8 +341,9 @@ namespace GMESH
             points.Add(new Geometry.Point(x,y));
             curves[choosencurve].getPoint(0.6,out x, out y);
             points.Add(new Geometry.Point(x,y));
-            curves[choosencurve] = new Bezier(somePoints[0], points[points.Count], points[points.Count - 1], somePoints[1]);
+            curves[choosencurve] = new Bezier(somePoints[0], points[points.Count - 1], points[points.Count - 2], somePoints[1]);
             CurveMenuStrip.Close();
+            Refresh();
         }
 
         public void visitLine(Line curve)
