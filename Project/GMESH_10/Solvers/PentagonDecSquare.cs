@@ -10,109 +10,57 @@ namespace Solvers
     /// Киракосян Ани 
     /// Декомпозиция пятиугольника при помощи квадрата
     /// </summary>
-    class PentgonDecSquarecs : IContourDecompositor, IVisitor
+    public class PentagonDecSquare : IContourDecompositor, IVisitor
     {
-                List<IContour> triangles;
+
         private List<IContour> finalDecompose;//результат декомпозиции
         private List<IPoint> pointsOfCurvs;
-        private IPoint[] subPoints;
-        private ICurve[] subcurves = new ICurve[2];
-        private IPoint pointOfMiddle;
-
-        // находим центр для треугольника
-        private IPoint findCenterTriangle(IContour contour)
-        {
-            IPoint[] points = new IPoint[3];
-            for (int i = 0; i < contour.Size; ++i) //находим середины линий
-            {
-                double x, y;
-
-                contour[i].getPoint(0.5, out x, out y);
-                points[i] = new Geometry.Point(x, y);
-            }
-
-            return new Geometry.Point((points[0].X + points[1].X + points[2].X) / 3, (points[0].Y + points[1].Y + points[2].Y) / 3);
-        }
-        // находит центр масс 5ти угольника
-        public IPoint prepearToDecompose(IContour contour)
-        {
-            triangles = new List<IContour>();
-            pointsOfCurvs = new List<IPoint>();
-            for (int i = 0; i < 5; i++)     //вызываем кривые, чтобы они вызвали метод visitLine и отдали нам свои точки в pointsOfCurvs
-            {
-                contour[i].accept(this);
-            }
-            for (int i = 0; i < 2; i++)
-            {
-                subcurves[i] = new Line(pointsOfCurvs[0], pointsOfCurvs[2 + i]);
-            }
-            triangles.Add(new Contour(new List<ICurve> { contour[0], contour[1], subcurves[0] }));
-            triangles.Add(new Contour(new List<ICurve> { subcurves[0], contour[2], subcurves[1] }));
-            triangles.Add(new Contour(new List<ICurve> { subcurves[1], contour[3], contour[4] }));
-            subPoints = new Point[triangles.Count];
-            foreach (var triangle in triangles)
-            {
-                subPoints[triangles.IndexOf(triangle)] = findCenterTriangle(triangle);
-            }
-            subcurves = new ICurve[3];
-            subcurves[0] = new Line(subPoints[0], subPoints[1]);
-            subcurves[1] = new Line(subPoints[1], subPoints[2]);
-            subcurves[2] = new Line(subPoints[2], subPoints[0]);
-            triangles.Add(new Contour(new List<ICurve> { subcurves[0], contour[1], contour[2] }));
-            return pointOfMiddle = findCenterTriangle(triangles[triangles.Count - 1]);
-        }
+        private List<ICurve> preDecompose;
+        private List<IPoint> generalPoints;
 
 
         public IContour[] decomposed(IContour contour)
         {
-            finalDecompose = new List<IContour>();
             pointsOfCurvs = new List<IPoint>();
-            double x, y;
+            generalPoints = new List<IPoint>();
+            preDecompose = new List<ICurve>();
+            finalDecompose = new List<IContour>();
             for (int i = 0; i < 5; i++)     //вызываем кривые, чтобы они вызвали метод visitLine и отдали нам свои точки в pointsOfCurvs
             {
-                contour[i].getPoint(0, out x, out y);
-                pointsOfCurvs.Add(new Point(x, y));
+                contour[i].accept(this);
             }
-            List<double> lenghts = new List<double>();//массив для длин сторон 5ти угольникка
-            List<IPoint> sqPoints = new List<IPoint>();//массив для вершин квадрата
-            IPoint center = prepearToDecompose(contour);
-            for (int i = 0; i < contour.Size - 1; i++)//находим минимальную длину 
-                lenghts.Add(Tools.length(contour[i]));
-            double minLenght = lenghts.Min();
-            //находим вершины квадрата
-            IPoint squarePoint1 = new Point(center.X + minLenght / 3.0, center.Y + minLenght / 3.0);
-            IPoint squarePoint2 = new Point(center.X + minLenght / 3.0, center.Y - minLenght / 3.0);
-            IPoint squarePoint3 = new Point(center.X - minLenght / 3.0, center.Y - minLenght / 3.0);
-            IPoint squarePoint4 = new Point(center.X - minLenght / 3.0, center.Y + minLenght / 3.0);
-            sqPoints.Add(squarePoint1);
-            sqPoints.Add(squarePoint2);
-            sqPoints.Add(squarePoint3);
-            sqPoints.Add(squarePoint4);
-            //создаём стороны квадрата
-            ICurve squareSide1 = new Line(squarePoint1, squarePoint2);
-            ICurve squareSide2 = new Line(squarePoint2, squarePoint3);
-            ICurve squareSide3 = new Line(squarePoint3, squarePoint4);
-            ICurve squareSide4 = new Line(squarePoint4, squarePoint1);
-            finalDecompose.Add(new Contour(new List<ICurve> { squareSide1, squareSide2, squareSide3, squareSide4 }));
-            List<int> buff = new List<int>();//массив для индесков квадрата(для каждой вершины 5ти угольника находится ближайшая вершина квадрата)
-            List<ICurve> preFinCurves = new List<ICurve>();
-            for (int i = 0; i < contour.Size; i++)
-            {
-                for (int j = 0; j < sqPoints.Count - 1; j++)
-                    if (Tools.length(new Line(pointsOfCurvs[i], sqPoints[j])) < Tools.length(new Line(pointsOfCurvs[i], sqPoints[j + 1])))
-                        buff.Add(j);
-                    else buff.Add(j + 1);
-
-            }
-            //помещаем в список полученные контуры
-            for (int i = 0; i < contour.Size - 1; i++)
-
-                finalDecompose.Add(new Contour(new List<ICurve> { contour[i], new Line(pointsOfCurvs[i], sqPoints[buff[i]]), new Line(pointsOfCurvs[i + 1], sqPoints[buff[i + 1]]), new Line(sqPoints[buff[i]], sqPoints[buff[i + 1]]) }));
-
-
+            preDecompose.Add((new Line(pointsOfCurvs[0], pointsOfCurvs[2])));//0
+            preDecompose.Add((new Line(pointsOfCurvs[0], pointsOfCurvs[3])));//1
+            preDecompose.Add((new Line(pointsOfCurvs[1], pointsOfCurvs[3])));//2
+            preDecompose.Add((new Line(pointsOfCurvs[1], pointsOfCurvs[4])));//3
+            preDecompose.Add((new Line(pointsOfCurvs[2], pointsOfCurvs[4])));//4
+            generalPoints.Add(findGeneralPoints(preDecompose[0], preDecompose[3]));//1
+            generalPoints.Add(findGeneralPoints(preDecompose[0], preDecompose[2]));//2
+            generalPoints.Add(findGeneralPoints(preDecompose[4], preDecompose[2]));//3
+            generalPoints.Add(findGeneralPoints(preDecompose[1], preDecompose[4]));//4
+            generalPoints.Add(findGeneralPoints(preDecompose[2], preDecompose[1]));//5
+            finalDecompose.Add(new Contour(new List<ICurve> { contour[0], new Line(pointsOfCurvs[0], generalPoints[4]), new Line(pointsOfCurvs[4], pointsOfCurvs[0]) }));
+            finalDecompose.Add(new Contour(new List<ICurve> { contour[1], new Line(pointsOfCurvs[2], generalPoints[0]), new Line(generalPoints[0], pointsOfCurvs[1]) }));
+            finalDecompose.Add(new Contour(new List<ICurve> { contour[2], new Line(pointsOfCurvs[3], generalPoints[3]), new Line(generalPoints[3], generalPoints[1]), new Line(generalPoints[1], pointsOfCurvs[2]) }));
+            finalDecompose.Add(new Contour(new List<ICurve> { contour[3], new Line(pointsOfCurvs[4], generalPoints[3]), new Line(generalPoints[3], pointsOfCurvs[3]) }));
+            finalDecompose.Add(new Contour(new List<ICurve> { contour[4], new Line(pointsOfCurvs[2], generalPoints[0]), new Line(generalPoints[0], pointsOfCurvs[1]) }));
+            finalDecompose.Add(new Contour(new List<ICurve> { new Line(generalPoints[0], generalPoints[1]), new Line(generalPoints[1], generalPoints[2]), new Line(generalPoints[2], generalPoints[4]), new Line(generalPoints[4], generalPoints[0]) }));
             return finalDecompose.ToArray();
-
         }
+
+        private IPoint findGeneralPoints(ICurve l1, ICurve l2)
+        {
+            double x1, y1, x2, y2, x3, y3, x4, y4;
+            l1.getPoint(0, out x1, out y1);
+            l1.getPoint(1, out x2, out y2);
+            l2.getPoint(0, out x3, out y3);
+            l2.getPoint(1, out x4, out y4);
+            double x = ((x1 * y2 - x2 * y1) * (x4 - x3) - (x3 * y4 - x4 * y3) * (x2 - x1)) / ((y1 - y2) * (x4 - x3) - (y3 - y4) * (x2 - x1));
+            double y = ((y3 - y4) * x - (x3 * y4 - x4 * y3)) / (x4 - x3);
+
+            return new Point(x, y);
+        }
+
         public void visitLine(Line curve)
         {
             pointsOfCurvs.Add(curve.l1);
@@ -128,5 +76,5 @@ namespace Solvers
             throw new NotImplementedException();
         }
     }
-    }
+}
 
