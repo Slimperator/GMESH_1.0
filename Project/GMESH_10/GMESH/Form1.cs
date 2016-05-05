@@ -341,10 +341,20 @@ namespace GMESH
 
                         for (int j = 0; j < mesh.X - 1; j++)
                         {
-                            e.DrawLine(new Pen(Color.Black), (int)mesh[i, j].X, (int)mesh[i, j].Y, (int)mesh[i, j + 1].X, (int)mesh[i, j + 1].Y);
-                            e.DrawLine(new Pen(Color.Black), (int)mesh[i, j].X, (int)mesh[i, j].Y, (int)mesh[i + 1, j].X, (int)mesh[i + 1, j].Y);
+                            e.DrawLine(new Pen(Color.Black), 
+                                (int)mesh[i, j].X, (int)mesh[i, j].Y, 
+                                (int)mesh[i, j + 1].X, (int)mesh[i, j + 1].Y);
+                            e.DrawLine(new Pen(Color.Black), 
+                                (int)mesh[i, j].X, (int)mesh[i, j].Y, 
+                                (int)mesh[i + 1, j].X, (int)mesh[i + 1, j].Y);
                         }
                     }
+                    e.DrawLine(new Pen(Color.Black),
+                        (int)mesh[mesh.Y - 1, 0].X, (int)mesh[mesh.Y - 1, 0].Y,
+                        (int)mesh[mesh.Y - 1, mesh.X - 1].X, (int)mesh[mesh.Y - 1, mesh.X - 1].Y);
+                    e.DrawLine(new Pen(Color.Black),
+                        (int)mesh[0, mesh.X - 1].X, (int)mesh[0, mesh.X - 1].Y,
+                        (int)mesh[mesh.Y - 1, mesh.X - 1].X, (int)mesh[mesh.Y - 1, mesh.X - 1].Y);
                 }
                 meshs = null;
             }      
