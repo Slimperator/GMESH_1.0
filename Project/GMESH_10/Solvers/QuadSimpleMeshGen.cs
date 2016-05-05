@@ -26,6 +26,14 @@ namespace Solvers
             this.hY = 1.0 / (double)(nY);
         }
 
+        public QuadSimpleMeshGen(int nX)
+        {
+            this.nX = nX + 1;
+            this.nY = nX + 1;
+            this.hX = 1.0 / (double)(nX);
+            this.hY = 1.0 / (double)(nX);
+        }
+
         public List<RegMesh2D> Generate(IContour contour)
         {
             IPoint[,] points = new Point[this.nY, this.nX];
