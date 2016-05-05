@@ -17,6 +17,11 @@ namespace Solvers
             this.decompos = new TriangleDecompositor();
             this.meshgen = new QuadCleverMeshGen(nX,nY);
         }
+        public TriaMeshGen(int nX)
+        {
+            this.decompos = new TriangleDecompositor();
+            this.meshgen = new QuadCleverMeshGen(nX);
+        }
         public List<RegMesh2D> Generate(IContour contour)
         {
             this.mesh = new List<RegMesh2D>();
