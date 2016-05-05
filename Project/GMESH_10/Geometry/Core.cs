@@ -36,13 +36,13 @@ namespace Geometry
     public interface IContour
     {
         int Size { get; }
-        ICurve this[int i] { get; set; }
+        ICurve this[int i] { get; }
     }
 
     public interface IPrepareContour : IContour
     {
+        void createPartitions(double step, double eps);
         int getPartition(int i);
-        void setPartition(int i, int value);
     }
     /// <summary>
     /// 
