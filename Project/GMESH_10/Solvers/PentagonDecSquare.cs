@@ -41,11 +41,11 @@ namespace Solvers
             generalPoints.Add(findGeneralPoints(preDecompose[1], preDecompose[4]));//4
             generalPoints.Add(findGeneralPoints(preDecompose[3], preDecompose[1]));//5
 
-            //finalDecompose.Add(new Contour(new List<ICurve> { contour[0], new Line(pointsOfCurvs[1], generalPoints[4]), new Line(generalPoints[4], pointsOfCurvs[0]) }));
-            //finalDecompose.Add(new Contour(new List<ICurve> { contour[1], new Line(pointsOfCurvs[2], generalPoints[0]), new Line(generalPoints[0], pointsOfCurvs[1]) }));
+            finalDecompose.Add(new Contour(new List<ICurve> { contour[0], new Line(pointsOfCurvs[1], generalPoints[4]), new Line(generalPoints[4], pointsOfCurvs[0]) }));
+            finalDecompose.Add(new Contour(new List<ICurve> { contour[1], new Line(pointsOfCurvs[2], generalPoints[0]), new Line(generalPoints[0], pointsOfCurvs[1]) }));
             finalDecompose.Add(new Contour(new List<ICurve> { contour[2], new Line(pointsOfCurvs[3], generalPoints[3]), new Line(generalPoints[3], generalPoints[1]), new Line(generalPoints[1], pointsOfCurvs[2]) }));
-            //finalDecompose.Add(new Contour(new List<ICurve> { contour[3], contour[4], new Line(pointsOfCurvs[0], pointsOfCurvs[3]) }));
-            //finalDecompose.Add(new Contour(new List<ICurve> { new Line(generalPoints[0], generalPoints[1]), new Line(generalPoints[1], generalPoints[3]), new Line(generalPoints[3], generalPoints[4]), new Line(generalPoints[4], generalPoints[0]) }));
+            finalDecompose.Add(new Contour(new List<ICurve> { contour[3], contour[4], new Line(pointsOfCurvs[0], pointsOfCurvs[3]) }));
+            finalDecompose.Add(new Contour(new List<ICurve> { new Line(generalPoints[0], generalPoints[1]), new Line(generalPoints[1], generalPoints[3]), new Line(generalPoints[3], generalPoints[4]), new Line(generalPoints[4], generalPoints[0]) }));
             
             return finalDecompose.ToArray();
         }
