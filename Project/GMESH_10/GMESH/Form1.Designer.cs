@@ -172,7 +172,6 @@
             // 
             // decomposeOnToolStripMenuItem
             // 
-            this.decomposeOnToolStripMenuItem.Enabled = false;
             this.decomposeOnToolStripMenuItem.Name = "decomposeOnToolStripMenuItem";
             this.decomposeOnToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
             this.decomposeOnToolStripMenuItem.Text = "Decompose on triangles and tetragon";
@@ -180,7 +179,6 @@
             // 
             // decomposeWithStarToolStripMenuItem
             // 
-            this.decomposeWithStarToolStripMenuItem.Enabled = false;
             this.decomposeWithStarToolStripMenuItem.Name = "decomposeWithStarToolStripMenuItem";
             this.decomposeWithStarToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
             this.decomposeWithStarToolStripMenuItem.Text = "Decompose with star";
