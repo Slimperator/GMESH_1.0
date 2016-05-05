@@ -18,7 +18,7 @@ namespace GMESH
         private int currentClickedPoint = -1;
         private int choosencurve = -1;
         private IPoint[] somePoints;
-        private IContourDecompositor decomPentagon = new PentagonTriangleDecompose();
+        private IContourDecompositor decompositor = null;
         const int rad = 10;
 
         List<ICurve> curves = new List<ICurve>();
@@ -167,11 +167,12 @@ namespace GMESH
             Contour contour = new Contour(curves);
             if (contour.Size == 5)
             {
-                IContourDecompositor decom = new PentagonTriangleDecompose();
+                if (decompositor == null)
+                    decompositor = new PentagonTriangleDecompose();
                 IContour[] contourTEST;
                 meshs = new List<RegMesh2D>();
                 IMeshGen generator;// = new TriaMeshGen(10, 10);
-                contourTEST = decom.decomposed(contour);              //тестовый код для пятиугольника
+                contourTEST = decompositor.decomposed(contour);              //тестовый код для пятиугольника
                 foreach (var x in contourTEST)
                 {
                     if (x.Size == 4)
@@ -421,23 +422,20 @@ namespace GMESH
 
         private void decomposeOnTrianglesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
-            decomPentagon = new PentagonTriangleDecompose();
-            
-
+            decompositor = new PentagonTriangleDecompose();
+            Build_Click(sender, e);
         }
 
         private void decomposeOnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-   
-            decomPentagon = new PentagonDecTetraAndTri();
-       
+            decompositor = new PentagonDecTetraAndTri();
+            Build_Click(sender, e);
         }
 
         private void decomposeWithStarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            decomPentagon = new PentagonDecSquare();
-
+            decompositor = new PentagonDecSquare();
+            Build_Click(sender, e);
         }
     }
 }
