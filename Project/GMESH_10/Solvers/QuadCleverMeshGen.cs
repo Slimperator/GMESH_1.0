@@ -24,6 +24,14 @@ namespace Solvers
             this.hY = 1.0 / (double)(nY);
             vectorOfParam = new double[this.nX];
         }
+        public QuadCleverMeshGen(int nX)
+        {
+            this.nX = nX + 1;
+            this.nY = nX + 1;
+            this.hX = 1.0 / (double)(nX);
+            this.hY = 1.0 / (double)(nX);
+            vectorOfParam = new double[this.nX];
+        }
         public List<RegMesh2D> Generate(IContour contour)
         {
             this.mesh = new List<RegMesh2D>();
