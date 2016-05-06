@@ -74,6 +74,7 @@ namespace GMESH
                 {
                     choosencurve = curves.IndexOf(choose);
                     CurveMenuStrip.Show(e.X, e.Y);
+                    
                 }
             }
             Refresh();
@@ -385,10 +386,10 @@ namespace GMESH
             double x, y;
             curves[choosencurve].accept(this);
             curves[choosencurve].getPoint(0.3, out x, out y);
-            points.Add(new Geometry.Point(x, y));
+            points.Insert(points.IndexOf(somePoints[0])+1, new Geometry.Point(x, y));
             curves[choosencurve].getPoint(0.6, out x, out y);
-            points.Add(new Geometry.Point(x, y));
-            curves[choosencurve] = new Bezier(somePoints[0], points[points.Count - 1], points[points.Count - 2], somePoints[1]);
+            points.Insert(points.IndexOf(somePoints[0]) + 2, new Geometry.Point(x, y));
+            curves[choosencurve] = new Bezier(somePoints[0], points[points.IndexOf(somePoints[0]) + 1], points[points.IndexOf(somePoints[0])+2], somePoints[1]);
             CurveMenuStrip.Close();
             choosencurve = -1;
             Refresh();
