@@ -22,7 +22,7 @@ namespace Geometry
         {
             double ax, ay, bx, by;
 
-            a.getPoint(t, out ax, out ay);
+            a.getPoint(1-t, out ax, out ay);
             b.getPoint(t, out bx, out by);
 
             x = this.alpha * ax + (1 - this.alpha) * bx;
