@@ -178,12 +178,12 @@ namespace GMESH
                 {
                     if (x.Size == 4)
                     {
-                        generator = new QuadSimpleMeshGen(10, 10);
+                        generator = new QuadCleverMeshGen(10);
                         meshs.AddRange(generator.Generate(x));
                     }
                     if (x.Size == 3)
                     {
-                        generator = new TriaMeshGen(10, 10);
+                        generator = new TriaMeshGen(10);
                         meshs.AddRange(generator.Generate(x));
                     }
                 }
@@ -191,7 +191,7 @@ namespace GMESH
             if (contour.Size == 4)
             {
                 //IMeshGen generator = new QuadSimpleMeshGen(10, 10);
-                IMeshGen generator = new QuadCleverMeshGen(10, 10);
+                IMeshGen generator = new QuadCleverMeshGen(10);
                 //IMeshGen generator = new TriaMeshGen(10, 10);
                 meshs = new List<RegMesh2D>();
                 meshs.Add(generator.Generate(contour)[0]);
@@ -199,7 +199,7 @@ namespace GMESH
             if (contour.Size == 3)
             {
                 meshs = new List<RegMesh2D>();
-                IMeshGen generator = new TriaMeshGen(10, 10);
+                IMeshGen generator = new TriaMeshGen(10);
                 meshs = generator.Generate(contour);
             }
             double qualitySum = 0;
