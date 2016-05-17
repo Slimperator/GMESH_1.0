@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace GMESH
 {
@@ -224,9 +225,18 @@ namespace GMESH
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string fileSelected = openFileDialog1.FileName;
-                parser.load(fileSelected);
-                parser.PreProcessing.convert(ref curves, ref points, ref parser.Gmesh.Poligons[0].Curves, ref parser.Gmesh.Poligons[0].Points);
-                Refresh();
+                if (Path.GetExtension(fileSelected) == ".xml")
+                {
+                    parser.load(fileSelected);
+                    parser.PreProcessing.convert(ref curves, ref points, ref parser.Gmesh.Poligons[0].Curves, ref parser.Gmesh.Poligons[0].Points);
+                    Refresh();
+                }
+                else 
+                {
+                    MessageBox.Show("Wrong File Format!", "Format Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //Save_Click(sender, e);
+                    return;
+                }
             }
         }
 
@@ -242,9 +252,19 @@ namespace GMESH
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string fileSelected = saveFileDialog1.FileName;
-                parser.PostProcessing.convert(ref curves, ref points, ref parser.Gmesh.Poligons[0].Curves, ref parser.Gmesh.Poligons[0].Points);
-                parser.save(fileSelected);
-                Refresh();
+
+                if (Path.GetExtension(fileSelected) == ".xml")
+                {
+                    parser.PostProcessing.convert(ref curves, ref points, ref parser.Gmesh.Poligons[0].Curves, ref parser.Gmesh.Poligons[0].Points);
+                    parser.save(fileSelected);
+                    Refresh();
+                }
+                else
+                {
+                    MessageBox.Show("Wrong File Format!", "Format Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //Save_Click(sender, e);
+                    return;
+                }
             }
         }
 
