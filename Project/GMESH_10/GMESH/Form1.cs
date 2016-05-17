@@ -166,6 +166,8 @@ namespace GMESH
         private void Build_Click(object sender, EventArgs e)
         {
             Contour contour = new Contour(curves);
+            if (contour.Size < 3 || contour.Size > 5)
+                return;
             if (contour.Size == 5)
             {
                 if (decompositor == null)
