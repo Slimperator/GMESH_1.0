@@ -11,7 +11,7 @@ namespace Solvers
         List<IPoint> points;
         public void visitBezier(Bezier curve)
         {
-            throw new NotImplementedException();
+            points.Add(curve.P0);
         }
 
         public void visit(ICurve curve)

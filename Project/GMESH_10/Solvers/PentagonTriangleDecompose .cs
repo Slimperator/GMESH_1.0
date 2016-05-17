@@ -55,7 +55,7 @@ namespace Solvers
 
         public void visitBezier(Bezier curve)
         {
-            throw new NotImplementedException();
+            pointsOfCurvs.Add(curve.P0);
         }
 
         public void visit(ICurve curve)
