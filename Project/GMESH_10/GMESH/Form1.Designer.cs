@@ -32,13 +32,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.Save = new System.Windows.Forms.ToolStripMenuItem();
             this.Open = new System.Windows.Forms.ToolStripMenuItem();
-            this.Change = new System.Windows.Forms.ToolStripMenuItem();
-            this.CurveToolStripMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.Astroid = new System.Windows.Forms.ToolStripMenuItem();
-            this.Bezier = new System.Windows.Forms.ToolStripMenuItem();
-            this.Cardioid = new System.Windows.Forms.ToolStripMenuItem();
-            this.Line = new System.Windows.Forms.ToolStripMenuItem();
-            this.Gauge = new System.Windows.Forms.ToolStripMenuItem();
             this.Build = new System.Windows.Forms.ToolStripMenuItem();
             this.Clear = new System.Windows.Forms.ToolStripMenuItem();
             this.Quality = new System.Windows.Forms.ToolStripTextBox();
@@ -49,6 +42,7 @@
             this.CurveMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.lineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bezierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.CurveMenuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -58,14 +52,14 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Save,
             this.Open,
-            this.Change,
             this.Build,
             this.Clear,
             this.Quality,
-            this.pentagonOptionsToolStripMenuItem});
+            this.pentagonOptionsToolStripMenuItem,
+            this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(500, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(661, 27);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -82,56 +76,6 @@
             this.Open.Size = new System.Drawing.Size(48, 23);
             this.Open.Text = "Open";
             this.Open.Click += new System.EventHandler(this.Open_Click);
-            // 
-            // Change
-            // 
-            this.Change.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.CurveToolStripMenu,
-            this.Gauge});
-            this.Change.Name = "Change";
-            this.Change.Size = new System.Drawing.Size(60, 23);
-            this.Change.Text = "Change";
-            // 
-            // CurveToolStripMenu
-            // 
-            this.CurveToolStripMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Astroid,
-            this.Bezier,
-            this.Cardioid,
-            this.Line});
-            this.CurveToolStripMenu.Name = "CurveToolStripMenu";
-            this.CurveToolStripMenu.Size = new System.Drawing.Size(108, 22);
-            this.CurveToolStripMenu.Text = "Curve";
-            // 
-            // Astroid
-            // 
-            this.Astroid.Name = "Astroid";
-            this.Astroid.Size = new System.Drawing.Size(119, 22);
-            this.Astroid.Text = "Astroid";
-            // 
-            // Bezier
-            // 
-            this.Bezier.Name = "Bezier";
-            this.Bezier.Size = new System.Drawing.Size(119, 22);
-            this.Bezier.Text = "Bezier";
-            // 
-            // Cardioid
-            // 
-            this.Cardioid.Name = "Cardioid";
-            this.Cardioid.Size = new System.Drawing.Size(119, 22);
-            this.Cardioid.Text = "Cardioid";
-            // 
-            // Line
-            // 
-            this.Line.Name = "Line";
-            this.Line.Size = new System.Drawing.Size(119, 22);
-            this.Line.Text = "Line";
-            // 
-            // Gauge
-            // 
-            this.Gauge.Name = "Gauge";
-            this.Gauge.Size = new System.Drawing.Size(108, 22);
-            this.Gauge.Text = "Gauge";
             // 
             // Build
             // 
@@ -206,11 +150,18 @@
             this.bezierToolStripMenuItem.Text = "bezier";
             this.bezierToolStripMenuItem.Click += new System.EventHandler(this.bezierToolStripMenuItem_Click);
             // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 23);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(500, 262);
+            this.ClientSize = new System.Drawing.Size(661, 262);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
@@ -235,13 +186,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem Save;
         private System.Windows.Forms.ToolStripMenuItem Open;
-        private System.Windows.Forms.ToolStripMenuItem Change;
-        private System.Windows.Forms.ToolStripMenuItem CurveToolStripMenu;
-        private System.Windows.Forms.ToolStripMenuItem Astroid;
-        private System.Windows.Forms.ToolStripMenuItem Bezier;
-        private System.Windows.Forms.ToolStripMenuItem Cardioid;
-        private System.Windows.Forms.ToolStripMenuItem Line;
-        private System.Windows.Forms.ToolStripMenuItem Gauge;
         private System.Windows.Forms.ToolStripMenuItem Build;
         private System.Windows.Forms.ToolStripMenuItem Clear;
         private System.Windows.Forms.ToolStripTextBox Quality;
@@ -252,6 +196,7 @@
         private System.Windows.Forms.ToolStripMenuItem decomposeOnTrianglesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem decomposeOnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem decomposeWithStarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
 

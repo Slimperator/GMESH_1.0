@@ -460,6 +460,11 @@ namespace GMESH
             decompositor = new PentagonDecSquare();
             Build_Click(sender, e);
         }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit(); 
+        }
     }
 }
 
