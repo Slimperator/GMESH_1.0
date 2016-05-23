@@ -50,6 +50,7 @@ namespace GMESH
         // Event section
         private void Form1_MouseClick(object sender, MouseEventArgs e)
         {
+            choosencurve = -1;
             if (e.Button == MouseButtons.Left)
             {
                 if (IsContain(e) == -1)
@@ -74,8 +75,7 @@ namespace GMESH
                 if (choose != null)
                 {
                     choosencurve = curves.IndexOf(choose);
-                    CurveMenuStrip.Show(e.X, e.Y);
-                    
+                    CurveMenuStrip.Show(e.X, e.Y);             
                 }
             }
             Refresh();
@@ -395,10 +395,14 @@ namespace GMESH
         private void lineToolStripMenuItem_Click(object sender, EventArgs e)
         {
             curves[choosencurve].accept(this);
-            points.Remove(somePoints[1]);
-            points.Remove(somePoints[2]);
-            curves[choosencurve] = new Line(somePoints[0], somePoints[3]);
+            if (curves[choosencurve] is Bezier)      //!!!
+            {
+                points.Remove(somePoints[1]);
+                points.Remove(somePoints[2]);
+                curves[choosencurve] = new Line(somePoints[0], somePoints[3]);
+            }
             CurveMenuStrip.Close();
+            somePoints = null;
             choosencurve = -1;
             Refresh();
         }
@@ -408,11 +412,12 @@ namespace GMESH
             double x, y;
             curves[choosencurve].accept(this);
             curves[choosencurve].getPoint(0.3, out x, out y);
-            points.Insert(points.IndexOf(somePoints[0])+1, new Geometry.Point(x, y));
+            points.Insert(points.IndexOf(somePoints[0]) + 1, new Geometry.Point(x, y));
             curves[choosencurve].getPoint(0.6, out x, out y);
             points.Insert(points.IndexOf(somePoints[0]) + 2, new Geometry.Point(x, y));
             curves[choosencurve] = new Bezier(somePoints[0], points[points.IndexOf(somePoints[0]) + 1], points[points.IndexOf(somePoints[0])+2], somePoints[1]);
             CurveMenuStrip.Close();
+            somePoints = null;
             choosencurve = -1;
             Refresh();
         }
@@ -431,6 +436,7 @@ namespace GMESH
             somePoints[1] = curve.P1;
             somePoints[2] = curve.P2;
             somePoints[3] = curve.P3;
+
         }
 
         public void visit(ICurve curve)
