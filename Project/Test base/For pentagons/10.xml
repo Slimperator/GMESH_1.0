@@ -3,43 +3,63 @@
   <Poligons>
     <Poligon>
       <Curves>
-        <Curve id="0" type="line">
+        <Curve id="0" type="bezier">
           <points>
             <ID>0</ID>
             <ID>1</ID>
-          </points>
-        </Curve>
-        <Curve id="1" type="line">
-          <points>
-            <ID>1</ID>
-            <ID>2</ID>
-          </points>
-        </Curve>
-        <Curve id="2" type="line">
-          <points>
             <ID>2</ID>
             <ID>3</ID>
           </points>
         </Curve>
-        <Curve id="3" type="line">
+        <Curve id="1" type="bezier">
           <points>
             <ID>3</ID>
             <ID>4</ID>
+            <ID>5</ID>
+            <ID>6</ID>
           </points>
         </Curve>
-        <Curve id="4" type="line">
+        <Curve id="2" type="bezier">
           <points>
-            <ID>4</ID>
+            <ID>6</ID>
+            <ID>7</ID>
+            <ID>8</ID>
+            <ID>9</ID>
+          </points>
+        </Curve>
+        <Curve id="3" type="bezier">
+          <points>
+            <ID>9</ID>
+            <ID>10</ID>
+            <ID>11</ID>
+            <ID>12</ID>
+          </points>
+        </Curve>
+        <Curve id="4" type="bezier">
+          <points>
+            <ID>12</ID>
+            <ID>13</ID>
+            <ID>14</ID>
             <ID>0</ID>
           </points>
         </Curve>
       </Curves>
       <Points>
-        <Point id="0" x="448" y="123" />
-        <Point id="1" x="881" y="271" />
-        <Point id="2" x="904" y="395" />
-        <Point id="3" x="641" y="474" />
-        <Point id="4" x="384" y="303" />
+        <Point id="0" x="167" y="124" />
+        <Point id="1" x="201.79999999999998" y="106.6" />
+        <Point id="2" x="225" y="66" />
+        <Point id="3" x="283" y="66" />
+        <Point id="4" x="349" y="40" />
+        <Point id="5" x="381.4" y="85.8" />
+        <Point id="6" x="447" y="99" />
+        <Point id="7" x="440.09999999999997" y="139.8" />
+        <Point id="8" x="468" y="185" />
+        <Point id="9" x="424" y="235" />
+        <Point id="10" x="362.49999999999994" y="233.2" />
+        <Point id="11" x="303" y="251" />
+        <Point id="12" x="219" y="229" />
+        <Point id="13" x="189" y="204" />
+        <Point id="14" x="149" y="174" />
       </Points>
     </Poligon>
   </Poligons>
