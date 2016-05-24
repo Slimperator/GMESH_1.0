@@ -15,15 +15,19 @@
             <ID>2</ID>
           </points>
         </Curve>
-        <Curve id="2" type="line">
+        <Curve id="2" type="bezier">
           <points>
             <ID>2</ID>
             <ID>3</ID>
+            <ID>4</ID>
+            <ID>5</ID>
           </points>
         </Curve>
-        <Curve id="3" type="line">
+        <Curve id="3" type="bezier">
           <points>
-            <ID>3</ID>
+            <ID>5</ID>
+            <ID>6</ID>
+            <ID>7</ID>
             <ID>0</ID>
           </points>
         </Curve>
@@ -32,7 +36,11 @@
         <Point id="0" x="252" y="97" />
         <Point id="1" x="591" y="31" />
         <Point id="2" x="370" y="229" />
-        <Point id="3" x="25" y="392" />
+        <Point id="3" x="289" y="307" />
+        <Point id="4" x="163" y="326.8" />
+        <Point id="5" x="25" y="392" />
+        <Point id="6" x="93.1" y="303.5" />
+        <Point id="7" x="153" y="196" />
       </Points>
     </Poligon>
   </Poligons>
