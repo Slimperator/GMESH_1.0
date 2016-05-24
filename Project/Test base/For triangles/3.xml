@@ -3,29 +3,41 @@
   <Poligons>
     <Poligon>
       <Curves>
-        <Curve id="0" type="line">
+        <Curve id="0" type="bezier">
           <points>
             <ID>0</ID>
             <ID>1</ID>
+            <ID>2</ID>
+            <ID>3</ID>
           </points>
         </Curve>
-        <Curve id="1" type="line">
+        <Curve id="1" type="bezier">
           <points>
-            <ID>1</ID>
-            <ID>2</ID>
+            <ID>3</ID>
+            <ID>4</ID>
+            <ID>5</ID>
+            <ID>6</ID>
           </points>
         </Curve>
-        <Curve id="2" type="line">
+        <Curve id="2" type="bezier">
           <points>
-            <ID>2</ID>
+            <ID>6</ID>
+            <ID>7</ID>
+            <ID>8</ID>
             <ID>0</ID>
           </points>
         </Curve>
       </Curves>
       <Points>
-        <Point id="0" x="152" y="55" />
-        <Point id="1" x="156" y="145" />
-        <Point id="2" x="196" y="62" />
+        <Point id="0" x="254" y="69" />
+        <Point id="1" x="135" y="67" />
+        <Point id="2" x="179" y="178" />
+        <Point id="3" x="132" y="299" />
+        <Point id="4" x="299" y="347" />
+        <Point id="5" x="334.8" y="202.4" />
+        <Point id="6" x="470" y="138" />
+        <Point id="7" x="414" y="84" />
+        <Point id="8" x="278" y="127" />
       </Points>
     </Poligon>
   </Poligons>
