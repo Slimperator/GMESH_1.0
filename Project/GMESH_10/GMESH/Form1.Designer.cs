@@ -39,10 +39,10 @@
             this.decomposeOnTrianglesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.decomposeOnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.decomposeWithStarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.CurveMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.lineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bezierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.CurveMenuStrip.SuspendLayout();
             this.SuspendLayout();
@@ -59,7 +59,7 @@
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(661, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(784, 27);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -128,6 +128,13 @@
             this.decomposeWithStarToolStripMenuItem.Text = "Decompose with star";
             this.decomposeWithStarToolStripMenuItem.Click += new System.EventHandler(this.decomposeWithStarToolStripMenuItem_Click);
             // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 23);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
             // CurveMenuStrip
             // 
             this.CurveMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -150,18 +157,11 @@
             this.bezierToolStripMenuItem.Text = "bezier";
             this.bezierToolStripMenuItem.Click += new System.EventHandler(this.bezierToolStripMenuItem_Click);
             // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 23);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(661, 262);
+            this.ClientSize = new System.Drawing.Size(784, 562);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
