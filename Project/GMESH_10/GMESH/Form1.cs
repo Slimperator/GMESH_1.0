@@ -452,6 +452,7 @@ namespace GMESH
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             countour_points.Clear();
+            special_points.Clear();
             curves.Clear();
             Quality.Clear();
             Refresh();
