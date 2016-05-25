@@ -43,8 +43,10 @@ namespace Solvers
                 lines.Add(new Line(newPoints[i], L));
                 lines.Add(new Line(L, newPoints[index]));
                 lines.Add(new SubCurve(contour[index], PART, 1));
-                Max += grade.Calculate(gen.Generate(new Contour(lines))[0]);
+                decFigures.Add(new Contour(lines));
+                //Max += grade.Calculate(gen.Generate(new Contour(lines))[0]);
             }
+            /*
             Max = Max / contour.Size;
 
             while (flag == false)
@@ -103,7 +105,7 @@ namespace Solvers
                     flag = true;
                 }
             }
-
+            
             for (int i = 0; i < contour.Size; ++i) //что это должно делать
             {
                 List<ICurve> lines = new List<ICurve>();
@@ -115,7 +117,7 @@ namespace Solvers
                 lines.Add(new SubCurve(contour[index], PART, 1));
                 decFigures.Add(new Contour(lines));
             }
-
+            */
             return decFigures.ToArray();
 }
 
