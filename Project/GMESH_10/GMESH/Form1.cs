@@ -21,7 +21,7 @@ namespace GMESH
         private IPoint[] somePoints;
         private IContourDecompositor decompositor = null;
         private bool what_points_arr; //false countour, true special
-        private bool change_access;   //запрос на изменение. для метода accept
+        
         const int rad = 10;
 
         List<ICurve> curves = new List<ICurve>();
@@ -99,7 +99,7 @@ namespace GMESH
                 if (choose != null)
                 {
                     choosencurve = curves.IndexOf(choose);
-                    CurveMenuStrip.Show(e.X, e.Y);             
+                    CurveMenuStrip.Show(e.X + 50, e.Y+ 50);             
                 }
             }
             Refresh();
@@ -182,11 +182,11 @@ namespace GMESH
             currentClickedPoint = IsContain(e);
             if (currentClickedPoint != -1)
             {
-                curves.RemoveAt((currentClickedPoint) % curves.Count);
+                curves.RemoveAt((currentClickedPoint) % curves.Count);   // НУЛЬ
                 if (currentClickedPoint == 0)
-                    curves.RemoveAt(curves.Count - 1);
+                        curves.RemoveAt(curves.Count - 1);
                 else
-                    curves.RemoveAt((currentClickedPoint - 1) % curves.Count);//?
+                    curves.RemoveAt((currentClickedPoint - 1) % curves.Count);//?           
                 countour_points.RemoveAt(currentClickedPoint);
                 if (currentClickedPoint - 1 != curves.Count & !(currentClickedPoint == 0))
                     curves.Insert((currentClickedPoint - 1) % (curves.Count), new Line(countour_points[currentClickedPoint - 1], countour_points[currentClickedPoint % countour_points.Count]));
@@ -262,13 +262,19 @@ namespace GMESH
                     parser.load(fileSelected);
                     parser.PreProcessing.convert(ref curves, ref all_points, ref parser.Gmesh.Poligons[0].Curves, ref parser.Gmesh.Poligons[0].Points);
                     countour_points = new List<IPoint>(all_points);
-                    foreach (Bezier b in curves)                    //!!!!
+
+                    foreach (ICurve b in curves)                    //!!!!
                     {
-                        special_points.Add(b.P1);
-                        special_points.Add(b.P2);
-                        countour_points.Remove(b.P1);
-                        countour_points.Remove(b.P2);
+                        b.accept(this);
+                        if (somePoints.Length > 2)
+                        {
+                            special_points.Add(somePoints[1]);
+                            special_points.Add(somePoints[2]);
+                            countour_points.Remove(somePoints[1]);
+                            countour_points.Remove(somePoints[2]);
+                        }
                     }
+
                     Refresh();
                 }
                 else 
@@ -296,8 +302,8 @@ namespace GMESH
                 if (Path.GetExtension(fileSelected) == ".xml")
                 {
                     all_points = new List<IPoint>();
-                    all_points.Concat(countour_points);
-                    all_points.Concat(special_points);             
+                    all_points.AddRange(countour_points);
+                    all_points.AddRange(special_points);             
                     parser.PostProcessing.convert(ref curves, ref all_points, ref parser.Gmesh.Poligons[0].Curves, ref parser.Gmesh.Poligons[0].Points);
                     parser.save(fileSelected);
                     Refresh();
@@ -471,8 +477,10 @@ namespace GMESH
             double x, y;
             curves[choosencurve].accept(this);
             curves[choosencurve].getPoint(0.3, out x, out y);
+            //special_points.Insert(curves.IndexOf(curves[choosencurve]),new Geometry.Point(x, y));
             special_points.Add(new Geometry.Point(x, y));
             curves[choosencurve].getPoint(0.6, out x, out y);
+            //special_points.Insert(curves.IndexOf(curves[choosencurve])+1, new Geometry.Point(x, y));
             special_points.Add(new Geometry.Point(x, y));
             curves[choosencurve] = new Bezier(somePoints[0], special_points[special_points.Count - 2], special_points[special_points.Count - 1], somePoints[1]);
             CurveMenuStrip.Close();
@@ -529,6 +537,24 @@ namespace GMESH
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit(); 
+        }
+
+        private void CurveMenuStrip_Opening(object sender, CancelEventArgs e)
+        {
+            if (curves[choosencurve] is Bezier)
+            {
+                lineToolStripMenuItem.Checked = false;
+                lineToolStripMenuItem.Enabled = true;
+                bezierToolStripMenuItem.Checked = true;
+                bezierToolStripMenuItem.Enabled = false;
+            }
+            if (curves[choosencurve] is Line)
+            {
+                lineToolStripMenuItem.Checked = true;
+                lineToolStripMenuItem.Enabled = false;
+                bezierToolStripMenuItem.Checked = false;
+                bezierToolStripMenuItem.Enabled = true;
+            }
         }
     }
 }

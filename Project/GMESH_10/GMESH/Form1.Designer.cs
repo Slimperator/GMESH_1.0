@@ -142,6 +142,7 @@
             this.bezierToolStripMenuItem});
             this.CurveMenuStrip.Name = "CurveMenuStrip";
             this.CurveMenuStrip.Size = new System.Drawing.Size(106, 48);
+            this.CurveMenuStrip.Opening += new System.ComponentModel.CancelEventHandler(this.CurveMenuStrip_Opening);
             // 
             // lineToolStripMenuItem
             // 
